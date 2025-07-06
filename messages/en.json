@@ -1,0 +1,49 @@
+{
+  "ArtistDashboardTabs": {
+    "assets": "Assets",
+    "share": "Share"
+  },
+  "ArtistDashboardPrssKit": {
+    "artist_name": "Artist name",
+    "biography": "Biography",
+    "location": "Location",
+    "profile_url": "Profile URL",
+    "subtitle": "Content that will be displayed on your profile page",
+    "title": "Your PRSS Kit"
+  },
+  "Auth": {
+    "divider_text": "Or continue with",
+    "email": "Email",
+    "email_error": "Enter valid email address",
+    "login_button": "Let Me In!",
+    "login_description": "Login to your account",
+    "login_error": "Check your credentials and try again",
+    "login_redirect_register": "Don't have an account? Register now",
+    "password": "Password",
+    "password_confirm": "Confirm Password",
+    "password_requirements": "Must be more than 8 characters including:; At least one number, At least one lowercase letter, At least one uppercase letter",
+    "register_button": "Register",
+    "register_description": "Sign up for free!",
+    "register_redirect_login": "Already have an account? Login now"
+  },
+  "Home": {
+    "action_register": "Join the Party!",
+    "description": "Share who you are and what you do",
+    "features_header_1": "Everything you need",
+    "features_header_2": "All in one place",
+    "features_description": "Prsskit is made by artists, for artists. We make it easy to share what's most important with a single link. All your assets in one place."
+  },
+  "NavigationBar": {
+    "login": "Login",
+    "logout": "Logout",
+    "profile": "Profile",
+    "register": "Register",
+    "settings": "Settings",
+    "theme": "Theme"
+  },
+  "Onboard": {
+    "step_1_title": "What's your artist name?",
+    "step_2_title": "Upload your press kit",
+    "step_3_title": "Upload your media"
+  }
+}

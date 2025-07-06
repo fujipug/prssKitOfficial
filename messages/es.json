@@ -1,0 +1,49 @@
+{
+  "ArtistDashboardTabs": {
+    "assets": "Recursos",
+    "share": "Compartir"
+  },
+  "ArtistDashboardPrssKit": {
+    "artist_name": "Nombre de artista",
+    "biography": "Biografía",
+    "location": "Ubicación",
+    "profile_url": "URL del perfil",
+    "subtitle": "Contenido que se mostrará en tu página de perfil",
+    "title": "Tu Prss Kit"
+  },
+  "Auth": {
+    "divider_text": "O continúa con",
+    "email": "Correo electrónico",
+    "email_error": "Ingresa un correo electrónico válido",
+    "login_button": "¡Déjame entrar!",
+    "login_description": "Inicia sesión",
+    "login_error": "Verifica tus credenciales e inténtalo de nuevo",
+    "login_redirect_register": "¿No tienes una cuenta? Regístrate ahora",
+    "password": "Contraseña",
+    "password_confirm": "Confirmar contraseña",
+    "password_requirements": "Debe tener más de 8 caracteres incluyendo:; Al menos un número, Al menos una letra minúscula, Al menos una letra mayúscula",
+    "register_button": "Registrarse",
+    "register_description": "¡Regístrate gratis!",
+    "register_redirect_login": "¿Ya tienes una cuenta? Inicia sesión aquí"
+  },
+  "Home": {
+    "action_register": "¡Únete a la fiesta!",
+    "description": "Comparte quién eres y lo que te mueve",
+    "features_header_1": "Todo lo que necesitas",
+    "features_header_2": "En un solo lugar",
+    "features_description": "Prsskit está hecho por artistas, para artistas. Facilitamos compartir lo más importante con un solo enlace. Todo disponible en un solo lugar."
+  },
+  "NavigationBar": {
+    "login": "Iniciar sesión",
+    "register": "Registrarse",
+    "profile": "Perfil",
+    "logout": "Cerrar sesión",
+    "settings": "Configuración",
+    "theme": "Tema"
+  },
+  "Onboard": {
+    "step_1_title": "¿Cuál es tu nombre artístico/a?",
+    "step_2_title": "Sube tu press kit",
+    "step_3_title": "Sube tus multimedia"
+  }
+}
