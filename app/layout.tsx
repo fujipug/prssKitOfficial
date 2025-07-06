@@ -7,7 +7,6 @@ import NavigationBar from "@/components/navigation-bar";
 import Footer from "@/components/footer";
 import { AuthProvider } from "@/utils/AuthContext";
 import { ThemeProvider } from "@/utils/ThemeContext";
-// import FirebaseAuthProvider from "@/utils/FirebaseAuthProvider";
 
 const specialEliteSans = Special_Elite({ weight: "400", subsets: ["latin"] });
 
@@ -40,7 +39,6 @@ export default function RootLayout({
         className={`${specialEliteSans.className} antialiased`}
       >
         <AuthProvider>
-          {/* <FirebaseAuthProvider> */}
           <ThemeProvider>
             <NextIntlClientProvider messages={messages}>
               <NavigationBar translations={navMessages} />
@@ -51,7 +49,6 @@ export default function RootLayout({
               {/* </div> */}
               <Footer />
             </NextIntlClientProvider>
-            {/* </FirebaseAuthProvider> */}
           </ThemeProvider>
         </AuthProvider>
       </body>

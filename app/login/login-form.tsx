@@ -22,7 +22,7 @@ export default function LoginForm({ messages, ...formProps }: { messages: LoginF
 
   const baseUrl = process.env.NODE_ENV === 'development'
     ? 'http://localhost:3000'
-    : '';
+    : 'https://prsskit.com';
 
   const createSessionCookie = async (idToken: string) => {
     const response = await fetch(`${baseUrl}/api/set-session-cookie`, {

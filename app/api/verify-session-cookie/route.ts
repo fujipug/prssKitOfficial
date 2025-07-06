@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
-import { serverAuth } from "@/functions/src/main";
+import { serverAuth } from "@/services/firebase-admin-config";
 
 export async function GET() {
   try {
