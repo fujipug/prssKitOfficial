@@ -47,5 +47,3 @@ videos/*
 !videos/*.ts
 public/_next-video
 
-# firebase
-prsskit-firebase-adminsdk.json

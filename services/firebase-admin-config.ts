@@ -2,12 +2,15 @@ import { cert, getApps, initializeApp } from 'firebase-admin/app';
 import { getAuth } from 'firebase-admin/auth';
 import { getFirestore } from 'firebase-admin/firestore';
 import { getFunctions } from 'firebase-admin/functions';
-import serviceAccount from '../prsskit-firebase-adminsdk.json';
 import { ServiceAccount } from 'firebase-admin/app';
 
 
 export const firebaseAdminConfig = {
-  credential: cert(serviceAccount as ServiceAccount)
+  credential: cert({
+    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+    clientEmail: process.env.PRSS_KIT_ADMIN_CLIENT_EMAIL,
+    privateKey: process.env.PRSS_KIT_ADMIN_PRIVATE_KEY?.replace(/\\n/gm, '\n')
+  } as ServiceAccount)
 };
 
 function getAdminApp() {
