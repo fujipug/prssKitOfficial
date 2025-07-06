@@ -7,7 +7,7 @@ import { ServiceAccount } from 'firebase-admin/app';
 
 export const firebaseAdminConfig = {
   credential: cert({
-    projectId: 'prsskit',
+    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
     clientEmail: process.env.PRSS_KIT_ADMIN_CLIENT_EMAIL,
     privateKey: process.env.PRSS_KIT_ADMIN_PRIVATE_KEY?.replace(/\\n/gm, '\n')
   } as ServiceAccount)
@@ -32,6 +32,8 @@ const serverAuth = getAuth(serverApp);
 const serverDb = getFirestore(serverApp);
 const serverFunctions = getFunctions(serverApp);
 const cors = [
+  'https://www.prss-kit-official.vercel.app',
+  'https://prss-kit-official.vercel.app',
   "https://www.prsskit.com",
   'https://prsskit.com',
   'http://localhost:3000'
