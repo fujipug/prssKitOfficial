@@ -4,6 +4,8 @@ import { cookies } from 'next/headers';
 export async function POST(request: Request) {
   const { idToken } = await request.json();
 
+  console.log("Server auth:", serverAuth);
+
   if (!idToken) {
     throw new Error("No ID token provided");
   }

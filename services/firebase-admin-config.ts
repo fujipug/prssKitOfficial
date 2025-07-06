@@ -7,7 +7,7 @@ import { ServiceAccount } from 'firebase-admin/app';
 
 export const firebaseAdminConfig = {
   credential: cert({
-    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+    projectId: 'prsskit',
     clientEmail: process.env.PRSS_KIT_ADMIN_CLIENT_EMAIL,
     privateKey: process.env.PRSS_KIT_ADMIN_PRIVATE_KEY?.replace(/\\n/gm, '\n')
   } as ServiceAccount)

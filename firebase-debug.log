@@ -1,55 +1,60 @@
-[debug] [2025-07-06T22:43:14.013Z] ----------------------------------------------------------------------
-[debug] [2025-07-06T22:43:14.014Z] Command:       /Users/lanefujikado/.nvm/versions/node/v18.20.8/bin/node /Users/lanefujikado/.nvm/versions/node/v18.20.8/bin/firebase emulators:start
-[debug] [2025-07-06T22:43:14.014Z] CLI Version:   13.35.1
-[debug] [2025-07-06T22:43:14.015Z] Platform:      darwin
-[debug] [2025-07-06T22:43:14.015Z] Node Version:  v18.20.8
-[debug] [2025-07-06T22:43:14.015Z] Time:          Sun Jul 06 2025 16:43:14 GMT-0600 (Central Standard Time)
-[debug] [2025-07-06T22:43:14.015Z] ----------------------------------------------------------------------
+[debug] [2025-07-06T23:20:23.357Z] ----------------------------------------------------------------------
+[debug] [2025-07-06T23:20:23.358Z] Command:       /Users/lanefujikado/.nvm/versions/node/v18.20.8/bin/node /Users/lanefujikado/.nvm/versions/node/v18.20.8/bin/firebase emulators:start
+[debug] [2025-07-06T23:20:23.358Z] CLI Version:   13.35.1
+[debug] [2025-07-06T23:20:23.358Z] Platform:      darwin
+[debug] [2025-07-06T23:20:23.358Z] Node Version:  v18.20.8
+[debug] [2025-07-06T23:20:23.359Z] Time:          Sun Jul 06 2025 17:20:23 GMT-0600 (Central Standard Time)
+[debug] [2025-07-06T23:20:23.359Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2025-07-06T22:43:14.111Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2025-07-06T22:43:14.112Z] > authorizing via signed-in user (lane.fujikado@gmail.com)
-[debug] [2025-07-06T22:43:14.148Z] java version "19.0.1" 2022-10-18
+[debug] [2025-07-06T23:20:23.456Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-07-06T23:20:23.456Z] > authorizing via signed-in user (lane.fujikado@gmail.com)
+[debug] [2025-07-06T23:20:23.494Z] java version "19.0.1" 2022-10-18
 
-[debug] [2025-07-06T22:43:14.148Z] Java(TM) SE Runtime Environment (build 19.0.1+10-21)
+[debug] [2025-07-06T23:20:23.495Z] Java(TM) SE Runtime Environment (build 19.0.1+10-21)
 Java HotSpot(TM) 64-Bit Server VM (build 19.0.1+10-21, mixed mode, sharing)
 
-[debug] [2025-07-06T22:43:14.150Z] Parsed Java major version: 19
+[debug] [2025-07-06T23:20:23.497Z] Parsed Java major version: 19
 [info] i  emulators: Starting emulators: auth, functions, firestore, storage, extensions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, storage, extensions"}}
-[debug] [2025-07-06T22:43:14.152Z] Checked if tokens are valid: true, expires at: 1751844423403
-[debug] [2025-07-06T22:43:14.152Z] Checked if tokens are valid: true, expires at: 1751844423403
-[debug] [2025-07-06T22:43:14.152Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/prsskit [none]
-[debug] [2025-07-06T22:43:14.581Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/prsskit 200
-[debug] [2025-07-06T22:43:14.582Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/prsskit {"projectNumber":"994908429115","projectId":"prsskit","lifecycleState":"ACTIVE","name":"prsskit","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-04-18T09:29:42.946971Z"}
-[debug] [2025-07-06T22:43:15.360Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2025-07-06T22:43:15.360Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2025-07-06T22:43:15.360Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2025-07-06T22:43:15.360Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2025-07-06T22:43:15.360Z] [storage] Storage Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2025-07-06T22:43:15.360Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2025-07-06T23:20:23.498Z] Checked if tokens are valid: false, expires at: 1751844423403
+[debug] [2025-07-06T23:20:23.499Z] Checked if tokens are valid: false, expires at: 1751844423403
+[debug] [2025-07-06T23:20:23.499Z] > refreshing access token with scopes: []
+[debug] [2025-07-06T23:20:23.499Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-07-06T23:20:23.500Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-07-06T23:20:23.751Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-07-06T23:20:23.751Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-07-06T23:20:23.770Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/prsskit [none]
+[debug] [2025-07-06T23:20:24.361Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/prsskit 200
+[debug] [2025-07-06T23:20:24.361Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/prsskit {"projectNumber":"994908429115","projectId":"prsskit","lifecycleState":"ACTIVE","name":"prsskit","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-04-18T09:29:42.946971Z"}
+[debug] [2025-07-06T23:20:25.152Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-06T23:20:25.152Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-06T23:20:25.152Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-06T23:20:25.152Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-06T23:20:25.152Z] [storage] Storage Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-06T23:20:25.152Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}]},"metadata":{"message":"assigned listening specs for emulators"}}
 [warn] ⚠  emulators: It seems that you are running multiple instances of the emulator suite for project prsskit. This may result in unexpected behavior. 
-[debug] [2025-07-06T22:43:15.362Z] [hub] writing locator at /var/folders/4c/gfcjz2cj57zc04kv_9lj2xdr0000gn/T/hub-prsskit.json
-[debug] [2025-07-06T22:43:15.364Z] [Extensions] Started Extensions emulator, this is a noop.
-[debug] [2025-07-06T22:43:15.688Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2025-07-06T22:43:15.689Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2025-07-06T22:43:15.689Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2025-07-06T22:43:15.689Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[debug] [2025-07-06T23:20:25.154Z] [hub] writing locator at /var/folders/4c/gfcjz2cj57zc04kv_9lj2xdr0000gn/T/hub-prsskit.json
+[debug] [2025-07-06T23:20:25.156Z] [Extensions] Started Extensions emulator, this is a noop.
+[debug] [2025-07-06T23:20:25.481Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-06T23:20:25.481Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-06T23:20:25.482Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-06T23:20:25.482Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
 [warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: apphosting, database, hosting, pubsub, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mapphosting, database, hosting, pubsub, dataconnect\u001b[22m"}}
-[debug] [2025-07-06T22:43:15.693Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
-[debug] [2025-07-06T22:43:15.693Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
-[debug] [2025-07-06T22:43:15.693Z] Checked if tokens are valid: true, expires at: 1751844423403
-[debug] [2025-07-06T22:43:15.693Z] Checked if tokens are valid: true, expires at: 1751844423403
-[debug] [2025-07-06T22:43:15.693Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/prsskit/adminSdkConfig [none]
-[debug] [2025-07-06T22:43:15.968Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/prsskit/adminSdkConfig 200
-[debug] [2025-07-06T22:43:15.969Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/prsskit/adminSdkConfig {"projectId":"prsskit","storageBucket":"prsskit.firebasestorage.app"}
-[debug] [2025-07-06T22:43:15.997Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2025-07-06T22:43:15.997Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
-[debug] [2025-07-06T22:43:15.997Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","/Users/lanefujikado/.cache/firebase/emulators/cloud-firestore-emulator-v1.19.8.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","prsskit","--rules","/Users/lanefujikado/Projects/prss-kit/firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false,"shell":false,"port":8080} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"/Users/lanefujikado/.cache/firebase/emulators/cloud-firestore-emulator-v1.19.8.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"prsskit\",\"--rules\",\"/Users/lanefujikado/Projects/prss-kit/firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false,\"shell\":false,\"port\":8080}"}}
+[debug] [2025-07-06T23:20:25.487Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-06T23:20:25.488Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[debug] [2025-07-06T23:20:25.489Z] Checked if tokens are valid: true, expires at: 1751847622752
+[debug] [2025-07-06T23:20:25.489Z] Checked if tokens are valid: true, expires at: 1751847622752
+[debug] [2025-07-06T23:20:25.489Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/prsskit/adminSdkConfig [none]
+[debug] [2025-07-06T23:20:25.842Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/prsskit/adminSdkConfig 200
+[debug] [2025-07-06T23:20:25.842Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/prsskit/adminSdkConfig {"projectId":"prsskit","storageBucket":"prsskit.firebasestorage.app"}
+[debug] [2025-07-06T23:20:25.858Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2025-07-06T23:20:25.858Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2025-07-06T23:20:25.858Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","/Users/lanefujikado/.cache/firebase/emulators/cloud-firestore-emulator-v1.19.8.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","prsskit","--rules","/Users/lanefujikado/Projects/prss-kit/firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false,"shell":false,"port":8080} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"/Users/lanefujikado/.cache/firebase/emulators/cloud-firestore-emulator-v1.19.8.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"prsskit\",\"--rules\",\"/Users/lanefujikado/Projects/prss-kit/firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false,\"shell\":false,\"port\":8080}"}}
 [info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
-[debug] [2025-07-06T22:43:16.566Z] Jul 06, 2025 5:43:16 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+[debug] [2025-07-06T23:20:26.427Z] Jul 06, 2025 6:20:26 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
 INFO: Started WebSocket server on ws://127.0.0.1:9150
- {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 06, 2025 5:43:16 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\nINFO: Started WebSocket server on ws://127.0.0.1:9150\n"}}
-[debug] [2025-07-06T22:43:16.578Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
-[debug] [2025-07-06T22:43:16.578Z] 127.0.0.1:8080
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 06, 2025 6:20:26 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\nINFO: Started WebSocket server on ws://127.0.0.1:9150\n"}}
+[debug] [2025-07-06T23:20:26.439Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
+[debug] [2025-07-06T23:20:26.439Z] 127.0.0.1:8080
 If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
 
    export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
@@ -63,12 +68,12 @@ Dev App Server is now running.
 
  {"metadata":{"emulator":{"name":"firestore"},"message":"127.0.0.1:8080\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nIf you are running a Firestore in Datastore Mode project, run:\n\n   export DATASTORE_EMULATOR_HOST=127.0.0.1:8080\n\nNote: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.\nDev App Server is now running.\n\n"}}
 [info] ✔  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
-[debug] [2025-07-06T22:43:19.693Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"storage"},"message":"Ignoring unsupported arg: port"}}
-[debug] [2025-07-06T22:43:20.058Z] Temp file directory for storage emulator: /var/folders/4c/gfcjz2cj57zc04kv_9lj2xdr0000gn/T/firebase/storage/blobs {"metadata":{"emulator":{"name":"storage"},"message":"Temp file directory for storage emulator: /var/folders/4c/gfcjz2cj57zc04kv_9lj2xdr0000gn/T/firebase/storage/blobs"}}
-[debug] [2025-07-06T22:43:20.061Z] [Extensions] Connecting Extensions emulator, this is a noop.
+[debug] [2025-07-06T23:20:29.572Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"storage"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2025-07-06T23:20:29.933Z] Temp file directory for storage emulator: /var/folders/4c/gfcjz2cj57zc04kv_9lj2xdr0000gn/T/firebase/storage/blobs {"metadata":{"emulator":{"name":"storage"},"message":"Temp file directory for storage emulator: /var/folders/4c/gfcjz2cj57zc04kv_9lj2xdr0000gn/T/firebase/storage/blobs"}}
+[debug] [2025-07-06T23:20:29.936Z] [Extensions] Connecting Extensions emulator, this is a noop.
 [info] i  functions: Watching "/Users/lanefujikado/Projects/prss-kit/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/lanefujikado/Projects/prss-kit/functions\" for Cloud Functions..."}}
-[debug] [2025-07-06T22:43:20.064Z] Validating nodejs source
-[debug] [2025-07-06T22:43:20.501Z] > [functions] package.json contents: {
+[debug] [2025-07-06T23:20:29.939Z] Validating nodejs source
+[debug] [2025-07-06T23:20:30.602Z] > [functions] package.json contents: {
   "name": "functions",
   "scripts": {
     "build": "tsc",
@@ -93,18 +98,18 @@ Dev App Server is now running.
   },
   "private": true
 }
-[debug] [2025-07-06T22:43:20.501Z] Building nodejs source
-[debug] [2025-07-06T22:43:20.501Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[debug] [2025-07-06T23:20:30.602Z] Building nodejs source
+[debug] [2025-07-06T23:20:30.603Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
 [info] ✔  functions: Using node@18 from host. 
-[debug] [2025-07-06T22:43:20.504Z] Could not find functions.yaml. Must use http discovery
-[debug] [2025-07-06T22:43:20.509Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
-[info] Serving at port 8438
+[debug] [2025-07-06T23:20:30.605Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-06T23:20:30.609Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8093
 
-[debug] [2025-07-06T22:43:20.609Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
-[debug] [2025-07-06T22:43:20.617Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
-[debug] [2025-07-06T22:43:20.617Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[debug] [2025-07-06T23:20:30.729Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-06T23:20:30.736Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-06T23:20:30.736Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
 [info] ✔  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
-[debug] [2025-07-06T22:43:20.619Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: connect ECONNREFUSED ::1:40001. If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[debug] [2025-07-06T23:20:30.738Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: connect ECONNREFUSED ::1:40001. If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
 [info] 
 ┌─────────────────────────────────────────────────────────────┐
 │ ✔  All emulators ready! It is now safe to connect your app. │
@@ -131,38 +136,6 @@ Dev App Server is now running.
 └─────────────────────────┴───────────────┴─────────────────────┘
 Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
  
-[debug] [2025-07-06T22:43:46.267Z] Jul 06, 2025 5:43:46 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+[debug] [2025-07-06T23:20:53.556Z] Jul 06, 2025 6:20:53 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
 INFO: Connected to new websocket client
- {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 06, 2025 5:43:46 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
-[debug] [2025-07-06T22:43:46.286Z] Jul 06, 2025 5:43:46 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
-INFO: Connected to new websocket client
- {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 06, 2025 5:43:46 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
-[debug] [2025-07-06T22:43:46.302Z] Jul 06, 2025 5:43:46 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
-INFO: Websocket client disconnected
- {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 06, 2025 5:43:46 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
-[debug] [2025-07-06T22:44:00.152Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/prsskit/trigger_multicast [none]
-[debug] [2025-07-06T22:44:00.152Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/prsskit/trigger_multicast {"eventId":"a0f3e8d9-da4b-4c6c-a659-025066133e66","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/prsskit","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2025-07-06T22:44:00.151Z","data":{"uid":"fl8ahXwLUCe6XqEoT54z8kuTHokl","email":"l@g.com","emailVerified":false,"displayName":"","photoURL":"","metadata":{"creationTime":"2025-07-06T22:44:00.146Z","lastSignInTime":"2025-07-06T22:44:00.146Z"},"customClaims":{},"providerData":[{"providerId":"password","email":"l@g.com","federatedId":"l@g.com","rawId":"l@g.com","displayName":"","photoUrl":""}],"mfaInfo":[]}}
-[debug] [2025-07-06T22:44:00.164Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/prsskit/trigger_multicast 200
-[debug] [2025-07-06T22:44:00.164Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/prsskit/trigger_multicast {"status":"multicast_acknowledged"}
-[debug] [2025-07-06T22:50:11.256Z] Jul 06, 2025 5:50:11 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
-INFO: Connected to new websocket client
- {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 06, 2025 5:50:11 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
-[debug] [2025-07-06T22:50:11.886Z] Jul 06, 2025 5:50:11 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
-INFO: Connected to new websocket client
- {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 06, 2025 5:50:11 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
-[debug] [2025-07-06T22:50:11.991Z] Jul 06, 2025 5:50:11 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
-INFO: Connected to new websocket client
- {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 06, 2025 5:50:11 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
-[debug] [2025-07-06T22:50:12.173Z] Jul 06, 2025 5:50:12 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
-INFO: Connected to new websocket client
- {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 06, 2025 5:50:12 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
-[debug] [2025-07-06T22:50:16.004Z] Jul 06, 2025 5:50:15 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
-INFO: Websocket client disconnected
-Jul 06, 2025 5:50:16 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
-INFO: Websocket client disconnected
-Jul 06, 2025 5:50:16 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
-INFO: Websocket client disconnected
- {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 06, 2025 5:50:15 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\nJul 06, 2025 5:50:16 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\nJul 06, 2025 5:50:16 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
-[debug] [2025-07-06T22:50:16.004Z] Jul 06, 2025 5:50:16 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
-INFO: Websocket client disconnected
- {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 06, 2025 5:50:16 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 06, 2025 6:20:53 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
