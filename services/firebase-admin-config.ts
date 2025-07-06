@@ -2,9 +2,12 @@ import { cert, getApps, initializeApp } from 'firebase-admin/app';
 import { getAuth } from 'firebase-admin/auth';
 import { getFirestore } from 'firebase-admin/firestore';
 import { getFunctions } from 'firebase-admin/functions';
+import serviceAccount from '../prsskit-firebase-adminsdk.json';
+import { ServiceAccount } from 'firebase-admin/app';
+
 
 export const firebaseAdminConfig = {
-  credential: cert('../prsskit-firebase-adminsdk.json')
+  credential: cert(serviceAccount as ServiceAccount)
 };
 
 function getAdminApp() {
