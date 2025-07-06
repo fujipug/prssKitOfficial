@@ -144,3 +144,25 @@ INFO: Websocket client disconnected
 [debug] [2025-07-06T22:44:00.152Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/prsskit/trigger_multicast {"eventId":"a0f3e8d9-da4b-4c6c-a659-025066133e66","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/prsskit","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2025-07-06T22:44:00.151Z","data":{"uid":"fl8ahXwLUCe6XqEoT54z8kuTHokl","email":"l@g.com","emailVerified":false,"displayName":"","photoURL":"","metadata":{"creationTime":"2025-07-06T22:44:00.146Z","lastSignInTime":"2025-07-06T22:44:00.146Z"},"customClaims":{},"providerData":[{"providerId":"password","email":"l@g.com","federatedId":"l@g.com","rawId":"l@g.com","displayName":"","photoUrl":""}],"mfaInfo":[]}}
 [debug] [2025-07-06T22:44:00.164Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/prsskit/trigger_multicast 200
 [debug] [2025-07-06T22:44:00.164Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/prsskit/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2025-07-06T22:50:11.256Z] Jul 06, 2025 5:50:11 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 06, 2025 5:50:11 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2025-07-06T22:50:11.886Z] Jul 06, 2025 5:50:11 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 06, 2025 5:50:11 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2025-07-06T22:50:11.991Z] Jul 06, 2025 5:50:11 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 06, 2025 5:50:11 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2025-07-06T22:50:12.173Z] Jul 06, 2025 5:50:12 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 06, 2025 5:50:12 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2025-07-06T22:50:16.004Z] Jul 06, 2025 5:50:15 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+Jul 06, 2025 5:50:16 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+Jul 06, 2025 5:50:16 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 06, 2025 5:50:15 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\nJul 06, 2025 5:50:16 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\nJul 06, 2025 5:50:16 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2025-07-06T22:50:16.004Z] Jul 06, 2025 5:50:16 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 06, 2025 5:50:16 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
