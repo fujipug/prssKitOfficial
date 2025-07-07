@@ -15,7 +15,6 @@ export const createSessionCookie = onCall({ cors }, async (request: CallableRequ
       throw new Error("Failed to create session cookie");
     }
 
-    console.log("Session cookie created successfully", sessionCookie);
     return { success: true, sessionCookie };
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
