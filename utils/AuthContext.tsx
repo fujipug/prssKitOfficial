@@ -81,20 +81,17 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
       throw new Error('Sign in failed');
     }
 
-    // await httpsCallable(clientFunctions, "verifySessionCookie")({
-    //   sessionCookie: await user.getIdToken(),
-    // }).then((result) => {
-    //   console.log("Session cookie verified:", result.data);
-    // }).catch((error) => {
-    //   console.error("Error verifying session cookie:", error);
-    //   throw new Error('Session cookie verification failed');
-    // });
-
-    user.getIdToken().then(async idToken => {
-      await httpsCallable(clientFunctions, "createSessionCookie")({
-        sessionCookie: idToken
+    await user.getIdToken().then(async idToken => {
+      type CreateSessionCookieRequest = { idToken: string };
+      type CreateSessionCookieResponse = { sessionCookie: string };
+      await httpsCallable<CreateSessionCookieRequest, CreateSessionCookieResponse>(clientFunctions, "createSessionCookie")({
+        idToken: idToken,
+      }).then((result) => {
+        document.cookie = `session=${(result.data as CreateSessionCookieResponse).sessionCookie}`;
+      }).catch((error) => {
+        console.error("Error creating session cookie:", error);
+        throw new Error('Session cookie creation failed');
       });
-      // return postIdTokenToSessionLogin('/sessionLogin', idToken);
     });
 
     return user;

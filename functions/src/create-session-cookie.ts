@@ -2,34 +2,14 @@ import { onCall } from "firebase-functions/v2/https";
 import { cors } from "./main";
 import { adminAuth } from "./main";
 
-// export const createSessionCookie = onCall({ cors }, async (request: CallableRequest) => {
-//   const uid = request.auth?.uid;
-//   if (!uid) {
-//     throw new Error("No user ID provided");
-//   }
-
-//   try {
-//     const sessionCookie = await adminAuth.createCustomToken(uid);
-
-//     if (!sessionCookie) {
-//       throw new Error("Failed to create custom token");
-//     }
-
-//     return { success: true, sessionCookie };
-//   } catch (error) {
-//     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-//     throw new Error(errorMessage);
-//   }
-// });
-
 export const createSessionCookie = onCall({ cors }, async (req) => {
   // Get the ID token passed and the CSRF token.
-  const idToken = req.data.idToken.toString();
-  const csrfToken = req.data.csrfToken.toString();
+  const idToken = req.data.idToken;
+  // const csrfToken = req.data.csrfToken.toString();
   // Guard against CSRF attacks.
-  if (csrfToken !== req.data.csrfToken) {
-    throw new Error('UNAUTHORIZED REQUEST!');
-  }
+  // if (csrfToken !== req.data.csrfToken) {
+  //   throw new Error('UNAUTHORIZED REQUEST!');
+  // }
   // Set session expiration to 5 days.
   const expiresIn = 60 * 60 * 24 * 5 * 1000;
   // Create the session cookie. This will also verify the ID token in the process.
