@@ -2,9 +2,8 @@ import { serverAuth } from '@/services/firebase-admin-config';
 import { cookies } from 'next/headers';
 
 export async function POST(request: Request) {
+  console.log("Setting session cookie...", request);
   const { idToken } = await request.json();
-
-  console.log("Server auth:", serverAuth);
 
   if (!idToken) {
     throw new Error("No ID token provided");
@@ -24,6 +23,15 @@ export async function POST(request: Request) {
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'lax',
       path: '/',
+    });
+
+    (await cookies()).set('session', sessionCookie, {
+      maxAge: expiresIn,
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'lax',
+      path: '/',
+      domain: process.env.NODE_ENV === 'production' ? '.prss-kit-official.vercel.app' : '.localhost',
     });
 
     return Response.json({ success: true });

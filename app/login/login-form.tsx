@@ -25,21 +25,26 @@ export default function LoginForm({ messages, ...formProps }: { messages: LoginF
     : 'https://prss-kit-official.vercel.app';
 
   const createSessionCookie = async (idToken: string) => {
-    const response = await fetch(`${baseUrl}/api/set-session-cookie`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ idToken }),
-      credentials: "include", // Required for cookies
-    });
+    try {
+      const response = await fetch(`${baseUrl}/api/set-session-cookie`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ idToken }),
+        credentials: "include", // Important for cookies
+      });
 
-    if (!response.ok) {
-      throw new Error("Failed to create session cookie");
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Failed to create session cookie");
+      }
+
+      return await response.json();
+    } catch (error) {
+      console.error("Cookie setting error:", error);
+      throw error;
     }
-
-    const data = await response.json();
-    return data;
   };
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -54,20 +59,6 @@ export default function LoginForm({ messages, ...formProps }: { messages: LoginF
       if (typeof result === "string") {
         setAlert(true);
       } else {
-        // httpsCallable(clientFunctions, "setSessionCookie")({ idToken: await result.getIdToken() }).then((response) => {
-        //   if (response) {
-        //     // Set the cookie on the client side
-        //     // document.cookie = `session=${response.data}; ${serializeOptions(response.data.options)}`;
-        //     console.log("Session cookie set successfully:", response.data);
-        //   } else {
-        //     // Handle the case where the session cookie was not set
-        //     setAlert(true);
-        //   }
-        // }).catch((error) => {
-        //   console.error("Error setting session cookie:", error);
-        //   setAlert(true);
-        // });
-
         createSessionCookie(await result.getIdToken());
         setAlert(false);
       }
