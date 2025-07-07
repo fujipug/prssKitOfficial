@@ -1,6 +1,6 @@
 'use client';
 import SocialAuthButtonGrid from "@/components/social-auth-button-grid";
-import { clientFunctions, httpsCallable } from "@/services/firebase-config";
+// import { clientFunctions, httpsCallable } from "@/services/firebase-config";
 import { useAuth } from "@/utils/AuthContext";
 import { useState } from "react";
 
@@ -33,9 +33,9 @@ export default function LoginForm({ messages, ...formProps }: { messages: LoginF
       if (typeof result === "string") {
         setAlert(true);
       } else {
-        httpsCallable(clientFunctions, "createSessionCookie")({
-          idToken: await result.getIdToken(),
-        });
+        // httpsCallable(clientFunctions, "createSessionCookie")({
+        //   idToken: await result.getIdToken(),
+        // });
         setAlert(false);
       }
     });

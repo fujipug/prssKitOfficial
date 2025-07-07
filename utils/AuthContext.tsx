@@ -5,7 +5,7 @@ import { firebaseRegister, firebaseSignIn, firebaseSignOut, subscribeToCurrentUs
 import { onAuthStateChanged, User } from "firebase/auth";
 import { PreRegister, Artist } from "@/app/types";
 // import { deleteSessionCookie } from "@/actions/auth";
-import { clientAuth } from "@/services/firebase-config";
+import { clientAuth, clientFunctions, httpsCallable } from "@/services/firebase-config";
 
 const AuthContext = createContext<{
   isSignedIn: boolean;
@@ -80,6 +80,22 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     if (!user) {
       throw new Error('Sign in failed');
     }
+
+    // await httpsCallable(clientFunctions, "verifySessionCookie")({
+    //   sessionCookie: await user.getIdToken(),
+    // }).then((result) => {
+    //   console.log("Session cookie verified:", result.data);
+    // }).catch((error) => {
+    //   console.error("Error verifying session cookie:", error);
+    //   throw new Error('Session cookie verification failed');
+    // });
+
+    user.getIdToken().then(async idToken => {
+      await httpsCallable(clientFunctions, "createSessionCookie")({
+        sessionCookie: idToken
+      });
+      // return postIdTokenToSessionLogin('/sessionLogin', idToken);
+    });
 
     return user;
   };

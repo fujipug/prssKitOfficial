@@ -1,7 +1,10 @@
 import { initializeApp } from "firebase-admin/app"
 import { getAuth } from "firebase-admin/auth";
 
-const adminApp = initializeApp();
+const adminApp = initializeApp({
+  serviceAccountId: process.env.PRSS_KIT_ADMIN_CLIENT_EMAIL,
+});
+
 const adminAuth = getAuth(adminApp);
 const cors = [
   'https://www.prss-kit-official.vercel.app',

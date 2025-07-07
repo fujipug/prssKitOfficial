@@ -1,0 +1,1194 @@
+[debug] [2025-07-07T06:59:20.960Z] ----------------------------------------------------------------------
+[debug] [2025-07-07T06:59:20.961Z] Command:       /Users/lanefujikado/.nvm/versions/node/v18.20.8/bin/node /Users/lanefujikado/.nvm/versions/node/v18.20.8/bin/firebase emulators:start
+[debug] [2025-07-07T06:59:20.961Z] CLI Version:   13.35.1
+[debug] [2025-07-07T06:59:20.961Z] Platform:      darwin
+[debug] [2025-07-07T06:59:20.961Z] Node Version:  v18.20.8
+[debug] [2025-07-07T06:59:20.965Z] Time:          Mon Jul 07 2025 00:59:20 GMT-0600 (Central Standard Time)
+[debug] [2025-07-07T06:59:20.965Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-07-07T06:59:21.067Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-07-07T06:59:21.067Z] > authorizing via signed-in user (lane.fujikado@gmail.com)
+[debug] [2025-07-07T06:59:21.209Z] java version "19.0.1" 2022-10-18
+
+[debug] [2025-07-07T06:59:21.209Z] Java(TM) SE Runtime Environment (build 19.0.1+10-21)
+Java HotSpot(TM) 64-Bit Server VM (build 19.0.1+10-21, mixed mode, sharing)
+
+[debug] [2025-07-07T06:59:21.213Z] Parsed Java major version: 19
+[info] i  emulators: Starting emulators: auth, functions, firestore, storage, extensions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, storage, extensions"}}
+[debug] [2025-07-07T06:59:21.214Z] Checked if tokens are valid: false, expires at: 1751868719941
+[debug] [2025-07-07T06:59:21.215Z] Checked if tokens are valid: false, expires at: 1751868719941
+[debug] [2025-07-07T06:59:21.215Z] > refreshing access token with scopes: []
+[debug] [2025-07-07T06:59:21.216Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-07-07T06:59:21.216Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-07-07T06:59:21.441Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-07-07T06:59:21.441Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-07-07T06:59:21.459Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/prsskit [none]
+[debug] [2025-07-07T06:59:21.920Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/prsskit 200
+[debug] [2025-07-07T06:59:21.920Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/prsskit {"projectNumber":"994908429115","projectId":"prsskit","lifecycleState":"ACTIVE","name":"prsskit","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-04-18T09:29:42.946971Z"}
+[debug] [2025-07-07T06:59:22.752Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-07T06:59:22.752Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-07T06:59:22.752Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-07T06:59:22.752Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-07T06:59:22.752Z] [storage] Storage Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-07T06:59:22.752Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[warn] ⚠  emulators: It seems that you are running multiple instances of the emulator suite for project prsskit. This may result in unexpected behavior. 
+[debug] [2025-07-07T06:59:22.754Z] [hub] writing locator at /var/folders/4c/gfcjz2cj57zc04kv_9lj2xdr0000gn/T/hub-prsskit.json
+[debug] [2025-07-07T06:59:22.756Z] [Extensions] Started Extensions emulator, this is a noop.
+[debug] [2025-07-07T06:59:23.097Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-07T06:59:23.097Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-07T06:59:23.097Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-07-07T06:59:23.097Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: apphosting, database, hosting, pubsub, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mapphosting, database, hosting, pubsub, dataconnect\u001b[22m"}}
+[debug] [2025-07-07T06:59:23.101Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-07T06:59:23.102Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[debug] [2025-07-07T06:59:23.102Z] Checked if tokens are valid: true, expires at: 1751875160441
+[debug] [2025-07-07T06:59:23.102Z] Checked if tokens are valid: true, expires at: 1751875160441
+[debug] [2025-07-07T06:59:23.102Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/prsskit/adminSdkConfig [none]
+[debug] [2025-07-07T06:59:23.469Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/prsskit/adminSdkConfig 200
+[debug] [2025-07-07T06:59:23.470Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/prsskit/adminSdkConfig {"projectId":"prsskit","storageBucket":"prsskit.firebasestorage.app"}
+[debug] [2025-07-07T06:59:23.491Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2025-07-07T06:59:23.491Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2025-07-07T06:59:23.491Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","/Users/lanefujikado/.cache/firebase/emulators/cloud-firestore-emulator-v1.19.8.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","prsskit","--rules","/Users/lanefujikado/Projects/prss-kit/firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false,"shell":false,"port":8080} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"/Users/lanefujikado/.cache/firebase/emulators/cloud-firestore-emulator-v1.19.8.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"prsskit\",\"--rules\",\"/Users/lanefujikado/Projects/prss-kit/firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false,\"shell\":false,\"port\":8080}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[debug] [2025-07-07T06:59:24.155Z] Jul 07, 2025 1:59:24 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+INFO: Started WebSocket server on ws://127.0.0.1:9150
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 1:59:24 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\nINFO: Started WebSocket server on ws://127.0.0.1:9150\n"}}
+[debug] [2025-07-07T06:59:24.168Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
+[debug] [2025-07-07T06:59:24.168Z] 127.0.0.1:8080
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
+
+If you are running a Firestore in Datastore Mode project, run:
+
+   export DATASTORE_EMULATOR_HOST=127.0.0.1:8080
+
+Note: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.
+Dev App Server is now running.
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"127.0.0.1:8080\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nIf you are running a Firestore in Datastore Mode project, run:\n\n   export DATASTORE_EMULATOR_HOST=127.0.0.1:8080\n\nNote: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.\nDev App Server is now running.\n\n"}}
+[info] ✔  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
+[debug] [2025-07-07T06:59:27.911Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"storage"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2025-07-07T06:59:28.312Z] Temp file directory for storage emulator: /var/folders/4c/gfcjz2cj57zc04kv_9lj2xdr0000gn/T/firebase/storage/blobs {"metadata":{"emulator":{"name":"storage"},"message":"Temp file directory for storage emulator: /var/folders/4c/gfcjz2cj57zc04kv_9lj2xdr0000gn/T/firebase/storage/blobs"}}
+[debug] [2025-07-07T06:59:28.315Z] [Extensions] Connecting Extensions emulator, this is a noop.
+[info] i  functions: Watching "/Users/lanefujikado/Projects/prss-kit/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/lanefujikado/Projects/prss-kit/functions\" for Cloud Functions..."}}
+[debug] [2025-07-07T06:59:28.319Z] Validating nodejs source
+[debug] [2025-07-07T06:59:29.050Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-07T06:59:29.050Z] Building nodejs source
+[debug] [2025-07-07T06:59:29.050Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-07T06:59:29.053Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-07T06:59:29.058Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8802
+
+[debug] [2025-07-07T06:59:29.299Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"},"verifySessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"verifySessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-07T06:59:29.311Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-07T06:59:29.311Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie, verifySessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie, verifySessionCookie."}}
+[info] ✔  functions[us-central1-createSessionCookie]: http function initialized (http://127.0.0.1:5001/prsskit/us-central1/createSessionCookie). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/prsskit/us-central1/createSessionCookie)."}}
+[info] ✔  functions[us-central1-verifySessionCookie]: http function initialized (http://127.0.0.1:5001/prsskit/us-central1/verifySessionCookie). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/prsskit/us-central1/verifySessionCookie)."}}
+[debug] [2025-07-07T06:59:29.315Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: connect ECONNREFUSED ::1:40001. If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬──────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI              │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Authentication │ 127.0.0.1:9099 │ http://127.0.0.1:4000/auth       │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Functions      │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions  │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Firestore      │ 127.0.0.1:8080 │ http://127.0.0.1:4000/firestore  │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Storage        │ 127.0.0.1:9199 │ http://127.0.0.1:4000/storage    │
+├────────────────┼────────────────┼──────────────────────────────────┤
+│ Extensions     │ 127.0.0.1:5001 │ http://127.0.0.1:4000/extensions │
+└────────────────┴────────────────┴──────────────────────────────────┘
+  Emulator Hub host: 127.0.0.1 port: 4400
+  Other reserved ports: 4500, 9150
+┌─────────────────────────┬───────────────┬─────────────────────┐
+│ Extension Instance Name │ Extension Ref │ View in Emulator UI │
+└─────────────────────────┴───────────────┴─────────────────────┘
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2025-07-07T06:59:47.838Z] Jul 07, 2025 1:59:47 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 1:59:47 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2025-07-07T06:59:50.829Z] File /Users/lanefujikado/Projects/prss-kit/functions/lib/create-session-cookie.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/lib/create-session-cookie.js changed, reloading triggers"}}
+[debug] [2025-07-07T06:59:50.830Z] File /Users/lanefujikado/Projects/prss-kit/functions/lib/verify-session-cookie.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/lib/verify-session-cookie.js changed, reloading triggers"}}
+[debug] [2025-07-07T06:59:50.830Z] File /Users/lanefujikado/Projects/prss-kit/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2025-07-07T06:59:50.830Z] File /Users/lanefujikado/Projects/prss-kit/functions/lib/main.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/lib/main.js.map changed, reloading triggers"}}
+[debug] [2025-07-07T06:59:50.830Z] File /Users/lanefujikado/Projects/prss-kit/functions/lib/create-session-cookie.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/lib/create-session-cookie.js.map changed, reloading triggers"}}
+[debug] [2025-07-07T06:59:50.830Z] File /Users/lanefujikado/Projects/prss-kit/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2025-07-07T06:59:50.830Z] File /Users/lanefujikado/Projects/prss-kit/functions/lib/main.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/lib/main.js changed, reloading triggers"}}
+[debug] [2025-07-07T06:59:50.830Z] File /Users/lanefujikado/Projects/prss-kit/functions/lib/verify-session-cookie.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/lib/verify-session-cookie.js.map changed, reloading triggers"}}
+[debug] [2025-07-07T06:59:51.831Z] Validating nodejs source
+[debug] [2025-07-07T06:59:52.369Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-07T06:59:52.369Z] Building nodejs source
+[debug] [2025-07-07T06:59:52.370Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-07T06:59:52.371Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-07T06:59:52.372Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8220
+
+[debug] [2025-07-07T06:59:52.579Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"},"verifySessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"verifySessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-07T06:59:52.590Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-07T06:59:52.590Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie, verifySessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie, verifySessionCookie."}}
+[debug] [2025-07-07T07:01:07.782Z] Jul 07, 2025 2:01:07 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+INFO: Websocket client disconnected
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:01:07 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
+[debug] [2025-07-07T07:01:07.798Z] Jul 07, 2025 2:01:07 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:01:07 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
+[debug] [2025-07-07T07:01:19.013Z] >>> [apiv2][query] POST http://127.0.0.1:5001/functions/projects/prsskit/trigger_multicast [none]
+[debug] [2025-07-07T07:01:19.013Z] >>> [apiv2][body] POST http://127.0.0.1:5001/functions/projects/prsskit/trigger_multicast {"eventId":"919bc04f-20ea-4642-8d11-9351481ed5c2","eventType":"providers/firebase.auth/eventTypes/user.create","resource":{"name":"projects/prsskit","service":"firebaseauth.googleapis.com"},"params":{},"timestamp":"2025-07-07T07:01:19.011Z","data":{"uid":"uObmO5I2arODzLprvvtTsg5iZQSZ","email":"l@g.com","emailVerified":false,"displayName":"","photoURL":"","metadata":{"creationTime":"2025-07-07T07:01:19.009Z","lastSignInTime":"2025-07-07T07:01:19.009Z"},"customClaims":{},"providerData":[{"providerId":"password","email":"l@g.com","federatedId":"l@g.com","rawId":"l@g.com","displayName":"","photoUrl":""}],"mfaInfo":[]}}
+[debug] [2025-07-07T07:01:19.029Z] <<< [apiv2][status] POST http://127.0.0.1:5001/functions/projects/prsskit/trigger_multicast 200
+[debug] [2025-07-07T07:01:19.029Z] <<< [apiv2][body] POST http://127.0.0.1:5001/functions/projects/prsskit/trigger_multicast {"status":"multicast_acknowledged"}
+[debug] [2025-07-07T07:01:29.463Z] [work-queue] {"queuedWork":["/prsskit/us-central1/createSessionCookie-2025-07-07T07:01:29.463Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-07T07:01:29.463Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/prsskit/us-central1/createSessionCookie-2025-07-07T07:01:29.463Z"],"workRunningCount":1}
+[debug] [2025-07-07T07:01:29.464Z] Accepted request OPTIONS /prsskit/us-central1/createSessionCookie --> us-central1-createSessionCookie
+[debug] [2025-07-07T07:01:29.465Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-07T07:01:29.466Z] [functions] Got req.url=/prsskit/us-central1/createSessionCookie, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/prsskit/us-central1/createSessionCookie, mapping to path=/"}}
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-07T07:01:29.470Z] [worker-pool] addWorker(us-central1-createSessionCookie) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-createSessionCookie)"}}
+[debug] [2025-07-07T07:01:29.470Z] [worker-pool] Adding worker with key us-central1-createSessionCookie, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-createSessionCookie, total=1"}}
+[debug] [2025-07-07T07:01:29.479Z] Jul 07, 2025 2:01:29 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:01:29 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:01:29.928Z] Jul 07, 2025 2:01:29 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:01:29 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:01:30.133Z] [runtime-status] [99976] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.7.0","resolution":"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"[runtime-status] [99976] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2025-07-07T07:01:30.133Z] [runtime-status] [99976] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.3.2","resolution":"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"[runtime-status] [99976] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.3.2\",\"resolution\":\"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2025-07-07T07:01:30.133Z] [runtime-status] [99976] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"[runtime-status] [99976] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2025-07-07T07:01:30.133Z] [runtime-status] [99976] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.3.2","resolution":"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"[runtime-status] [99976] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.3.2\",\"resolution\":\"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2025-07-07T07:01:30.273Z] [runtime-status] [99976] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"[runtime-status] [99976] Checked functions.config() {\"config\":{}}"}}
+[debug] [2025-07-07T07:01:30.273Z] [runtime-status] [99976] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"6.3.2","resolution":"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"[runtime-status] [99976] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"6.3.2\",\"resolution\":\"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js\"}}"}}
+[debug] [2025-07-07T07:01:30.273Z] [runtime-status] [99976] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.3.2","resolution":"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"[runtime-status] [99976] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.3.2\",\"resolution\":\"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2025-07-07T07:01:30.275Z] [runtime-status] [99976] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.7.0","resolution":"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"[runtime-status] [99976] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2025-07-07T07:01:30.276Z] [runtime-status] [99976] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.3.2","resolution":"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"[runtime-status] [99976] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.3.2\",\"resolution\":\"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2025-07-07T07:01:30.276Z] [runtime-status] [99976] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"12.7.0","resolution":"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"[runtime-status] [99976] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2025-07-07T07:01:30.282Z] [runtime-status] [99976] Functions runtime initialized. {"cwd":"/Users/lanefujikado/Projects/prss-kit/functions","node_version":"18.20.8"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"[runtime-status] [99976] Functions runtime initialized. {\"cwd\":\"/Users/lanefujikado/Projects/prss-kit/functions\",\"node_version\":\"18.20.8\"}"}}
+[debug] [2025-07-07T07:01:30.282Z] [runtime-status] [99976] Listening to port: /var/folders/4c/gfcjz2cj57zc04kv_9lj2xdr0000gn/T/fire_emu_a5909e6211d232af.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"[runtime-status] [99976] Listening to port: /var/folders/4c/gfcjz2cj57zc04kv_9lj2xdr0000gn/T/fire_emu_a5909e6211d232af.sock"}}
+[debug] [2025-07-07T07:01:30.387Z] [worker-us-central1-createSessionCookie-9cc771c9-3273-4f97-acb0-9b1309521957]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"[worker-us-central1-createSessionCookie-9cc771c9-3273-4f97-acb0-9b1309521957]: IDLE"}}
+[debug] [2025-07-07T07:01:30.388Z] [worker-pool] submitRequest(triggerId=us-central1-createSessionCookie) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-createSessionCookie)"}}
+[info] i  functions: Beginning execution of "us-central1-createSessionCookie" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"Beginning execution of \"us-central1-createSessionCookie\""}}
+[debug] [2025-07-07T07:01:30.388Z] [worker-us-central1-createSessionCookie-9cc771c9-3273-4f97-acb0-9b1309521957]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"[worker-us-central1-createSessionCookie-9cc771c9-3273-4f97-acb0-9b1309521957]: BUSY"}}
+[debug] [2025-07-07T07:01:30.390Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-createSessionCookie" in 2.632167ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"Finished \"us-central1-createSessionCookie\" in 2.632167ms"}}
+[debug] [2025-07-07T07:01:30.391Z] [worker-us-central1-createSessionCookie-9cc771c9-3273-4f97-acb0-9b1309521957]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"[worker-us-central1-createSessionCookie-9cc771c9-3273-4f97-acb0-9b1309521957]: IDLE"}}
+[debug] [2025-07-07T07:01:30.391Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-07T07:01:30.391Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-07T07:01:30.391Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-07T07:01:30.391Z] [work-queue] {"queuedWork":["/prsskit/us-central1/createSessionCookie-2025-07-07T07:01:30.391Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-07T07:01:30.391Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/prsskit/us-central1/createSessionCookie-2025-07-07T07:01:30.391Z"],"workRunningCount":1}
+[debug] [2025-07-07T07:01:30.391Z] Accepted request POST /prsskit/us-central1/createSessionCookie --> us-central1-createSessionCookie
+[debug] [2025-07-07T07:01:30.392Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-07T07:01:30.392Z] [functions] Got req.url=/prsskit/us-central1/createSessionCookie, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/prsskit/us-central1/createSessionCookie, mapping to path=/"}}
+[debug] [2025-07-07T07:01:30.392Z] [worker-pool] submitRequest(triggerId=us-central1-createSessionCookie) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-createSessionCookie)"}}
+[info] i  functions: Beginning execution of "us-central1-createSessionCookie" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"Beginning execution of \"us-central1-createSessionCookie\""}}
+[debug] [2025-07-07T07:01:30.392Z] [worker-us-central1-createSessionCookie-9cc771c9-3273-4f97-acb0-9b1309521957]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"[worker-us-central1-createSessionCookie-9cc771c9-3273-4f97-acb0-9b1309521957]: BUSY"}}
+[info] >  {"verifications":{"app":"MISSING","auth":"VALID"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"} {"user":{"verifications":{"app":"MISSING","auth":"VALID"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"verifications\":{\"app\":\"MISSING\",\"auth\":\"VALID\"},\"logging.googleapis.com/labels\":{\"firebase-log-type\":\"callable-request-verification\"},\"severity\":\"DEBUG\",\"message\":\"Callable request verification passed\"}"}}
+[debug] [2025-07-07T07:01:30.402Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-createSessionCookie" in 10.336875ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"Finished \"us-central1-createSessionCookie\" in 10.336875ms"}}
+[debug] [2025-07-07T07:01:30.402Z] [worker-us-central1-createSessionCookie-9cc771c9-3273-4f97-acb0-9b1309521957]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"[worker-us-central1-createSessionCookie-9cc771c9-3273-4f97-acb0-9b1309521957]: IDLE"}}
+[debug] [2025-07-07T07:01:30.402Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-07T07:01:30.402Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-07T07:01:30.403Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-07T07:02:45.834Z] Jul 07, 2025 2:02:45 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:02:45 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:03:31.844Z] Jul 07, 2025 2:03:31 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:03:31 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:04:17.848Z] Jul 07, 2025 2:04:17 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:04:17 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:05:17.888Z] Jul 07, 2025 2:05:17 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:05:17 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:06:17.931Z] Jul 07, 2025 2:06:17 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:06:17 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:07:17.966Z] Jul 07, 2025 2:07:17 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:07:17 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:08:18.008Z] Jul 07, 2025 2:08:18 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:08:18 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:09:11.311Z] Jul 07, 2025 2:09:11 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:09:11 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:09:11.343Z] Jul 07, 2025 2:09:11 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:09:11 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:09:41.096Z] Jul 07, 2025 2:09:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:09:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:09:41.116Z] Jul 07, 2025 2:09:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:09:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:10:41.147Z] Jul 07, 2025 2:10:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:10:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:11:41.194Z] Jul 07, 2025 2:11:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:11:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:12:41.234Z] Jul 07, 2025 2:12:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:12:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:13:41.279Z] Jul 07, 2025 2:13:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:13:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:14:41.310Z] Jul 07, 2025 2:14:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:14:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:15:23.535Z] Jul 07, 2025 2:15:23 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:15:23 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:15:23.556Z] Jul 07, 2025 2:15:23 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:15:23 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:16:23.573Z] Jul 07, 2025 2:16:23 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:16:23 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:17:06.351Z] Jul 07, 2025 2:17:06 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:17:06 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:17:06.366Z] Jul 07, 2025 2:17:06 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:17:06 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:17:19.639Z] Jul 07, 2025 2:17:19 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:17:19 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:17:19.667Z] Jul 07, 2025 2:17:19 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:17:19 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:18:14.214Z] Jul 07, 2025 2:18:14 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:18:14 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:18:14.215Z] [work-queue] {"queuedWork":["/prsskit/us-central1/verifySessionCookie-2025-07-07T07:18:14.215Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-07T07:18:14.215Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/prsskit/us-central1/verifySessionCookie-2025-07-07T07:18:14.215Z"],"workRunningCount":1}
+[debug] [2025-07-07T07:18:14.215Z] Accepted request OPTIONS /prsskit/us-central1/verifySessionCookie --> us-central1-verifySessionCookie
+[debug] [2025-07-07T07:18:14.217Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-07T07:18:14.218Z] [functions] Got req.url=/prsskit/us-central1/verifySessionCookie, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/prsskit/us-central1/verifySessionCookie, mapping to path=/"}}
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-07T07:18:14.236Z] [worker-pool] addWorker(us-central1-verifySessionCookie) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-verifySessionCookie)"}}
+[debug] [2025-07-07T07:18:14.236Z] [worker-pool] Adding worker with key us-central1-verifySessionCookie, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-verifySessionCookie, total=1"}}
+[debug] [2025-07-07T07:18:14.238Z] Jul 07, 2025 2:18:14 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jul 07, 2025 2:18:14 AM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
+INFO: channel closed
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:18:14 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\nJul 07, 2025 2:18:14 AM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose\nINFO: channel closed\n"}}
+[debug] [2025-07-07T07:18:14.249Z] Jul 07, 2025 2:18:14 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:18:14 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:18:14.942Z] [runtime-status] [5634] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.7.0","resolution":"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[runtime-status] [5634] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2025-07-07T07:18:14.942Z] [runtime-status] [5634] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.3.2","resolution":"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[runtime-status] [5634] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.3.2\",\"resolution\":\"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2025-07-07T07:18:14.943Z] [runtime-status] [5634] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[runtime-status] [5634] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2025-07-07T07:18:14.943Z] [runtime-status] [5634] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.3.2","resolution":"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[runtime-status] [5634] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.3.2\",\"resolution\":\"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2025-07-07T07:18:15.112Z] [runtime-status] [5634] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[runtime-status] [5634] Checked functions.config() {\"config\":{}}"}}
+[debug] [2025-07-07T07:18:15.113Z] [runtime-status] [5634] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"6.3.2","resolution":"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[runtime-status] [5634] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"6.3.2\",\"resolution\":\"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js\"}}"}}
+[debug] [2025-07-07T07:18:15.113Z] [runtime-status] [5634] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.3.2","resolution":"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[runtime-status] [5634] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.3.2\",\"resolution\":\"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2025-07-07T07:18:15.115Z] [runtime-status] [5634] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.7.0","resolution":"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[runtime-status] [5634] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2025-07-07T07:18:15.116Z] [runtime-status] [5634] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.3.2","resolution":"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[runtime-status] [5634] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.3.2\",\"resolution\":\"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2025-07-07T07:18:15.116Z] [runtime-status] [5634] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"12.7.0","resolution":"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[runtime-status] [5634] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2025-07-07T07:18:15.123Z] [runtime-status] [5634] Functions runtime initialized. {"cwd":"/Users/lanefujikado/Projects/prss-kit/functions","node_version":"18.20.8"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[runtime-status] [5634] Functions runtime initialized. {\"cwd\":\"/Users/lanefujikado/Projects/prss-kit/functions\",\"node_version\":\"18.20.8\"}"}}
+[debug] [2025-07-07T07:18:15.123Z] [runtime-status] [5634] Listening to port: /var/folders/4c/gfcjz2cj57zc04kv_9lj2xdr0000gn/T/fire_emu_30a16b9900a96815.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[runtime-status] [5634] Listening to port: /var/folders/4c/gfcjz2cj57zc04kv_9lj2xdr0000gn/T/fire_emu_30a16b9900a96815.sock"}}
+[debug] [2025-07-07T07:18:15.153Z] [worker-us-central1-verifySessionCookie-0317d0a7-0583-4e9b-a6be-ed38de9ed8af]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[worker-us-central1-verifySessionCookie-0317d0a7-0583-4e9b-a6be-ed38de9ed8af]: IDLE"}}
+[debug] [2025-07-07T07:18:15.153Z] [worker-pool] submitRequest(triggerId=us-central1-verifySessionCookie) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-verifySessionCookie)"}}
+[info] i  functions: Beginning execution of "us-central1-verifySessionCookie" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"Beginning execution of \"us-central1-verifySessionCookie\""}}
+[debug] [2025-07-07T07:18:15.154Z] [worker-us-central1-verifySessionCookie-0317d0a7-0583-4e9b-a6be-ed38de9ed8af]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[worker-us-central1-verifySessionCookie-0317d0a7-0583-4e9b-a6be-ed38de9ed8af]: BUSY"}}
+[debug] [2025-07-07T07:18:15.156Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-verifySessionCookie" in 1.987834ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"Finished \"us-central1-verifySessionCookie\" in 1.987834ms"}}
+[debug] [2025-07-07T07:18:15.156Z] [worker-us-central1-verifySessionCookie-0317d0a7-0583-4e9b-a6be-ed38de9ed8af]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[worker-us-central1-verifySessionCookie-0317d0a7-0583-4e9b-a6be-ed38de9ed8af]: IDLE"}}
+[debug] [2025-07-07T07:18:15.156Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-07T07:18:15.156Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-07T07:18:15.156Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-07T07:18:15.156Z] [work-queue] {"queuedWork":["/prsskit/us-central1/verifySessionCookie-2025-07-07T07:18:15.156Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-07T07:18:15.157Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/prsskit/us-central1/verifySessionCookie-2025-07-07T07:18:15.156Z"],"workRunningCount":1}
+[debug] [2025-07-07T07:18:15.157Z] Accepted request POST /prsskit/us-central1/verifySessionCookie --> us-central1-verifySessionCookie
+[debug] [2025-07-07T07:18:15.157Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-07T07:18:15.157Z] [functions] Got req.url=/prsskit/us-central1/verifySessionCookie, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/prsskit/us-central1/verifySessionCookie, mapping to path=/"}}
+[debug] [2025-07-07T07:18:15.157Z] [worker-pool] submitRequest(triggerId=us-central1-verifySessionCookie) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-verifySessionCookie)"}}
+[info] i  functions: Beginning execution of "us-central1-verifySessionCookie" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"Beginning execution of \"us-central1-verifySessionCookie\""}}
+[debug] [2025-07-07T07:18:15.157Z] [worker-us-central1-verifySessionCookie-0317d0a7-0583-4e9b-a6be-ed38de9ed8af]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[worker-us-central1-verifySessionCookie-0317d0a7-0583-4e9b-a6be-ed38de9ed8af]: BUSY"}}
+[info] >  {"verifications":{"app":"MISSING","auth":"VALID"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"} {"user":{"verifications":{"app":"MISSING","auth":"VALID"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"verifications\":{\"app\":\"MISSING\",\"auth\":\"VALID\"},\"logging.googleapis.com/labels\":{\"firebase-log-type\":\"callable-request-verification\"},\"severity\":\"DEBUG\",\"message\":\"Callable request verification passed\"}"}}
+[info] >  {"severity":"ERROR","message":"Unhandled error Error: Firebase session cookie has incorrect \"iss\" (issuer) claim. Expected \"https://session.firebase.google.com/prsskit\" but got \"https://securetoken.google.com/prsskit\". Make sure the session cookie comes from the same Firebase project as the service account used to authenticate this SDK. See https://firebase.google.com/docs/auth/admin/manage-cookies for details on how to retrieve a session cookie.\n    at /Users/lanefujikado/Projects/prss-kit/functions/lib/verify-session-cookie.js:17:15\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/common/providers/https.js:544:26\n    at async runFunction (/Users/lanefujikado/.nvm/versions/node/v18.20.8/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:506:9)\n    at async runHTTPS (/Users/lanefujikado/.nvm/versions/node/v18.20.8/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:531:5)\n    at async /Users/lanefujikado/.nvm/versions/node/v18.20.8/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:694:21"} {"user":{"severity":"ERROR","message":"Unhandled error Error: Firebase session cookie has incorrect \"iss\" (issuer) claim. Expected \"https://session.firebase.google.com/prsskit\" but got \"https://securetoken.google.com/prsskit\". Make sure the session cookie comes from the same Firebase project as the service account used to authenticate this SDK. See https://firebase.google.com/docs/auth/admin/manage-cookies for details on how to retrieve a session cookie.\n    at /Users/lanefujikado/Projects/prss-kit/functions/lib/verify-session-cookie.js:17:15\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/common/providers/https.js:544:26\n    at async runFunction (/Users/lanefujikado/.nvm/versions/node/v18.20.8/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:506:9)\n    at async runHTTPS (/Users/lanefujikado/.nvm/versions/node/v18.20.8/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:531:5)\n    at async /Users/lanefujikado/.nvm/versions/node/v18.20.8/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:694:21"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"severity\":\"ERROR\",\"message\":\"Unhandled error Error: Firebase session cookie has incorrect \\\"iss\\\" (issuer) claim. Expected \\\"https://session.firebase.google.com/prsskit\\\" but got \\\"https://securetoken.google.com/prsskit\\\". Make sure the session cookie comes from the same Firebase project as the service account used to authenticate this SDK. See https://firebase.google.com/docs/auth/admin/manage-cookies for details on how to retrieve a session cookie.\\n    at /Users/lanefujikado/Projects/prss-kit/functions/lib/verify-session-cookie.js:17:15\\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\\n    at async /Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/common/providers/https.js:544:26\\n    at async runFunction (/Users/lanefujikado/.nvm/versions/node/v18.20.8/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:506:9)\\n    at async runHTTPS (/Users/lanefujikado/.nvm/versions/node/v18.20.8/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:531:5)\\n    at async /Users/lanefujikado/.nvm/versions/node/v18.20.8/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:694:21\"}"}}
+[debug] [2025-07-07T07:18:15.167Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-verifySessionCookie" in 9.962375ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"Finished \"us-central1-verifySessionCookie\" in 9.962375ms"}}
+[debug] [2025-07-07T07:18:15.167Z] [worker-us-central1-verifySessionCookie-0317d0a7-0583-4e9b-a6be-ed38de9ed8af]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[worker-us-central1-verifySessionCookie-0317d0a7-0583-4e9b-a6be-ed38de9ed8af]: IDLE"}}
+[debug] [2025-07-07T07:18:15.167Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-07T07:18:15.167Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-07T07:18:15.167Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-07T07:18:53.165Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/verify-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/verify-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-07T07:18:54.168Z] Validating nodejs source
+[debug] [2025-07-07T07:18:54.833Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-07T07:18:54.834Z] Building nodejs source
+[debug] [2025-07-07T07:18:54.834Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-07T07:18:54.835Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-07T07:18:54.837Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8649
+
+[debug] [2025-07-07T07:18:55.067Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"},"verifySessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"verifySessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-07T07:18:55.076Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-07T07:18:55.076Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie, verifySessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie, verifySessionCookie."}}
+[debug] [2025-07-07T07:18:55.077Z] [worker-pool] Shutting down IDLE worker (us-central1-createSessionCookie) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-createSessionCookie)"}}
+[debug] [2025-07-07T07:18:55.077Z] [worker-us-central1-createSessionCookie-9cc771c9-3273-4f97-acb0-9b1309521957]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"[worker-us-central1-createSessionCookie-9cc771c9-3273-4f97-acb0-9b1309521957]: FINISHING"}}
+[debug] [2025-07-07T07:18:55.077Z] [worker-pool] Shutting down IDLE worker (us-central1-verifySessionCookie) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-verifySessionCookie)"}}
+[debug] [2025-07-07T07:18:55.077Z] [worker-us-central1-verifySessionCookie-0317d0a7-0583-4e9b-a6be-ed38de9ed8af]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[worker-us-central1-verifySessionCookie-0317d0a7-0583-4e9b-a6be-ed38de9ed8af]: FINISHING"}}
+[debug] [2025-07-07T07:18:55.081Z] [worker-us-central1-verifySessionCookie-0317d0a7-0583-4e9b-a6be-ed38de9ed8af]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[worker-us-central1-verifySessionCookie-0317d0a7-0583-4e9b-a6be-ed38de9ed8af]: exited"}}
+[debug] [2025-07-07T07:18:55.081Z] [worker-us-central1-verifySessionCookie-0317d0a7-0583-4e9b-a6be-ed38de9ed8af]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[worker-us-central1-verifySessionCookie-0317d0a7-0583-4e9b-a6be-ed38de9ed8af]: FINISHED"}}
+[debug] [2025-07-07T07:18:55.084Z] [worker-us-central1-createSessionCookie-9cc771c9-3273-4f97-acb0-9b1309521957]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"[worker-us-central1-createSessionCookie-9cc771c9-3273-4f97-acb0-9b1309521957]: exited"}}
+[debug] [2025-07-07T07:18:55.084Z] [worker-us-central1-createSessionCookie-9cc771c9-3273-4f97-acb0-9b1309521957]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"[worker-us-central1-createSessionCookie-9cc771c9-3273-4f97-acb0-9b1309521957]: FINISHED"}}
+[debug] [2025-07-07T07:19:03.632Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/verify-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/verify-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-07T07:19:04.635Z] Validating nodejs source
+[debug] [2025-07-07T07:19:05.128Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-07T07:19:05.128Z] Building nodejs source
+[debug] [2025-07-07T07:19:05.128Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-07T07:19:05.130Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-07T07:19:05.131Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8209
+
+[debug] [2025-07-07T07:19:05.283Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"},"verifySessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"verifySessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-07T07:19:05.292Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-07T07:19:05.292Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie, verifySessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie, verifySessionCookie."}}
+[debug] [2025-07-07T07:19:14.266Z] Jul 07, 2025 2:19:14 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:19:14 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:19:44.795Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/verify-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/verify-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-07T07:19:45.797Z] Validating nodejs source
+[debug] [2025-07-07T07:19:46.287Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-07T07:19:46.287Z] Building nodejs source
+[debug] [2025-07-07T07:19:46.287Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-07T07:19:46.288Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-07T07:19:46.289Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8114
+
+[debug] [2025-07-07T07:19:46.437Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"},"verifySessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"verifySessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-07T07:19:46.445Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-07T07:19:46.445Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie, verifySessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie, verifySessionCookie."}}
+[debug] [2025-07-07T07:20:04.283Z] File /Users/lanefujikado/Projects/prss-kit/functions/lib/create-session-cookie.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/lib/create-session-cookie.js.map changed, reloading triggers"}}
+[debug] [2025-07-07T07:20:04.283Z] File /Users/lanefujikado/Projects/prss-kit/functions/lib/create-session-cookie.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/lib/create-session-cookie.js changed, reloading triggers"}}
+[debug] [2025-07-07T07:20:04.283Z] File /Users/lanefujikado/Projects/prss-kit/functions/lib/main.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/lib/main.js.map changed, reloading triggers"}}
+[debug] [2025-07-07T07:20:04.283Z] File /Users/lanefujikado/Projects/prss-kit/functions/lib/main.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/lib/main.js changed, reloading triggers"}}
+[debug] [2025-07-07T07:20:04.384Z] File /Users/lanefujikado/Projects/prss-kit/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2025-07-07T07:20:04.384Z] File /Users/lanefujikado/Projects/prss-kit/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2025-07-07T07:20:04.384Z] File /Users/lanefujikado/Projects/prss-kit/functions/lib/verify-session-cookie.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/lib/verify-session-cookie.js changed, reloading triggers"}}
+[debug] [2025-07-07T07:20:04.384Z] File /Users/lanefujikado/Projects/prss-kit/functions/lib/verify-session-cookie.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/lib/verify-session-cookie.js.map changed, reloading triggers"}}
+[debug] [2025-07-07T07:20:05.386Z] Validating nodejs source
+[debug] [2025-07-07T07:20:05.903Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-07T07:20:05.903Z] Building nodejs source
+[debug] [2025-07-07T07:20:05.903Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-07T07:20:05.905Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-07T07:20:05.905Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8455
+
+[debug] [2025-07-07T07:20:06.126Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"},"verifySessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"verifySessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-07T07:20:06.133Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-07T07:20:06.134Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie, verifySessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie, verifySessionCookie."}}
+[debug] [2025-07-07T07:20:14.294Z] Jul 07, 2025 2:20:14 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:20:14 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:20:22.658Z] [work-queue] {"queuedWork":["/prsskit/us-central1/verifySessionCookie-2025-07-07T07:20:22.658Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-07T07:20:22.658Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/prsskit/us-central1/verifySessionCookie-2025-07-07T07:20:22.658Z"],"workRunningCount":1}
+[debug] [2025-07-07T07:20:22.658Z] Accepted request OPTIONS /prsskit/us-central1/verifySessionCookie --> us-central1-verifySessionCookie
+[debug] [2025-07-07T07:20:22.661Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-07T07:20:22.662Z] [functions] Got req.url=/prsskit/us-central1/verifySessionCookie, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/prsskit/us-central1/verifySessionCookie, mapping to path=/"}}
+[debug] [2025-07-07T07:20:22.662Z] [worker-pool] Cleaned up workers for us-central1-createSessionCookie: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-createSessionCookie: 1 --> 0"}}
+[debug] [2025-07-07T07:20:22.662Z] [worker-pool] Cleaned up workers for us-central1-verifySessionCookie: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-verifySessionCookie: 1 --> 0"}}
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-07T07:20:22.672Z] [worker-pool] addWorker(us-central1-verifySessionCookie) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-verifySessionCookie)"}}
+[debug] [2025-07-07T07:20:22.672Z] [worker-pool] Adding worker with key us-central1-verifySessionCookie, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-verifySessionCookie, total=1"}}
+[debug] [2025-07-07T07:20:22.673Z] Jul 07, 2025 2:20:22 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jul 07, 2025 2:20:22 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:20:22 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\nJul 07, 2025 2:20:22 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:20:22.675Z] Jul 07, 2025 2:20:22 AM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
+INFO: channel closed
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:20:22 AM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose\nINFO: channel closed\n"}}
+[debug] [2025-07-07T07:20:22.684Z] Jul 07, 2025 2:20:22 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:20:22 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:20:23.379Z] [runtime-status] [6299] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.7.0","resolution":"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[runtime-status] [6299] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2025-07-07T07:20:23.379Z] [runtime-status] [6299] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.3.2","resolution":"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[runtime-status] [6299] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.3.2\",\"resolution\":\"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2025-07-07T07:20:23.379Z] [runtime-status] [6299] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[runtime-status] [6299] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2025-07-07T07:20:23.379Z] [runtime-status] [6299] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.3.2","resolution":"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[runtime-status] [6299] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.3.2\",\"resolution\":\"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2025-07-07T07:20:23.482Z] [runtime-status] [6299] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[runtime-status] [6299] Checked functions.config() {\"config\":{}}"}}
+[debug] [2025-07-07T07:20:23.482Z] [runtime-status] [6299] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"6.3.2","resolution":"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[runtime-status] [6299] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"6.3.2\",\"resolution\":\"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js\"}}"}}
+[debug] [2025-07-07T07:20:23.483Z] [runtime-status] [6299] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.3.2","resolution":"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[runtime-status] [6299] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.3.2\",\"resolution\":\"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2025-07-07T07:20:23.484Z] [runtime-status] [6299] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.7.0","resolution":"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[runtime-status] [6299] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2025-07-07T07:20:23.485Z] [runtime-status] [6299] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.3.2","resolution":"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[runtime-status] [6299] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.3.2\",\"resolution\":\"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/v2/index.js\"}"}}
+[debug] [2025-07-07T07:20:23.485Z] [runtime-status] [6299] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"12.7.0","resolution":"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[runtime-status] [6299] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"/Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2025-07-07T07:20:23.490Z] [runtime-status] [6299] Functions runtime initialized. {"cwd":"/Users/lanefujikado/Projects/prss-kit/functions","node_version":"18.20.8"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[runtime-status] [6299] Functions runtime initialized. {\"cwd\":\"/Users/lanefujikado/Projects/prss-kit/functions\",\"node_version\":\"18.20.8\"}"}}
+[debug] [2025-07-07T07:20:23.490Z] [runtime-status] [6299] Listening to port: /var/folders/4c/gfcjz2cj57zc04kv_9lj2xdr0000gn/T/fire_emu_261886616e8facff.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[runtime-status] [6299] Listening to port: /var/folders/4c/gfcjz2cj57zc04kv_9lj2xdr0000gn/T/fire_emu_261886616e8facff.sock"}}
+[debug] [2025-07-07T07:20:23.589Z] [worker-us-central1-verifySessionCookie-8a4fa073-f9c3-46b8-b902-c5a867102ac0]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[worker-us-central1-verifySessionCookie-8a4fa073-f9c3-46b8-b902-c5a867102ac0]: IDLE"}}
+[debug] [2025-07-07T07:20:23.589Z] [worker-pool] submitRequest(triggerId=us-central1-verifySessionCookie) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-verifySessionCookie)"}}
+[info] i  functions: Beginning execution of "us-central1-verifySessionCookie" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"Beginning execution of \"us-central1-verifySessionCookie\""}}
+[debug] [2025-07-07T07:20:23.590Z] [worker-us-central1-verifySessionCookie-8a4fa073-f9c3-46b8-b902-c5a867102ac0]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[worker-us-central1-verifySessionCookie-8a4fa073-f9c3-46b8-b902-c5a867102ac0]: BUSY"}}
+[debug] [2025-07-07T07:20:23.592Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-verifySessionCookie" in 2.194667ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"Finished \"us-central1-verifySessionCookie\" in 2.194667ms"}}
+[debug] [2025-07-07T07:20:23.592Z] [worker-us-central1-verifySessionCookie-8a4fa073-f9c3-46b8-b902-c5a867102ac0]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[worker-us-central1-verifySessionCookie-8a4fa073-f9c3-46b8-b902-c5a867102ac0]: IDLE"}}
+[debug] [2025-07-07T07:20:23.592Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-07T07:20:23.592Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-07T07:20:23.592Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-07T07:20:23.596Z] [work-queue] {"queuedWork":["/prsskit/us-central1/verifySessionCookie-2025-07-07T07:20:23.596Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-07T07:20:23.596Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/prsskit/us-central1/verifySessionCookie-2025-07-07T07:20:23.596Z"],"workRunningCount":1}
+[debug] [2025-07-07T07:20:23.596Z] Accepted request POST /prsskit/us-central1/verifySessionCookie --> us-central1-verifySessionCookie
+[debug] [2025-07-07T07:20:23.596Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-07T07:20:23.596Z] [functions] Got req.url=/prsskit/us-central1/verifySessionCookie, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/prsskit/us-central1/verifySessionCookie, mapping to path=/"}}
+[debug] [2025-07-07T07:20:23.596Z] [worker-pool] submitRequest(triggerId=us-central1-verifySessionCookie) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-verifySessionCookie)"}}
+[info] i  functions: Beginning execution of "us-central1-verifySessionCookie" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"Beginning execution of \"us-central1-verifySessionCookie\""}}
+[debug] [2025-07-07T07:20:23.596Z] [worker-us-central1-verifySessionCookie-8a4fa073-f9c3-46b8-b902-c5a867102ac0]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[worker-us-central1-verifySessionCookie-8a4fa073-f9c3-46b8-b902-c5a867102ac0]: BUSY"}}
+[info] >  {"verifications":{"app":"MISSING","auth":"VALID"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"} {"user":{"verifications":{"app":"MISSING","auth":"VALID"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"verifications\":{\"app\":\"MISSING\",\"auth\":\"VALID\"},\"logging.googleapis.com/labels\":{\"firebase-log-type\":\"callable-request-verification\"},\"severity\":\"DEBUG\",\"message\":\"Callable request verification passed\"}"}}
+[info] >  {"severity":"ERROR","message":"Unhandled error Error: Firebase session cookie has incorrect \"iss\" (issuer) claim. Expected \"https://session.firebase.google.com/prsskit\" but got \"https://securetoken.google.com/prsskit\". Make sure the session cookie comes from the same Firebase project as the service account used to authenticate this SDK. See https://firebase.google.com/docs/auth/admin/manage-cookies for details on how to retrieve a session cookie.\n    at /Users/lanefujikado/Projects/prss-kit/functions/lib/verify-session-cookie.js:17:15\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/common/providers/https.js:544:26\n    at async runFunction (/Users/lanefujikado/.nvm/versions/node/v18.20.8/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:506:9)\n    at async runHTTPS (/Users/lanefujikado/.nvm/versions/node/v18.20.8/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:531:5)\n    at async /Users/lanefujikado/.nvm/versions/node/v18.20.8/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:694:21"} {"user":{"severity":"ERROR","message":"Unhandled error Error: Firebase session cookie has incorrect \"iss\" (issuer) claim. Expected \"https://session.firebase.google.com/prsskit\" but got \"https://securetoken.google.com/prsskit\". Make sure the session cookie comes from the same Firebase project as the service account used to authenticate this SDK. See https://firebase.google.com/docs/auth/admin/manage-cookies for details on how to retrieve a session cookie.\n    at /Users/lanefujikado/Projects/prss-kit/functions/lib/verify-session-cookie.js:17:15\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/common/providers/https.js:544:26\n    at async runFunction (/Users/lanefujikado/.nvm/versions/node/v18.20.8/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:506:9)\n    at async runHTTPS (/Users/lanefujikado/.nvm/versions/node/v18.20.8/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:531:5)\n    at async /Users/lanefujikado/.nvm/versions/node/v18.20.8/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:694:21"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"severity\":\"ERROR\",\"message\":\"Unhandled error Error: Firebase session cookie has incorrect \\\"iss\\\" (issuer) claim. Expected \\\"https://session.firebase.google.com/prsskit\\\" but got \\\"https://securetoken.google.com/prsskit\\\". Make sure the session cookie comes from the same Firebase project as the service account used to authenticate this SDK. See https://firebase.google.com/docs/auth/admin/manage-cookies for details on how to retrieve a session cookie.\\n    at /Users/lanefujikado/Projects/prss-kit/functions/lib/verify-session-cookie.js:17:15\\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\\n    at async /Users/lanefujikado/Projects/prss-kit/functions/node_modules/firebase-functions/lib/common/providers/https.js:544:26\\n    at async runFunction (/Users/lanefujikado/.nvm/versions/node/v18.20.8/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:506:9)\\n    at async runHTTPS (/Users/lanefujikado/.nvm/versions/node/v18.20.8/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:531:5)\\n    at async /Users/lanefujikado/.nvm/versions/node/v18.20.8/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:694:21\"}"}}
+[debug] [2025-07-07T07:20:23.608Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-verifySessionCookie" in 11.95675ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"Finished \"us-central1-verifySessionCookie\" in 11.95675ms"}}
+[debug] [2025-07-07T07:20:23.609Z] [worker-us-central1-verifySessionCookie-8a4fa073-f9c3-46b8-b902-c5a867102ac0]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[worker-us-central1-verifySessionCookie-8a4fa073-f9c3-46b8-b902-c5a867102ac0]: IDLE"}}
+[debug] [2025-07-07T07:20:23.609Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-07T07:20:23.609Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-07T07:20:23.609Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-07T07:21:37.849Z] Jul 07, 2025 2:21:37 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:21:37 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:22:37.878Z] Jul 07, 2025 2:22:37 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:22:37 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:23:37.909Z] Jul 07, 2025 2:23:37 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:23:37 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:24:53.852Z] Jul 07, 2025 2:24:53 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:24:53 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:25:39.849Z] Jul 07, 2025 2:25:39 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:25:39 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:26:25.859Z] Jul 07, 2025 2:26:25 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:26:25 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:27:25.892Z] Jul 07, 2025 2:27:25 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:27:25 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:28:09.433Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-07T07:28:10.437Z] Validating nodejs source
+[debug] [2025-07-07T07:28:11.131Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-07T07:28:11.131Z] Building nodejs source
+[debug] [2025-07-07T07:28:11.131Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-07T07:28:11.133Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-07T07:28:11.134Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8049
+
+[debug] [2025-07-07T07:28:11.389Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"},"verifySessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"verifySessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-07T07:28:11.398Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-07T07:28:11.400Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie, verifySessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie, verifySessionCookie."}}
+[debug] [2025-07-07T07:28:11.401Z] [worker-pool] Shutting down IDLE worker (us-central1-verifySessionCookie) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-verifySessionCookie)"}}
+[debug] [2025-07-07T07:28:11.401Z] [worker-us-central1-verifySessionCookie-8a4fa073-f9c3-46b8-b902-c5a867102ac0]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[worker-us-central1-verifySessionCookie-8a4fa073-f9c3-46b8-b902-c5a867102ac0]: FINISHING"}}
+[debug] [2025-07-07T07:28:11.406Z] [worker-us-central1-verifySessionCookie-8a4fa073-f9c3-46b8-b902-c5a867102ac0]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[worker-us-central1-verifySessionCookie-8a4fa073-f9c3-46b8-b902-c5a867102ac0]: exited"}}
+[debug] [2025-07-07T07:28:11.406Z] [worker-us-central1-verifySessionCookie-8a4fa073-f9c3-46b8-b902-c5a867102ac0]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-verifySessionCookie"},"extension":{},"message":"[worker-us-central1-verifySessionCookie-8a4fa073-f9c3-46b8-b902-c5a867102ac0]: FINISHED"}}
+[debug] [2025-07-07T07:28:25.929Z] Jul 07, 2025 2:28:25 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:28:25 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:29:25.965Z] Jul 07, 2025 2:29:25 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:29:25 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:30:25.992Z] Jul 07, 2025 2:30:25 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:30:25 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:31:26.018Z] Jul 07, 2025 2:31:26 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:31:26 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:31:26.245Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-07T07:31:27.247Z] Validating nodejs source
+[debug] [2025-07-07T07:31:27.853Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-07T07:31:27.853Z] Building nodejs source
+[debug] [2025-07-07T07:31:27.854Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-07T07:31:27.855Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-07T07:31:27.856Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8089
+
+[debug] [2025-07-07T07:31:28.103Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"},"verifySessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"verifySessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-07T07:31:28.111Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-07T07:31:28.111Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie, verifySessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie, verifySessionCookie."}}
+[debug] [2025-07-07T07:31:47.096Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-07T07:31:48.098Z] Validating nodejs source
+[debug] [2025-07-07T07:31:48.564Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-07T07:31:48.564Z] Building nodejs source
+[debug] [2025-07-07T07:31:48.564Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-07T07:31:48.564Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-07T07:31:48.565Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8780
+
+[debug] [2025-07-07T07:31:48.746Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"},"verifySessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"verifySessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-07T07:31:48.753Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-07T07:31:48.753Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie, verifySessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie, verifySessionCookie."}}
+[debug] [2025-07-07T07:31:55.136Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-07T07:31:56.141Z] Validating nodejs source
+[debug] [2025-07-07T07:31:56.640Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-07T07:31:56.640Z] Building nodejs source
+[debug] [2025-07-07T07:31:56.640Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-07T07:31:56.641Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-07T07:31:56.641Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8643
+
+[debug] [2025-07-07T07:31:56.783Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"},"verifySessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"verifySessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-07T07:31:56.791Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-07T07:31:56.791Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie, verifySessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie, verifySessionCookie."}}
+[debug] [2025-07-07T07:32:26.031Z] Jul 07, 2025 2:32:26 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:32:26 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:33:26.060Z] Jul 07, 2025 2:33:26 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:33:26 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:34:26.081Z] Jul 07, 2025 2:34:26 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:34:26 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:35:11.852Z] Jul 07, 2025 2:35:11 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:35:11 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:35:57.860Z] Jul 07, 2025 2:35:57 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:35:57 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:36:32.577Z] Jul 07, 2025 2:36:32 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:36:32 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:36:32.593Z] Jul 07, 2025 2:36:32 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:36:32 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:37:32.604Z] Jul 07, 2025 2:37:32 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:37:32 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:38:17.858Z] Jul 07, 2025 2:38:17 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:38:17 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:39:17.908Z] Jul 07, 2025 2:39:17 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:39:17 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:40:17.937Z] Jul 07, 2025 2:40:17 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:40:17 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:41:17.965Z] Jul 07, 2025 2:41:17 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:41:17 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:42:18.000Z] Jul 07, 2025 2:42:17 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:42:17 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:43:33.853Z] Jul 07, 2025 2:43:33 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:43:33 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:44:27.399Z] Jul 07, 2025 2:44:27 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:44:27 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:44:27.418Z] Jul 07, 2025 2:44:27 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:44:27 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:45:13.947Z] Jul 07, 2025 2:45:13 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:45:13 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:45:13.956Z] Jul 07, 2025 2:45:13 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:45:13 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:45:21.472Z] Jul 07, 2025 2:45:21 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:45:21 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:45:21.502Z] Jul 07, 2025 2:45:21 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:45:21 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:45:40.913Z] Jul 07, 2025 2:45:40 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:45:40 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:45:40.950Z] Jul 07, 2025 2:45:40 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:45:40 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:46:40.968Z] Jul 07, 2025 2:46:40 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:46:40 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:47:39.024Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-07T07:47:40.029Z] Validating nodejs source
+[debug] [2025-07-07T07:47:40.636Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-07T07:47:40.637Z] Building nodejs source
+[debug] [2025-07-07T07:47:40.637Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-07T07:47:40.639Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-07T07:47:40.640Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8328
+
+[debug] [2025-07-07T07:47:40.882Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"},"verifySessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"verifySessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-07T07:47:40.890Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-07T07:47:40.891Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie, verifySessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie, verifySessionCookie."}}
+[debug] [2025-07-07T07:47:40.985Z] Jul 07, 2025 2:47:40 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:47:40 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:48:03.023Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-07T07:48:04.025Z] Validating nodejs source
+[debug] [2025-07-07T07:48:04.681Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-07T07:48:04.681Z] Building nodejs source
+[debug] [2025-07-07T07:48:04.681Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-07T07:48:04.682Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-07T07:48:04.683Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8406
+
+[debug] [2025-07-07T07:48:04.904Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"},"verifySessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"verifySessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-07T07:48:04.912Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-07T07:48:04.913Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie, verifySessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie, verifySessionCookie."}}
+[debug] [2025-07-07T07:48:41.008Z] Jul 07, 2025 2:48:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:48:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:48:55.835Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-07T07:48:56.836Z] Validating nodejs source
+[debug] [2025-07-07T07:48:57.374Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-07T07:48:57.374Z] Building nodejs source
+[debug] [2025-07-07T07:48:57.374Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-07T07:48:57.375Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-07T07:48:57.376Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8938
+
+[debug] [2025-07-07T07:48:57.599Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"},"verifySessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"verifySessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-07T07:48:57.608Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-07T07:48:57.608Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie, verifySessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie, verifySessionCookie."}}
+[debug] [2025-07-07T07:49:23.578Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-07T07:49:24.579Z] Validating nodejs source
+[debug] [2025-07-07T07:49:25.098Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-07T07:49:25.099Z] Building nodejs source
+[debug] [2025-07-07T07:49:25.099Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-07T07:49:25.099Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-07T07:49:25.100Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8422
+
+[debug] [2025-07-07T07:49:25.306Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"},"verifySessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"verifySessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-07T07:49:25.314Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-07T07:49:25.315Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie, verifySessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie, verifySessionCookie."}}
+[debug] [2025-07-07T07:49:41.029Z] Jul 07, 2025 2:49:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:49:41 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:49:46.133Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-07T07:49:47.137Z] Validating nodejs source
+[debug] [2025-07-07T07:49:47.721Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-07T07:49:47.722Z] Building nodejs source
+[debug] [2025-07-07T07:49:47.722Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-07T07:49:47.724Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-07T07:49:47.725Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8749
+
+[debug] [2025-07-07T07:49:47.957Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"},"verifySessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"verifySessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-07T07:49:47.966Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-07T07:49:47.966Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie, verifySessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie, verifySessionCookie."}}
+[debug] [2025-07-07T07:49:59.151Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-07T07:50:00.153Z] Validating nodejs source
+[debug] [2025-07-07T07:50:00.673Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-07T07:50:00.673Z] Building nodejs source
+[debug] [2025-07-07T07:50:00.673Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-07T07:50:00.674Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-07T07:50:00.675Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8082
+
+[debug] [2025-07-07T07:50:00.902Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"},"verifySessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"verifySessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-07T07:50:00.910Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-07T07:50:00.911Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie, verifySessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie, verifySessionCookie."}}
+[debug] [2025-07-07T07:50:19.386Z] Jul 07, 2025 2:50:19 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:50:19 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:50:19.421Z] Jul 07, 2025 2:50:19 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:50:19 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:50:34.246Z] Jul 07, 2025 2:50:34 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:50:34 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:50:34.274Z] Jul 07, 2025 2:50:34 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:50:34 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:50:48.893Z] Jul 07, 2025 2:50:48 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:50:48 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:50:48.915Z] Jul 07, 2025 2:50:48 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:50:48 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:50:59.358Z] Jul 07, 2025 2:50:59 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:50:59 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:50:59.383Z] Jul 07, 2025 2:50:59 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:50:59 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:51:09.249Z] Jul 07, 2025 2:51:09 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:51:09 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:51:09.273Z] Jul 07, 2025 2:51:09 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 2:51:09 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-07T07:51:21.505Z] File /Users/lanefujikado/Projects/prss-kit/functions/lib/create-session-cookie.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/lib/create-session-cookie.js.map changed, reloading triggers"}}
+[debug] [2025-07-07T07:51:21.505Z] File /Users/lanefujikado/Projects/prss-kit/functions/lib/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/lib/index.js changed, reloading triggers"}}
+[debug] [2025-07-07T07:51:21.505Z] File /Users/lanefujikado/Projects/prss-kit/functions/lib/verify-session-cookie.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/lib/verify-session-cookie.js changed, reloading triggers"}}
+[debug] [2025-07-07T07:51:21.505Z] File /Users/lanefujikado/Projects/prss-kit/functions/lib/verify-session-cookie.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/lib/verify-session-cookie.js.map changed, reloading triggers"}}
+[debug] [2025-07-07T07:51:21.505Z] File /Users/lanefujikado/Projects/prss-kit/functions/lib/create-session-cookie.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/lib/create-session-cookie.js changed, reloading triggers"}}
+[debug] [2025-07-07T07:51:21.505Z] File /Users/lanefujikado/Projects/prss-kit/functions/lib/index.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/lib/index.js.map changed, reloading triggers"}}
+[debug] [2025-07-07T07:51:21.505Z] File /Users/lanefujikado/Projects/prss-kit/functions/lib/main.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/lib/main.js changed, reloading triggers"}}
+[debug] [2025-07-07T07:51:21.505Z] File /Users/lanefujikado/Projects/prss-kit/functions/lib/main.js.map changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/lib/main.js.map changed, reloading triggers"}}
+[debug] [2025-07-07T07:51:22.506Z] Validating nodejs source
+[debug] [2025-07-07T07:51:23.044Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-07T07:51:23.044Z] Building nodejs source
+[debug] [2025-07-07T07:51:23.044Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-07T07:51:23.046Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-07T07:51:23.046Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8790
+
+[debug] [2025-07-07T07:51:23.322Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"},"verifySessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"verifySessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-07T07:51:23.330Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-07T07:51:23.331Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie, verifySessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie, verifySessionCookie."}}

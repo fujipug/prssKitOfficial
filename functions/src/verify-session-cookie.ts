@@ -1,8 +1,9 @@
 import { onCall } from "firebase-functions/https";
 import { adminAuth, cors } from "./main";
 
-export const verifySessionCookie = onCall({ cors }, async (request) => {
-  const sessionCookie = request.data?.sessionCookie;
+export const verifySessionCookie = onCall({ cors }, async (req) => {
+  const sessionCookie = req.data.sessionCookie as string;
+
   if (!sessionCookie) {
     throw new Error("No session cookie provided");
   }
