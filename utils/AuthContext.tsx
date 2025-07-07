@@ -81,7 +81,6 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
       throw new Error('Sign in failed');
     }
 
-    console.log('User signed in:', user);
     return user;
   };
 

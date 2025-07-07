@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
-import { serverAuth } from "@/services/firebase-admin-config";
+// import { serverAuth } from "@/services/firebase-admin-config";
 
 export async function GET() {
   try {
@@ -13,9 +13,9 @@ export async function GET() {
       );
     }
 
-    const result = await serverAuth.verifySessionCookie(sessionCookie);
+    // const result = await serverAuth.verifySessionCookie(sessionCookie);
 
-    return NextResponse.json(result.data);
+    // return NextResponse.json(result.data);
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {

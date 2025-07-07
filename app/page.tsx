@@ -1,9 +1,11 @@
 // import { isUserSignedIn } from "@/lib/auth";
 // import { verifyFirebaseSessionCookie } from "@/network/firebase";
+// import { serverAuth } from "@/services/firebase-admin-config";
 import Home from "./home/page";
 // import ArtistDashboard from "./artist-dashboard/page";
 
 export default async function App() {
+  // console.log("App component is rendering...", serverAuth);
   // const baseUrl = process.env.NODE_ENV === 'development'
   //   ? 'http://localhost:3000'
   //   : 'https://prsskit.com';

@@ -1,5 +1,6 @@
 'use client';
 import SocialAuthButtonGrid from "@/components/social-auth-button-grid";
+import { clientFunctions, httpsCallable } from "@/services/firebase-config";
 import { useAuth } from "@/utils/AuthContext";
 import { useState } from "react";
 
@@ -20,33 +21,6 @@ export default function LoginForm({ messages, ...formProps }: { messages: LoginF
     <li key={idx}>{item}</li>
   ));
 
-  const baseUrl = process.env.NODE_ENV === 'development'
-    ? 'http://localhost:3000'
-    : 'https://prss-kit-official.vercel.app';
-
-  const createSessionCookie = async (idToken: string) => {
-    try {
-      const response = await fetch(`${baseUrl}/api/set-session-cookie`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ idToken }),
-        credentials: "include", // Important for cookies
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || "Failed to create session cookie");
-      }
-
-      return await response.json();
-    } catch (error) {
-      console.error("Cookie setting error:", error);
-      throw error;
-    }
-  };
-
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.target as HTMLFormElement);
@@ -59,7 +33,9 @@ export default function LoginForm({ messages, ...formProps }: { messages: LoginF
       if (typeof result === "string") {
         setAlert(true);
       } else {
-        createSessionCookie(await result.getIdToken());
+        httpsCallable(clientFunctions, "createSessionCookie")({
+          idToken: await result.getIdToken(),
+        });
         setAlert(false);
       }
     });

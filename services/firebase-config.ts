@@ -1,7 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import { connectAuthEmulator, getAuth } from 'firebase/auth';
 import { connectFirestoreEmulator, getFirestore } from 'firebase/firestore';
-import { connectFunctionsEmulator, getFunctions } from 'firebase/functions';
+import { connectFunctionsEmulator, getFunctions, httpsCallable } from 'firebase/functions';
 import { connectStorageEmulator, getStorage } from 'firebase/storage';
 
 export const firebaseConfig = {
@@ -19,7 +19,7 @@ const clientStorage = getStorage(clientApp);
 const clientFunctions = getFunctions(clientApp);
 const clientAuth = getAuth(clientApp);
 
-export { clientDb, clientStorage, clientFunctions, clientAuth };
+export { clientDb, clientStorage, clientFunctions, clientAuth, httpsCallable };
 
 // Emulator
 if (process.env.NODE_ENV == "development") {

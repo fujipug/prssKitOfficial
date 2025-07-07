@@ -1,5 +1,5 @@
-// import { setSessionCookie as _setSessionCookie } from "./set-session-cookie"
+import { createSessionCookie as _createSessionCookie } from "./create-session-cookie"
 // import { verifySessionCookie as _verifySessionCookie } from "./verify-session-cookie"
 
-// export const setSessionCookie = _setSessionCookie
+export const createSessionCookie = _createSessionCookie
 // export const verifySessionCookie = _verifySessionCookie
