@@ -5,7 +5,8 @@ import { firebaseRegister, firebaseSignIn, firebaseSignOut, subscribeToCurrentUs
 import { onAuthStateChanged, User } from "firebase/auth";
 import { PreRegister, Artist } from "@/app/types";
 // import { deleteSessionCookie } from "@/actions/auth";
-import { clientAuth, clientFunctions, httpsCallable } from "@/services/firebase-config";
+import { clientAuth } from "@/services/firebase-config";
+// import { useRouter } from "next/navigation";
 
 const AuthContext = createContext<{
   isSignedIn: boolean;
@@ -13,7 +14,7 @@ const AuthContext = createContext<{
   profile: Artist | null;
   isLoading: boolean;
   register: (params: { email: string; password: string; preRegister: PreRegister }) => Promise<void>;
-  signIn: (credentials: { email: string; password: string }) => Promise<User>;
+  signIn: (credentials: { email: string; password: string }) => Promise<void>;
   signOut: () => void;
 }>({
   isSignedIn: false,
@@ -21,10 +22,7 @@ const AuthContext = createContext<{
   profile: null,
   isLoading: true,
   register: async () => { },
-  signIn: async () => {
-    // Return a rejected promise to satisfy the signature
-    return Promise.reject(new Error("signIn function not implemented"));
-  },
+  signIn: async () => { },
   signOut: async () => { },
 });
 
@@ -33,6 +31,7 @@ interface AuthProviderProps {
 }
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
+  // const router = useRouter();
   const [isSignedIn, setIsSignedIn] = useState(false);
   const [firebaseUser, setFirebaseUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -81,25 +80,20 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
       throw new Error('Sign in failed');
     }
 
-    await user.getIdToken().then(async idToken => {
-      type CreateSessionCookieRequest = { idToken: string };
-      type CreateSessionCookieResponse = { sessionCookie: string };
-      await httpsCallable<CreateSessionCookieRequest, CreateSessionCookieResponse>(clientFunctions, "createSessionCookie")({
-        idToken: idToken,
-      }).then((result) => {
-        document.cookie = `session=${(result.data as CreateSessionCookieResponse).sessionCookie}`;
-      }).catch((error) => {
-        console.error("Error creating session cookie:", error);
-        throw new Error('Session cookie creation failed');
-      });
-    });
+    await setSessionCookie(await user.getIdToken());
 
-    return user;
+    // await httpsCallable(clientFunctions, 'createSessionCookie')({
+    //   idToken: await user.getIdToken(),
+    //   // csrfToken: 'your-csrf-token', // Optional, if you implement CSRF protection
+    // }).then(async () => {
+    //   await setSessionCookie(await user.getIdToken());
+    // });
   };
 
   const signOut = async () => {
     const user = await firebaseSignOut();
-    // await deleteSessionCookie();
+
+    // delete the session cookie
 
     return user;
   };
@@ -112,3 +106,19 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 };
 
 export const useAuth = () => useContext(AuthContext);
+
+const setSessionCookie = async (token: string) => {
+  const baseurl = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:3000';
+  const response = await fetch(`${baseurl}/api/set-session-cookie`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ token }),
+  });
+
+  if (!response.ok) {
+    throw new Error('Failed to set session cookie');
+  }
+
+  console.log('Session cookie created successfully');
+  window.location.href = '/artist-dashboard'
+}

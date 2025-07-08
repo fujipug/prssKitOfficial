@@ -15,7 +15,7 @@ export default function ThemeController({ translations }: { translations: { them
   return (
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn ml-1">
-        <span className="text-xs">{translations.theme}</span>
+        <span className="text-xs">{translations['theme']}</span>
         <svg
           width="12px"
           height="12px"

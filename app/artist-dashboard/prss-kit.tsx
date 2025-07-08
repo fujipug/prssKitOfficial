@@ -22,10 +22,10 @@ export default function PrssKit({ translations }: { translations: any }) {
                 alt="Profile Pic" />
             </figure>
             <div className="card-body">
-              <p className='font-semibold'>{translations.artist_name}:</p>
-              <p className='font-semibold'>{translations.location}:</p>
-              <p className='font-semibold'>{translations.profile_url}:</p>
-              <p className='font-semibold'>{translations.biography}:</p>
+              <p className='font-semibold'>{translations['artist_name']}:</p>
+              <p className='font-semibold'>{translations['location']}:</p>
+              <p className='font-semibold'>{translations['profile_url']}:</p>
+              <p className='font-semibold'>{translations['biography']}:</p>
               {/* <div className="card-actions justify-end">
                 <button className="btn btn-primary">Listen</button>
               </div> */}
@@ -33,8 +33,8 @@ export default function PrssKit({ translations }: { translations: any }) {
           </div>
 
           <div className="bg-base-200 border-base-300 rounded-box border p-4 mb-4">
-            <h1 className="text-2xl font-bold mb-1">{translations.title}</h1>
-            <p className="text-sm mb-4">{translations.subtitle}</p>
+            <h1 className="text-2xl font-bold mb-1">{translations['title']}</h1>
+            <p className="text-sm mb-4">{translations['subtitle']}</p>
 
             <Reorder.Group axis="y" values={items} onReorder={setItems} >
               <span className="space-y-4">

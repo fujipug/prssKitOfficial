@@ -6,7 +6,7 @@ export default function Step3({ translations, ...children }: { translations: any
     <div {...children} className="flex flex-col items-center justify-center min-h-dvh bg-base-200 checker-pattern">
       <div className="w-fit text-center">
         <div className="torn-paper text-black">
-          <h1 className="font-bold text-2xl sm:text-5xl">{translations.step_3_title}</h1>
+          <h1 className="font-bold text-2xl sm:text-5xl">{translations['step_3_title']}</h1>
         </div>
       </div>
 

@@ -3,6 +3,7 @@ import { cors } from "./main";
 import { adminAuth } from "./main";
 
 export const createSessionCookie = onCall({ cors }, async (req) => {
+  console.log('sohalkdfsj ;lksdj', req);
   // Get the ID token passed and the CSRF token.
   const idToken = req.data.idToken;
   // const csrfToken = req.data.csrfToken.toString();
@@ -19,8 +20,7 @@ export const createSessionCookie = onCall({ cors }, async (req) => {
   // adminAuth
   try {
     const sessionCookie = await adminAuth.createSessionCookie(idToken, { expiresIn });
-    // You cannot set cookies directly in a Callable Function response.
-    // Instead, return the session cookie to the client and let the client set it.
+    console.log('Session cookie created:', sessionCookie);
     return { status: 'success', sessionCookie };
   } catch (error) {
     throw new Error('UNAUTHORIZED REQUEST!' + (error instanceof Error ? `: ${error.message}` : ''));

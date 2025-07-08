@@ -18,7 +18,7 @@ type RegisterFormProps = {
 export default function RegisterForm({ messages, ...formProps }: { messages: RegisterFormProps } & React.HTMLAttributes<HTMLFormElement>) {
   const auth = useAuth();
   const [alert, setAlert] = useState<boolean>(false);
-  const translationsPasswordRequirementsList = messages.password_requirements.split(/[,;]/).map((item, idx) => (
+  const translationsPasswordRequirementsList = messages['password_requirements'].split(/[,;]/).map((item, idx) => (
     <li key={idx}>{item}</li>
   ));
 
@@ -50,7 +50,7 @@ export default function RegisterForm({ messages, ...formProps }: { messages: Reg
       <form {...formProps} onSubmit={handleSubmit}>
         <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border p-4 space-y-4">
           <span>
-            <p className="text-sm mb-1">{messages.email_title}</p>
+            <p className="text-sm mb-1">{messages['email_title']}</p>
             <label className="input validator w-full">
               <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <g
@@ -66,11 +66,11 @@ export default function RegisterForm({ messages, ...formProps }: { messages: Reg
               </svg>
               <input type="email" name="email" placeholder="email@prsskit.com" required />
             </label>
-            <div className="validator-hint hidden">{messages.email_error}</div>
+            <div className="validator-hint hidden">{messages['email_error']}</div>
           </span>
 
           <span>
-            <p className="text-sm mb-1">{messages.password_title}</p>
+            <p className="text-sm mb-1">{messages['password_title']}</p>
             <label className="input validator w-full">
               <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <g
@@ -101,7 +101,7 @@ export default function RegisterForm({ messages, ...formProps }: { messages: Reg
           </span>
 
           <span>
-            <p className="text-sm mb-1">{messages.password_confirm_title}</p>
+            <p className="text-sm mb-1">{messages['password_confirm_title']}</p>
             <label className="input validator w-full">
               <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <g
@@ -133,13 +133,13 @@ export default function RegisterForm({ messages, ...formProps }: { messages: Reg
 
           <button className="btn btn-lg btn-secondary" type="submit">
             <span className={auth.isLoading ? "loading loading-spinner" : ""}></span>
-            {messages.register_button}
+            {messages['register_button']}
           </button>
         </fieldset>
       </form>
 
       <div className="divider my-6">
-        <span className="bg-base-300 p-1 rotate-3 text-sm">{messages.divider_text}</span>
+        <span className="bg-base-300 p-1 rotate-3 text-sm">{messages['divider_text']}</span>
       </div>
 
       <SocialAuthButtonGrid />

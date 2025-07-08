@@ -1,6 +1,5 @@
 'use client';
 import SocialAuthButtonGrid from "@/components/social-auth-button-grid";
-// import { clientFunctions, httpsCallable } from "@/services/firebase-config";
 import { useAuth } from "@/utils/AuthContext";
 import { useState } from "react";
 
@@ -17,7 +16,7 @@ type LoginFormProps = {
 export default function LoginForm({ messages, ...formProps }: { messages: LoginFormProps } & React.HTMLAttributes<HTMLFormElement>) {
   const auth = useAuth();
   const [alert, setAlert] = useState<boolean>(false);
-  const translationsPasswordRequirementsList = messages.password_requirements.split(/[,;]/).map((item, idx) => (
+  const translationsPasswordRequirementsList = messages['password_requirements'].split(/[,;]/).map((item, idx) => (
     <li key={idx}>{item}</li>
   ));
 
@@ -45,14 +44,14 @@ export default function LoginForm({ messages, ...formProps }: { messages: LoginF
     <>
       {alert && (
         <div role="alert" className="alert alert-error alert-soft">
-          <span>{messages.login_error}</span>
+          <span>{messages['login_error']}</span>
         </div>
       )}
 
       <form {...formProps} onSubmit={handleSubmit}>
         <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border p-4 space-y-4">
           <span>
-            <p className="text-sm mb-1">{messages.email_title}</p>
+            <p className="text-sm mb-1">{messages['email_title']}</p>
             <label className="input validator w-full">
               <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <g
@@ -68,11 +67,11 @@ export default function LoginForm({ messages, ...formProps }: { messages: LoginF
               </svg>
               <input type="email" name="email" placeholder="email@prsskit.com" required />
             </label>
-            <div className="validator-hint hidden">{messages.email_error}</div>
+            <div className="validator-hint hidden">{messages['email_error']}</div>
           </span>
 
           <span>
-            <p className="text-sm mb-1">{messages.password_title}</p>
+            <p className="text-sm mb-1">{messages['password_title']}</p>
             <label className="input validator w-full">
               <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <g
@@ -104,13 +103,13 @@ export default function LoginForm({ messages, ...formProps }: { messages: LoginF
 
           <button className="btn btn-lg btn-secondary" type="submit">
             <span className={auth.isLoading ? "loading loading-spinner" : ""}></span>
-            {messages.login_button}
+            {messages['login_button']}
           </button>
         </fieldset>
       </form>
 
       <div className="divider my-6">
-        <span className="bg-base-300 rounded-field p-1 rotate-3 text-sm">{messages.divider_text}</span>
+        <span className="bg-base-300 rounded-field p-1 rotate-3 text-sm">{messages['divider_text']}</span>
       </div>
 
       <SocialAuthButtonGrid />
