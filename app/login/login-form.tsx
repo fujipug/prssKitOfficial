@@ -1,7 +1,7 @@
 'use client';
 import SocialAuthButtonGrid from "@/components/social-auth-button-grid";
 import { useAuth } from "@/utils/AuthContext";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type LoginFormProps = {
   email_title: string;
@@ -20,6 +20,25 @@ export default function LoginForm({ messages, ...formProps }: { messages: LoginF
     <li key={idx}>{item}</li>
   ));
 
+  useEffect(() => {
+    if (!auth.isSignedIn) {
+      setAlert(false);
+      return;
+    }
+
+    const handleTokenVerification = async () => {
+      await fetch('/api/verify-token', {
+        method: 'GET',
+        headers: {
+          'Authorization': `Bearer ${await auth.firebaseUser?.getIdToken(true) || ''}`,
+        },
+      });
+    }
+
+    handleTokenVerification();
+
+  }, [auth.isSignedIn, auth.firebaseUser]);
+
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.target as HTMLFormElement);
@@ -29,14 +48,11 @@ export default function LoginForm({ messages, ...formProps }: { messages: LoginF
     if (!email || !password) return;
 
     await auth.signIn({ email, password }).then(async (result) => {
+      console.log("Login result:", result);
       if (typeof result === "string") {
         setAlert(true);
       } else {
-        const idToken = await auth.firebaseUser?.uid;
-        await fetch('/api/verify-token', {
-          method: 'GET',
-          headers: { Authorization: `Bearer ${idToken}` }
-        });
+        setAlert(false);
       }
     });
   }
