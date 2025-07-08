@@ -1,7 +1,8 @@
 'use client';
 import SocialAuthButtonGrid from "@/components/social-auth-button-grid";
+import { createSessionCookie } from "@/services/cookies";
 import { useAuth } from "@/utils/AuthContext";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 type LoginFormProps = {
   email_title: string;
@@ -20,28 +21,6 @@ export default function LoginForm({ messages, ...formProps }: { messages: LoginF
     <li key={idx}>{item}</li>
   ));
 
-  useEffect(() => {
-    if (!auth.isSignedIn) {
-      setAlert(false);
-      return;
-    }
-
-    const handleTokenVerification = async () => {
-      const token = auth.firebaseUser?.getIdToken(true);
-      await fetch('/api/verify-token', {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ token }),
-      });
-    }
-
-    handleTokenVerification();
-
-  }, [auth.isSignedIn, auth.firebaseUser]);
-
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.target as HTMLFormElement);
@@ -50,12 +29,15 @@ export default function LoginForm({ messages, ...formProps }: { messages: LoginF
 
     if (!email || !password) return;
 
-    await auth.signIn({ email, password }).then(async (result) => {
-      console.log("Login result:", result);
-      if (typeof result === "string") {
-        setAlert(true);
+    await auth.signIn({ email, password }).then(async () => {
+      const token = await auth.firebaseUser?.getIdToken();
+      if (typeof token === "string") {
+        await createSessionCookie(token, 12 * 60 * 60 * 24).then((response) => {
+          console.log("Session cookie created successfully:", response);
+          setAlert(false);
+        })
       } else {
-        setAlert(false);
+        setAlert(true);
       }
     });
   }

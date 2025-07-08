@@ -23,8 +23,8 @@ export { clientDb, clientStorage, clientFunctions, clientAuth, httpsCallable };
 
 // Emulator
 if (process.env.NODE_ENV == "development") {
-  connectAuthEmulator(clientAuth, "http://127.0.0.1:9099")
-  connectFunctionsEmulator(clientFunctions, "127.0.0.1", 5001)
-  connectFirestoreEmulator(clientDb, "127.0.0.1", 8080)
-  connectStorageEmulator(clientStorage, "127.0.0.1", 9199)
+  connectAuthEmulator(clientAuth, "http://localhost:9099")
+  connectFunctionsEmulator(clientFunctions, "localhost", 5001)
+  connectFirestoreEmulator(clientDb, "localhost", 8080)
+  connectStorageEmulator(clientStorage, "localhost", 9199)
 }
