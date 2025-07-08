@@ -108,7 +108,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 export const useAuth = () => useContext(AuthContext);
 
 const setSessionCookie = async (token: string) => {
-  const baseurl = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:3000';
+  const baseurl = process.env.NODE_ENV === 'production' ? 'https://prss-kit-official.vercel.app' : 'http://localhost:3000';
   const response = await fetch(`${baseurl}/api/set-session-cookie`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },

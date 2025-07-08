@@ -403,3 +403,15 @@ INFO: Detected non-HTTP/2 connection.
 [debug] [2025-07-08T02:36:32.865Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
 [debug] [2025-07-08T02:36:32.866Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
 [info] ✔  functions: Loaded functions definitions from source: createSessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie."}}
+[debug] [2025-07-08T02:37:16.303Z] Jul 07, 2025 9:37:16 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 9:37:16 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T02:38:16.340Z] Jul 07, 2025 9:38:16 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 9:38:16 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T02:39:10.939Z] Jul 07, 2025 9:39:10 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 9:39:10 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T02:39:10.950Z] Jul 07, 2025 9:39:10 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 07, 2025 9:39:10 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
