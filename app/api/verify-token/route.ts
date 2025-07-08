@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { adminAuth } from "@/services/firebase-admin-config";
 import { cookies } from "next/headers";
 export async function POST(request: NextRequest) {
-  const { token } = await request.json();
+  const { token }: { token: string } = await request.json();
 
   console.log("Received token:", token);
 
@@ -24,13 +24,17 @@ export async function POST(request: NextRequest) {
   //   console.log("Token verified successfully:", decodedToken);
   const cookieStore = await cookies();
   const expiresIn = 12 * 60 * 60 * 24; // twelve days
-  const session = await adminAuth.createSessionCookie(await token, { expiresIn }).then(async (session) => {
+  const session = await adminAuth.createSessionCookie(token, { expiresIn }).then(async (session) => {
     console.log("Session cookie created successfully", await session);
+
+
     return await session;
   }).catch((error) => {
     console.error("Error creating session cookie:", error);
     return null;
   });
+
+  console.log("Session cookie:", session);
 
   if (session) {
     cookieStore.set("PRSSKIT_SESSION", session, {
@@ -40,7 +44,7 @@ export async function POST(request: NextRequest) {
       maxAge: expiresIn
     });
   }
-  return NextResponse.json({ message: "Session cookie created successfully", }, { status: 200 });
+  return NextResponse.json({ message: "Session cookie created successfully", session: session }, { status: 200 });
   // }).catch((error) => {
   //   console.error("Error verifying token:", error);
   //   return NextResponse.json({ message: "Invalid token" }, { status: 401 });
