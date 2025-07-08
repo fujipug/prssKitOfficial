@@ -27,11 +27,14 @@ export default function LoginForm({ messages, ...formProps }: { messages: LoginF
     }
 
     const handleTokenVerification = async () => {
+      const token = await auth.firebaseUser?.getIdToken(true);
       await fetch('/api/verify-token', {
-        method: 'GET',
+        method: 'POST',
         headers: {
-          'Authorization': `Bearer ${await auth.firebaseUser?.getIdToken(true) || ''}`,
+          'Authorization': `Bearer ${await token || ''}`,
+          'Content-Type': 'application/json'
         },
+        body: JSON.stringify({ token: await token }),
       });
     }
 
