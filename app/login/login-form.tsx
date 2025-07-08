@@ -32,10 +32,11 @@ export default function LoginForm({ messages, ...formProps }: { messages: LoginF
       if (typeof result === "string") {
         setAlert(true);
       } else {
-        // httpsCallable(clientFunctions, "createSessionCookie")({
-        //   idToken: await result.getIdToken(),
-        // });
-        setAlert(false);
+        const idToken = await auth.firebaseUser?.uid;
+        await fetch('/api/verify-token', {
+          method: 'GET',
+          headers: { Authorization: `Bearer ${idToken}` }
+        });
       }
     });
   }

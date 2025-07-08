@@ -1,7 +1,5 @@
 import { cert, getApps, initializeApp } from 'firebase-admin/app';
 import { getAuth } from 'firebase-admin/auth';
-// import { getFirestore } from 'firebase-admin/firestore';
-// import { getFunctions } from 'firebase-admin/functions';
 
 export const firebaseAdminConfig = {
   credential: cert({
@@ -27,8 +25,7 @@ function getAdminApp() {
 
 const adminApp = getAdminApp();
 const adminAuth = getAuth(adminApp);
-// const serverDb = getFirestore(serverApp);
-// const serverFunctions = getFunctions(serverApp);
+
 const cors = [
   'https://www.prss-kit-official.vercel.app',
   'https://prss-kit-official.vercel.app',

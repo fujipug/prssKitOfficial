@@ -2,7 +2,6 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 import Image from "next/image";
 import LoginForm from "./login-form";
-// import { cookies } from "next/headers";
 
 export default function Login() {
   const translations = useTranslations("Auth");
@@ -15,11 +14,6 @@ export default function Login() {
     divider_text: translations("divider_text"),
     login_error: translations("login_error")
   }
-
-  // const handleCreateCookie = async (data: { sessionCookie: string; options: Record<string, string> }) => {
-  //   const cookieStore = await cookies();
-  //   cookieStore.set('session', data.sessionCookie, data.options);
-  // }
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 skull-pattern min-h-dvh">

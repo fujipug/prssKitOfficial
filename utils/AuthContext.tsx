@@ -4,9 +4,7 @@ import { ReactNode } from "react";
 import { firebaseRegister, firebaseSignIn, firebaseSignOut, subscribeToCurrentUser } from "@/network/firebase";
 import { onAuthStateChanged, User } from "firebase/auth";
 import { PreRegister, Artist } from "@/app/types";
-// import { deleteSessionCookie } from "@/actions/auth";
 import { clientAuth } from "@/services/firebase-config";
-// import { useRouter } from "next/navigation";
 
 const AuthContext = createContext<{
   isSignedIn: boolean;
@@ -79,16 +77,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     if (!user) {
       throw new Error('Sign in failed');
     }
-
-    await setSessionCookie(await user.getIdToken());
-
-    // await httpsCallable(clientFunctions, 'createSessionCookie')({
-    //   idToken: await user.getIdToken(),
-    //   // csrfToken: 'your-csrf-token', // Optional, if you implement CSRF protection
-    // }).then(async () => {
-    //   await setSessionCookie(await user.getIdToken());
-    // });
-  };
+  }
 
   const signOut = async () => {
     const user = await firebaseSignOut();
@@ -106,19 +95,3 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 };
 
 export const useAuth = () => useContext(AuthContext);
-
-const setSessionCookie = async (token: string) => {
-  const baseurl = process.env.NODE_ENV === 'production' ? 'https://prss-kit-official.vercel.app' : 'http://localhost:3000';
-  const response = await fetch(`${baseurl}/api/set-session-cookie`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ token }),
-  });
-
-  if (!response.ok) {
-    throw new Error('Failed to set session cookie');
-  }
-
-  console.log('Session cookie created successfully');
-  window.location.href = '/artist-dashboard'
-}

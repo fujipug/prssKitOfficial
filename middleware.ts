@@ -1,52 +1,76 @@
-// import type { NextRequest } from "next/server";
-// import { authMiddleware } from "next-firebase-auth-edge";
+// import { NextResponse } from 'next/server';
+// import type { NextRequest } from 'next/server';
+// import {
+//   authMiddleware,
+//   redirectToHome,
+//   redirectToLogin
+// } from 'next-firebase-auth-edge';
 
-// export async function middleware(request: NextRequest) {
-//   return authMiddleware(request, {
-//     loginPath: "/api/login",
-//     logoutPath: "/api/logout",
-//     apiKey: "XXxxXxXXXxXxxxxx_XxxxXxxxxxXxxxXXXxxXxX",
-//     cookieName: "prsskit_session",
-//     cookieSignatureKeys: ["Key-Should-Be-at-least-32-bytes-in-length"],
-//     cookieSerializeOptions: {
-//       path: "/",
-//       httpOnly: true,
-//       secure: false, // Set this to true on HTTPS environments
-//       sameSite: "lax" as const,
-//       maxAge: 12 * 60 * 60 * 24, // Twelve days
-//     },
-//     serviceAccount: {
-//       projectId: "your-firebase-project-id",
-//       clientEmail: "firebase-adminsdk-nnw48@your-firebase-project-id.iam.gserviceaccount.com",
-//       privateKey: "-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n",
-//     },
-//   });
-// }
+// const PUBLIC_PATHS = ['/register', '/login', '/'];
 
-// export const config = {
-//   matcher: ["/api/login", "/api/logout", "/", "/((?!_next|favicon.ico|api|.*\\.).*)"],
-// };
+export async function middleware() {
+  //   return authMiddleware(request, {
+  //     loginPath: '/api/verify-token',
+  //     logoutPath: '/api/logout',
+  //     apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY || '',
+  //     cookieName: 'PRSSKIT_SESSION',
+  //     cookieSignatureKeys: ['Key-Should-Be-at-least-32-bytes-in-length'],
+  //     cookieSerializeOptions: {
+  //       path: '/',
+  //       httpOnly: true,
+  //       secure: false, // Set this to true on HTTPS environments
+  //       sameSite: 'lax' as const,
+  //       maxAge: 12 * 60 * 60 * 24 // twelve days
+  //     },
+  //     serviceAccount: {
+  //       projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || '',
+  //       clientEmail:
+  //         process.env.PRSS_KIT_ADMIN_CLIENT_EMAIL || '',
+  //       privateKey:
+  //         process.env.PRSS_KIT_ADMIN_PRIVATE_KEY?.replace(/\\n/gm, '\n') || ''
+  //     },
+  //     enableMultipleCookies: true,
+  //     enableCustomToken: false,
+  //     debug: true,
+  //     checkRevoked: true,
+  //     authorizationHeaderName: 'Authorization',
+  //     handleValidToken: async ({ token, decodedToken }, headers) => {
+  //       // Authenticated user should not be able to access /login, /register and / routes
+  //       console.log('Valid token received', token, decodedToken);
+  //       if (PUBLIC_PATHS.includes(request.nextUrl.pathname)) {
+  //         return redirectToHome(request);
+  //       }
 
-import { NextResponse, NextRequest } from 'next/server';
+  //       return NextResponse.next({
+  //         request: {
+  //           headers
+  //         }
+  //       });
+  //     },
+  //     handleInvalidToken: async (reason) => {
+  //       console.info('Missing or malformed credentials', { reason });
 
-export async function middleware(request: NextRequest) {
-  const sessionCookie = request.cookies.get('prsskit_session');
-  const protectedRoutes = ['/artist-dashboard'];
-  const ignoredRoutes = ['_next', '_api'].concat(protectedRoutes);
+  //       return redirectToLogin(request, {
+  //         path: '/login',
+  //         publicPaths: PUBLIC_PATHS
+  //       });
+  //     },
+  //     handleError: async (error) => {
+  //       console.error('Unhandled authentication error', { error });
 
-  const path = request.nextUrl.pathname;
+  //       return redirectToLogin(request, {
+  //         path: '/login',
+  //         publicPaths: PUBLIC_PATHS
+  //       });
+  //     }
+  //   });
+  // }
 
-  if (sessionCookie && !ignoredRoutes.includes(path)) {
-    return NextResponse.redirect(new URL('/artist-dashboard', request.url));
-  }
-
-  if (!sessionCookie && protectedRoutes.includes(path)) {
-    return NextResponse.redirect(new URL('/login', request.url));
-  }
-
-  return NextResponse.next();
-}
-
-export const config = {
-  matcher: ['/artist-dashboard', '/'],
-}
+  // export const config = {
+  //   matcher: [
+  //     '/api/verify-token',
+  //     '/api/logout',
+  //     '/',
+  //     '/((?!_next|favicon.ico|api|.*\\.).*)'
+  //   ]
+};
