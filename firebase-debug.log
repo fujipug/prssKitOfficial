@@ -1399,3 +1399,753 @@ INFO: Detected non-HTTP/2 connection.
 [debug] [2025-07-08T22:39:54.913Z] Jul 08, 2025 5:39:54 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
 INFO: Detected non-HTTP/2 connection.
  {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:39:54 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T22:40:47.888Z] Jul 08, 2025 5:40:47 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:40:47 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T22:40:47.892Z] Jul 08, 2025 5:40:47 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
+INFO: channel closed
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:40:47 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose\nINFO: channel closed\n"}}
+[debug] [2025-07-08T22:40:47.897Z] Jul 08, 2025 5:40:47 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:40:47 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T22:40:47.928Z] Jul 08, 2025 5:40:47 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:40:47 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T22:40:47.929Z] Jul 08, 2025 5:40:47 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:40:47 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T22:40:48.904Z] Jul 08, 2025 5:40:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:40:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T22:40:48.907Z] Jul 08, 2025 5:40:48 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
+INFO: channel closed
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:40:48 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose\nINFO: channel closed\n"}}
+[debug] [2025-07-08T22:40:48.915Z] Jul 08, 2025 5:40:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:40:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T22:40:48.924Z] Jul 08, 2025 5:40:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:40:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T22:41:48.944Z] Jul 08, 2025 5:41:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:41:48 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T22:42:34.046Z] Jul 08, 2025 5:42:34 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:42:34 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T22:42:35.742Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-08T22:42:36.746Z] Validating nodejs source
+[debug] [2025-07-08T22:42:37.371Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-08T22:42:37.372Z] Building nodejs source
+[debug] [2025-07-08T22:42:37.372Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-08T22:42:37.376Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-08T22:42:37.378Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8861
+
+[debug] [2025-07-08T22:42:37.611Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-08T22:42:37.620Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-08T22:42:37.621Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie."}}
+[debug] [2025-07-08T22:43:34.070Z] Jul 08, 2025 5:43:34 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:43:34 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T22:44:34.096Z] Jul 08, 2025 5:44:34 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:44:34 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T22:45:14.400Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-08T22:45:15.401Z] Validating nodejs source
+[debug] [2025-07-08T22:45:15.964Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-08T22:45:15.964Z] Building nodejs source
+[debug] [2025-07-08T22:45:15.964Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-08T22:45:15.966Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-08T22:45:15.967Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8840
+
+[debug] [2025-07-08T22:45:16.197Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-08T22:45:16.205Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-08T22:45:16.205Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie."}}
+[debug] [2025-07-08T22:45:34.134Z] Jul 08, 2025 5:45:34 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:45:34 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T22:46:02.488Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-08T22:46:03.490Z] Validating nodejs source
+[debug] [2025-07-08T22:46:04.054Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-08T22:46:04.054Z] Building nodejs source
+[debug] [2025-07-08T22:46:04.054Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-08T22:46:04.056Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-08T22:46:04.057Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8577
+
+[debug] [2025-07-08T22:46:04.300Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-08T22:46:04.308Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-08T22:46:04.308Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie."}}
+[debug] [2025-07-08T22:46:34.162Z] Jul 08, 2025 5:46:34 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:46:34 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T22:47:34.185Z] Jul 08, 2025 5:47:34 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:47:34 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T22:48:20.040Z] Jul 08, 2025 5:48:20 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:48:20 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T22:49:36.041Z] Jul 08, 2025 5:49:36 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:49:36 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T22:50:00.525Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-08T22:50:01.528Z] Validating nodejs source
+[debug] [2025-07-08T22:50:02.253Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-08T22:50:02.253Z] Building nodejs source
+[debug] [2025-07-08T22:50:02.253Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-08T22:50:02.255Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-08T22:50:02.257Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8525
+
+[debug] [2025-07-08T22:50:02.516Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-08T22:50:02.523Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-08T22:50:02.524Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie."}}
+[debug] [2025-07-08T22:50:14.819Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-08T22:50:15.819Z] Validating nodejs source
+[debug] [2025-07-08T22:50:16.360Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-08T22:50:16.360Z] Building nodejs source
+[debug] [2025-07-08T22:50:16.360Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-08T22:50:16.362Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-08T22:50:16.363Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8342
+
+[debug] [2025-07-08T22:50:16.509Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-08T22:50:16.516Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-08T22:50:16.517Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie."}}
+[debug] [2025-07-08T22:50:22.048Z] Jul 08, 2025 5:50:22 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:50:22 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T22:51:03.399Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-08T22:51:04.401Z] Validating nodejs source
+[debug] [2025-07-08T22:51:04.879Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-08T22:51:04.879Z] Building nodejs source
+[debug] [2025-07-08T22:51:04.879Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-08T22:51:04.880Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-08T22:51:04.881Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8023
+
+[debug] [2025-07-08T22:51:05.063Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-08T22:51:05.070Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-08T22:51:05.071Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie."}}
+[debug] [2025-07-08T22:51:08.047Z] Jul 08, 2025 5:51:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:51:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T22:51:29.246Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-08T22:51:30.250Z] Validating nodejs source
+[debug] [2025-07-08T22:51:30.836Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-08T22:51:30.836Z] Building nodejs source
+[debug] [2025-07-08T22:51:30.836Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-08T22:51:30.838Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-08T22:51:30.840Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8336
+
+[debug] [2025-07-08T22:51:31.074Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-08T22:51:31.081Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-08T22:51:31.082Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie."}}
+[debug] [2025-07-08T22:51:35.488Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-08T22:51:36.491Z] Validating nodejs source
+[debug] [2025-07-08T22:51:37.046Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-08T22:51:37.046Z] Building nodejs source
+[debug] [2025-07-08T22:51:37.047Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-08T22:51:37.048Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-08T22:51:37.049Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8718
+
+[debug] [2025-07-08T22:51:37.265Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-08T22:51:37.273Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-08T22:51:37.273Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie."}}
+[debug] [2025-07-08T22:52:08.090Z] Jul 08, 2025 5:52:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:52:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T22:52:17.731Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-08T22:52:18.734Z] Validating nodejs source
+[debug] [2025-07-08T22:52:19.376Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-08T22:52:19.377Z] Building nodejs source
+[debug] [2025-07-08T22:52:19.377Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-08T22:52:19.378Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-08T22:52:19.378Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8802
+
+[debug] [2025-07-08T22:52:19.588Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-08T22:52:19.596Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-08T22:52:19.596Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie."}}
+[debug] [2025-07-08T22:52:28.573Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-08T22:52:29.575Z] Validating nodejs source
+[debug] [2025-07-08T22:52:30.181Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-08T22:52:30.181Z] Building nodejs source
+[debug] [2025-07-08T22:52:30.181Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-08T22:52:30.183Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-08T22:52:30.184Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8258
+
+[debug] [2025-07-08T22:52:30.406Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-08T22:52:30.414Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-08T22:52:30.414Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie."}}
+[debug] [2025-07-08T22:52:38.062Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-08T22:52:39.064Z] Validating nodejs source
+[debug] [2025-07-08T22:52:39.601Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-08T22:52:39.601Z] Building nodejs source
+[debug] [2025-07-08T22:52:39.601Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-08T22:52:39.602Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-08T22:52:39.603Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8215
+
+[debug] [2025-07-08T22:52:39.809Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-08T22:52:39.817Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-08T22:52:39.817Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie."}}
+[debug] [2025-07-08T22:53:08.105Z] Jul 08, 2025 5:53:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:53:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T22:53:14.585Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-08T22:53:15.587Z] Validating nodejs source
+[debug] [2025-07-08T22:53:16.207Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-08T22:53:16.207Z] Building nodejs source
+[debug] [2025-07-08T22:53:16.207Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-08T22:53:16.208Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-08T22:53:16.210Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8278
+
+[debug] [2025-07-08T22:53:16.430Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-08T22:53:16.438Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-08T22:53:16.438Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie."}}
+[debug] [2025-07-08T22:53:25.306Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-08T22:53:26.310Z] Validating nodejs source
+[debug] [2025-07-08T22:53:26.944Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-08T22:53:26.944Z] Building nodejs source
+[debug] [2025-07-08T22:53:26.944Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-08T22:53:26.945Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-08T22:53:26.946Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8253
+
+[debug] [2025-07-08T22:53:27.161Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-08T22:53:27.168Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-08T22:53:27.170Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie."}}
+[debug] [2025-07-08T22:54:08.126Z] Jul 08, 2025 5:54:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:54:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T22:55:24.030Z] Jul 08, 2025 5:55:24 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:55:24 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T22:56:10.027Z] Jul 08, 2025 5:56:10 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:56:10 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T22:56:26.272Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-08T22:56:27.275Z] Validating nodejs source
+[debug] [2025-07-08T22:56:27.840Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-08T22:56:27.841Z] Building nodejs source
+[debug] [2025-07-08T22:56:27.841Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-08T22:56:27.842Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-08T22:56:27.843Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8062
+
+[debug] [2025-07-08T22:56:28.082Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-08T22:56:28.089Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-08T22:56:28.089Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie."}}
+[debug] [2025-07-08T22:56:30.484Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-08T22:56:31.485Z] Validating nodejs source
+[debug] [2025-07-08T22:56:31.966Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-08T22:56:31.966Z] Building nodejs source
+[debug] [2025-07-08T22:56:31.966Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-08T22:56:31.967Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-08T22:56:31.967Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8972
+
+[debug] [2025-07-08T22:56:32.119Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-08T22:56:32.127Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-08T22:56:32.127Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie."}}
+[debug] [2025-07-08T22:56:33.888Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-08T22:56:34.891Z] Validating nodejs source
+[debug] [2025-07-08T22:56:35.423Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-08T22:56:35.423Z] Building nodejs source
+[debug] [2025-07-08T22:56:35.423Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-08T22:56:35.424Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-08T22:56:35.424Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8619
+
+[debug] [2025-07-08T22:56:35.576Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-08T22:56:35.584Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-08T22:56:35.584Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie."}}
+[debug] [2025-07-08T22:56:36.533Z] File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/lanefujikado/Projects/prss-kit/functions/src/create-session-cookie.ts changed, reloading triggers"}}
+[debug] [2025-07-08T22:56:37.535Z] Validating nodejs source
+[debug] [2025-07-08T22:56:38.031Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-07-08T22:56:38.031Z] Building nodejs source
+[debug] [2025-07-08T22:56:38.031Z] Failed to find version of module node: reached end of search path /Users/lanefujikado/Projects/prss-kit/functions/node_modules
+[info] ✔  functions: Using node@18 from host. 
+[info] i  functions: Loaded environment variables from .env.local. 
+[debug] [2025-07-08T22:56:38.032Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-07-08T22:56:38.033Z] Found firebase-functions binary at '/Users/lanefujikado/Projects/prss-kit/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8078
+
+[debug] [2025-07-08T22:56:38.188Z] Got response from /__/functions.yaml {"endpoints":{"createSessionCookie":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"createSessionCookie"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2025-07-08T22:56:38.196Z] defaultcredentials: writing to file /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json
+[debug] [2025-07-08T22:56:38.197Z] Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/lanefujikado/.config/firebase/lane_fujikado_gmail.com_application_default_credentials.json"}}
+[info] ✔  functions: Loaded functions definitions from source: createSessionCookie. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: createSessionCookie."}}
+[debug] [2025-07-08T22:56:56.029Z] Jul 08, 2025 5:56:56 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:56:56 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T22:57:41.232Z] Jul 08, 2025 5:57:41 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:57:41 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T22:58:41.244Z] Jul 08, 2025 5:58:41 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:58:41 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-08T22:59:41.275Z] Jul 08, 2025 5:59:41 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 08, 2025 5:59:41 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}

@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
     return null;
   });
 
-  console.log("Session cookie:", session);
+  console.log("Session cookie:", await session);
 
   if (session) {
     cookieStore.set("PRSSKIT_SESSION", session, {
@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
       maxAge: expiresIn
     });
   }
-  return NextResponse.json({ message: "Session cookie created successfully", session: session }, { status: 200 });
+  return NextResponse.json({ message: "Session cookie created successfully", session: await session, cookieStore, token }, { status: 200 });
   // }).catch((error) => {
   //   console.error("Error verifying token:", error);
   //   return NextResponse.json({ message: "Invalid token" }, { status: 401 });

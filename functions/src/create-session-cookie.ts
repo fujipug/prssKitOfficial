@@ -3,25 +3,16 @@ import { cors } from "./main";
 import { adminAuth } from "./main";
 
 export const createSessionCookie = onCall({ cors }, async (req) => {
-  console.log('sohalkdfsj ;lksdj', req);
-  // Get the ID token passed and the CSRF token.
   const idToken = req.data.idToken;
-  // const csrfToken = req.data.csrfToken.toString();
-  // Guard against CSRF attacks.
-  // if (csrfToken !== req.data.csrfToken) {
-  //   throw new Error('UNAUTHORIZED REQUEST!');
-  // }
-  // Set session expiration to 5 days.
   const expiresIn = 60 * 60 * 24 * 5 * 1000;
-  // Create the session cookie. This will also verify the ID token in the process.
-  // The session cookie will have the same claims as the ID token.
-  // To only allow session cookie setting on recent sign-in, auth_time in ID token
-  // can be checked to ensure user was recently signed in before creating a session cookie.
-  // adminAuth
   try {
     const sessionCookie = await adminAuth.createSessionCookie(idToken, { expiresIn });
     console.log('Session cookie created:', sessionCookie);
-    return { status: 'success', sessionCookie };
+    // res.setHeader('Set-Cookie', `PRSSKIT_SESSION=${sessionCookie}; HttpOnly; Path=/; Max-Age=${expiresIn / 1000}; SameSite=Lax`);
+    // const options = { maxAge: expiresIn, httpOnly: true, secure: true };
+    // res?.cookie('session', sessionCookie, options);
+    // res?.end(JSON.stringify({ status: 'success' }));
+    // return { status: 'success', sessionCookie };
   } catch (error) {
     throw new Error('UNAUTHORIZED REQUEST!' + (error instanceof Error ? `: ${error.message}` : ''));
   }
