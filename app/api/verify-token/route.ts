@@ -14,7 +14,7 @@ export async function GET(request: NextRequest) {
   }
 
   // const cookieStore = await cookies();
-  const expiresIn = 12 * 60 * 60 * 24; // twelve days
+  // const expiresIn = 12 * 60 * 60 * 24; // twelve days
   // const session = await adminAuth.createSessionCookie(await token, { expiresIn }).then((session) => {
   //   console.log("Session cookie created successfully");
   //   return session;
