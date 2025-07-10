@@ -1,5 +1,6 @@
 'use client';
 import { useTheme } from "@/lib/ThemeContext";
+import { PiSwatchesFill } from "react-icons/pi";
 
 const themes = [
   { name: 'fantasy', label: 'Light' },
@@ -9,13 +10,14 @@ const themes = [
   { name: 'retro', label: 'Retro' }
 ];
 
-export default function ThemeController({ translations }: { translations: { theme: string } }) {
+export default function ThemeController() {
   const { setTheme } = useTheme();
 
   return (
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn ml-1">
-        <span className="text-xs">{translations['theme']}</span>
+        <PiSwatchesFill size={22} />
+
         <svg
           width="12px"
           height="12px"

@@ -3,13 +3,22 @@
     "assets": "Recursos",
     "share": "Compartir"
   },
+  "ArtistDashboardAssets": {
+    "audio_text": "Audios",
+    "collection_text": "Colecciónes",
+    "document_text": "Documentos",
+    "image_text": "Imágenes",
+    "video_text": "Videos"
+  },
   "ArtistDashboardPrssKit": {
-    "artist_name": "Nombre de artista",
-    "biography": "Biografía",
-    "location": "Ubicación",
-    "profile_url": "URL del perfil",
+    "biography_placeholder": "Agregar biografía",
+    "location_placeholder": "Agregar ubicación",
     "subtitle": "Contenido que se mostrará en tu página de perfil",
     "title": "Tu Prss Kit"
+  },
+  "ArtistDashboardShare": {
+    "title": "Archivos añadidos recientemente",
+    "description": "Comparte o descarga tus recursos"
   },
   "Auth": {
     "divider_text": "O continúa con",
@@ -18,13 +27,13 @@
     "login_button": "¡Déjame entrar!",
     "login_description": "Inicia sesión",
     "login_error": "Verifica tus credenciales e inténtalo de nuevo",
-    "login_redirect_register": "¿No tienes una cuenta? Regístrate ahora",
+    "login_redirect_register": "¿No tienes una cuenta? <register>Regístrate ahora</register>",
     "password": "Contraseña",
     "password_confirm": "Confirmar contraseña",
     "password_requirements": "Debe tener más de 8 caracteres incluyendo:; Al menos un número, Al menos una letra minúscula, Al menos una letra mayúscula",
     "register_button": "Registrarse",
     "register_description": "¡Regístrate gratis!",
-    "register_redirect_login": "¿Ya tienes una cuenta? Inicia sesión aquí"
+    "register_redirect_login": "¿Ya tienes una cuenta? <login>Inicia sesión aquí</login>"
   },
   "Home": {
     "action_register": "¡Crea tu Prss Kit!",
@@ -38,12 +47,14 @@
     "register": "Registrarse",
     "profile": "Perfil",
     "logout": "Cerrar sesión",
-    "settings": "Configuración",
-    "theme": "Tema"
+    "settings": "Configuración"
   },
   "Onboard": {
+    "step_1_button": "Enviar",
     "step_1_title": "¿Cuál es tu nombre artístico/a?",
+    "step_2_button": "Siguiente",
     "step_2_title": "Sube tu press kit",
+    "step_3_button": "Finalizar",
     "step_3_title": "Sube tus multimedia"
   }
 }

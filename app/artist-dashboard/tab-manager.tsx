@@ -1,11 +1,11 @@
 'use client';
-import Share from "../(dashboard-sections)/share";
-import PrssKit from "../(dashboard-sections)/prss-kit";
+import Share from "./_dashboard-sections/share";
+import PrssKit from "./_dashboard-sections/prss-kit";
 import { useState } from "react";
-import Assets from "../(dashboard-sections)/assets";
+import Assets from "./_dashboard-sections/assets";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function TabManager({ tabTranslations, prssKitTranslations }: { tabTranslations: any, prssKitTranslations: any }) {
+export default function TabManager({ tabTranslations, prssKitTranslations, shareTranslations, assetTranslations }: { tabTranslations: any, prssKitTranslations: any, shareTranslations: any, assetTranslations: any }) {
   const [selectedTab, setSelectedTab] = useState('share-tab');
 
   const handleTabSelect = (tab: string) => {
@@ -34,9 +34,9 @@ export default function TabManager({ tabTranslations, prssKitTranslations }: { t
         <a role="tab" id="assets-tab" onClick={() => handleTabSelect('assets-tab')} className="tab">{tabTranslations['assets']}</a>
       </div>
 
-      {selectedTab === 'share-tab' && <Share />}
+      {selectedTab === 'share-tab' && <Share translations={shareTranslations} />}
       {selectedTab === 'prsskit-tab' && <PrssKit translations={prssKitTranslations} />}
-      {selectedTab === 'assets-tab' && <Assets />}
+      {selectedTab === 'assets-tab' && <Assets translations={assetTranslations} />}
     </div>
   );
 }

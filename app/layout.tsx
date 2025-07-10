@@ -1,12 +1,13 @@
+import "./globals.css";
 import type { Metadata } from "next";
 import { Special_Elite } from "next/font/google";
-import "./globals.css";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider, useTranslations } from "next-intl";
-import NavigationBar from "@/components/navigation-bar";
-import Footer from "@/components/footer";
 import { AuthProvider } from "@/lib/AuthContext";
 import { ThemeProvider } from "@/lib/ThemeContext";
+import navigationBarTranslations from "@/utils/navigation-bar-translations";
+import NavigationBar from "@/components/navigation-bar";
+import Footer from "@/components/footer";
 
 const specialEliteSans = Special_Elite({ weight: "400", subsets: ["latin"] });
 
@@ -24,14 +25,7 @@ export default function RootLayout({
 }>) {
   const messages = getMessages();
   const translations = useTranslations("NavigationBar");
-  const navMessages = {
-    login: translations("login"),
-    logout: translations("logout"),
-    profile: translations("profile"),
-    register: translations("register"),
-    settings: translations("settings"),
-    theme: translations("theme")
-  }
+  const navMessages = navigationBarTranslations(translations);
 
   return (
     <html lang={params.locale} className="h-full">
@@ -42,11 +36,7 @@ export default function RootLayout({
           <ThemeProvider>
             <NextIntlClientProvider messages={messages}>
               <NavigationBar translations={navMessages} />
-              {/* Use a container to ensure consistent padding and centering */}
-              {/* Uncomment the following line if you want to use a container */}
-              {/* <div className="container mx-auto px-4 py-8 min-h-dvh"> */}
               {children}
-              {/* </div> */}
               <Footer />
             </NextIntlClientProvider>
           </ThemeProvider>

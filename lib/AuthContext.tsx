@@ -52,23 +52,20 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   }, []);
 
   useEffect(() => {
-    let unsubscribe: (() => void) | undefined;
-
-    const subscribe = async () => {
-      unsubscribe = await subscribeToCurrentUser(setProfile);
-    };
-
-    subscribe();
-
-    return () => {
-      if (unsubscribe) {
-        unsubscribe();
-      }
-    };
+    const unsubscribe = subscribeToCurrentUser(setProfile);
+    return () => unsubscribe(); // Cleanup on unmount
   }, [firebaseUser]);
 
   const register = async ({ email, password, preRegister }: { email: string; password: string; preRegister: PreRegister }) => {
-    await firebaseRegister(email, password, preRegister);
+    const user = await firebaseRegister(email, password, preRegister);
+
+    if (!user) {
+      throw new Error('Sign in failed');
+    }
+
+    // Create a session cookie after signing in
+    const idToken = await user?.getIdToken();
+    await createSessionCookie(idToken);
   }
 
   const signIn = async (credentials: { email: string; password: string }) => {

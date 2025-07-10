@@ -1,5 +1,4 @@
 'use client';
-
 import SocialAuthButtonGrid from "@/components/social-auth-button-grid";
 import { useAuth } from "@/lib/AuthContext";
 import { useState } from "react";
@@ -27,17 +26,27 @@ export default function RegisterForm({ messages, ...formProps }: { messages: Reg
     const formData = new FormData(event.target as HTMLFormElement);
     const email = formData.get("email") as string | null;
     const password = formData.get("password") as string | null;
+    const passwordConfirm = formData.get("password-confirm") as string | null;
 
-    if (!email || !password) return;
+    if (!email || !password || !passwordConfirm) return;
 
-    await auth.signIn({ email, password }).then((result) => {
-      if (typeof result === "string") {
-        setAlert(true);
-      } else {
-        setAlert(false);
+    if (password !== passwordConfirm) {
+      console.error("Passwords do not match");
+      setAlert(true);
+      return;
+    }
+
+    await auth.register({
+      email,
+      password,
+      preRegister: {
+        artistName: "",
+        pressKits: [],
+        assets: []
       }
-    })
-  }
+    });
+    setAlert(false);
+  };
 
   return (
     <>

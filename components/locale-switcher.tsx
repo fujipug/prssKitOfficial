@@ -4,6 +4,7 @@ import { useLocale } from 'next-intl';
 import { useTransition } from 'react';
 import { setUserLocale } from '@/services/locale';
 import { Locale } from '@/i18n/config';
+import { PiGlobeFill } from 'react-icons/pi';
 
 export default function LocaleSwitcher() {
   const locale = useLocale();
@@ -17,9 +18,11 @@ export default function LocaleSwitcher() {
   }
 
   return (
-    <div className="dropdown">
+    <div className="dropdown dropdown-end">
       <div tabIndex={0} role="button" className="btn ml-1">
-        <span className="text-xs">{locale === 'en' ? 'English' : 'Español'}</span>
+        {/* <span className="text-xs">{locale === 'en' ? 'English' : 'Español'}</span> */}
+        <PiGlobeFill size={22} />
+
         <svg
           width="12px"
           height="12px"

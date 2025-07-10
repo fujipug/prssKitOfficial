@@ -18,15 +18,15 @@ export default function NavigationBar({ translations }: { translations: any }) {
     <div className={`${isHidden ? 'hidden' : 'navbar bg-transparent mx-auto px-4 py-2 items-center sticky top-0 z-50 backdrop-blur'}`}>
       <div className="navbar-start">
         <div className={`${isDashboardPath ? 'dropdown' : 'hidden'}`}>
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle swap swap-rotate">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
           </div>
           <ul
             tabIndex={0}
             className="menu dropdown-content bg-base-300 rounded-box z-1 mt-2 p-2 shadow">
-            <li><a>{translations['profile']}</a></li>
-            <li><a>{translations['settings']}</a></li>
-            <li role="button" onClick={signOut} className="btn btn-error mt-1">
+            <li><Link href="/profile">{translations['profile']}</Link></li>
+            <li><Link href="/settings">{translations['settings']}</Link></li>
+            <li role="button" onClick={signOut} className="btn btn-error mt-1 w-max">
               {translations['logout']}
             </li>
           </ul>
@@ -42,7 +42,7 @@ export default function NavigationBar({ translations }: { translations: any }) {
         </div>
       </div>
       <div className="navbar-end">
-        <ThemeController translations={translations} />
+        <ThemeController />
         <LocaleSwitcher />
         <Link role="button" className={`${!isAuthPath ? 'btn btn-primary ml-1' : 'hidden'}`} href="/login">
           <span className="text-sm">{translations['login']}</span>

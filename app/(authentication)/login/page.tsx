@@ -29,7 +29,11 @@ export default function Login() {
 
         <LoginForm messages={messages} className="mt-4" />
 
-        <p className="text-sm text-center mt-8 font-medium">{translations("login_redirect_register")}</p>
+        <p className="text-sm text-center mt-8 font-medium">
+          {translations.rich("login_redirect_register", {
+            register: (chunks) => <Link className="font-bold hover:underline underline-offset-4" href="/register">{chunks}</Link>
+          })}
+        </p>
       </div>
 
       <div className="col-span-1 lg:block hidden">

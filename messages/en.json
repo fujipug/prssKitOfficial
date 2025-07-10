@@ -3,13 +3,22 @@
     "assets": "Assets",
     "share": "Share"
   },
+  "ArtistDashboardAssets": {
+    "audio_text": "Audio",
+    "collection_text": "Collections",
+    "document_text": "Documents",
+    "image_text": "Images",
+    "video_text": "Videos"
+  },
   "ArtistDashboardPrssKit": {
-    "artist_name": "Artist name",
-    "biography": "Biography",
-    "location": "Location",
-    "profile_url": "Profile URL",
+    "biography_placeholder": "Add biography",
+    "location_placeholder": "Add location",
     "subtitle": "Content that will be displayed on your profile page",
     "title": "Your PRSS Kit"
+  },
+  "ArtistDashboardShare": {
+    "title": "Recent added files",
+    "description": "Share or download your assets"
   },
   "Auth": {
     "divider_text": "Or continue with",
@@ -18,13 +27,13 @@
     "login_button": "Let Me In!",
     "login_description": "Login to your account",
     "login_error": "Check your credentials and try again",
-    "login_redirect_register": "Don't have an account? Register now",
+    "login_redirect_register": "Don't have an account? <register>Register now</register>",
     "password": "Password",
     "password_confirm": "Confirm Password",
     "password_requirements": "Must be more than 8 characters including:; At least one number, At least one lowercase letter, At least one uppercase letter",
     "register_button": "Register",
     "register_description": "Sign up for free!",
-    "register_redirect_login": "Already have an account? Login now"
+    "register_redirect_login": "Already have an account? <login>Login now</login>"
   },
   "Home": {
     "action_register": "Create your Prss Kit!",
@@ -38,12 +47,14 @@
     "logout": "Logout",
     "profile": "Profile",
     "register": "Register",
-    "settings": "Settings",
-    "theme": "Theme"
+    "settings": "Settings"
   },
   "Onboard": {
+    "step_1_button": "Submit",
     "step_1_title": "What's your artist name?",
+    "step_2_button": "Next",
     "step_2_title": "Upload your press kit",
+    "step_3_button": "Finish",
     "step_3_title": "Upload your media"
   }
 }

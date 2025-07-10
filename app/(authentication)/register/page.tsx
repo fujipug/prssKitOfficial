@@ -30,7 +30,11 @@ export default function Register() {
 
         <RegisterForm messages={messages} className="mt-4" />
 
-        <p className="text-sm text-center mt-8 font-medium">{translations("register_redirect_login")}</p>
+        <p className="text-sm text-center mt-8 font-medium">
+          {translations.rich("register_redirect_login", {
+            login: (chunks) => <Link className="font-bold hover:underline underline-offset-4" href="/login">{chunks}</Link>
+          })}
+        </p>
       </div>
       <div className="col-span-1 lg:block hidden">
         <Image
