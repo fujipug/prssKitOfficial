@@ -5,7 +5,7 @@ import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider, useTranslations } from "next-intl";
 import { AuthProvider } from "@/lib/AuthContext";
 import { ThemeProvider } from "@/lib/ThemeContext";
-import navigationBarTranslations from "@/utils/navigation-bar-translations";
+import { navigationBarTranslations } from "@/utils/component-translations";
 import NavigationBar from "@/components/navigation-bar";
 import Footer from "@/components/footer";
 

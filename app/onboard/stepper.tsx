@@ -17,9 +17,9 @@ type OnboardProps = {
 
 export default function Stepper({ messages }: { messages: OnboardProps }) {
   const [index, setIndex] = useState(0);
-  const [step1Complete, setStep1Complete] = useState<string | null>(null);
-  const [step2Complete, setStep2Complete] = useState<string | null>(null);
-  const [step3Complete, setStep3Complete] = useState<string | null>(null);
+  const [, setStep1Complete] = useState<string | null>(null);
+  const [, setStep2Complete] = useState<string | null>(null);
+  const [, setStep3Complete] = useState<string | null>(null);
 
   useEffect(() => {
     scrollToId(`step-${index + 1}`);
