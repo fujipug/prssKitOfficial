@@ -1,8 +1,8 @@
 'use client';
-import Share from "./share";
-import PrssKit from "./prss-kit";
+import Share from "../(dashboard-sections)/share";
+import PrssKit from "../(dashboard-sections)/prss-kit";
 import { useState } from "react";
-import Assets from "./assets";
+import Assets from "../(dashboard-sections)/assets";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function TabManager({ tabTranslations, prssKitTranslations }: { tabTranslations: any, prssKitTranslations: any }) {

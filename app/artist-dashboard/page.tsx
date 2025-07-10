@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import TabManager from "./tab-manager";
+import TabManager from "./_components/tab-manager";
 
 export default function ArtistDashboard() {
   const tabTranslations = useTranslations('ArtistDashboardTabs');

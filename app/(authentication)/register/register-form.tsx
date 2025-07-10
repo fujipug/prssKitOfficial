@@ -1,7 +1,7 @@
 'use client';
 
 import SocialAuthButtonGrid from "@/components/social-auth-button-grid";
-import { useAuth } from "@/utils/AuthContext";
+import { useAuth } from "@/lib/AuthContext";
 import { useState } from "react";
 
 type RegisterFormProps = {

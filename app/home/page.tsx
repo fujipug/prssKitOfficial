@@ -1,5 +1,5 @@
-import Features from "./features";
-import Landing from "./landing";
+import Features from "./(homepage-sections)/features";
+import Landing from "./(homepage-sections)/landing";
 
 export default async function Home() {
   return (

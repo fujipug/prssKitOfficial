@@ -1,6 +1,5 @@
 'use server';
 import { cookies } from 'next/headers';
-// Update the path below to the correct relative path to your config file
 import { Locale, defaultLocale } from '@/i18n/config';
 
 // In this example the locale is read from a cookie. You could alternatively

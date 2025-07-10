@@ -5,7 +5,7 @@ import Step1 from "./step-1";
 import Step2 from "./step-2";
 import Step3 from "./step-3";
 import Link from "next/link";
-import { scrollToId } from "@/lib/scroll-to-id";
+import { scrollToId } from "@/utils/scroll-to-id";
 
 type OnboardProps = {
   step_1_title: string;

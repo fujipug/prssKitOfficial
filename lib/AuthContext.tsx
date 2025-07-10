@@ -1,10 +1,11 @@
 'use client';
-import React, { createContext, useState, useContext, useEffect } from "react";
+import { createContext, useState, useContext, useEffect } from "react";
 import { ReactNode } from "react";
 import { firebaseRegister, firebaseSignIn, firebaseSignOut, subscribeToCurrentUser } from "@/network/firebase";
 import { onAuthStateChanged, User } from "firebase/auth";
 import { PreRegister, Artist } from "@/app/types";
 import { clientAuth } from "@/services/firebase-config";
+import { createSessionCookie, deleteSessionCookie } from "@/services/cookies";
 
 const AuthContext = createContext<{
   isSignedIn: boolean;
@@ -29,7 +30,6 @@ interface AuthProviderProps {
 }
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
-  // const router = useRouter();
   const [isSignedIn, setIsSignedIn] = useState(false);
   const [firebaseUser, setFirebaseUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -49,7 +49,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 
       setIsLoading(false);
     });
-  }, [clientAuth]);
+  }, []);
 
   useEffect(() => {
     let unsubscribe: (() => void) | undefined;
@@ -77,15 +77,18 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     if (!user) {
       throw new Error('Sign in failed');
     }
+
+    // Create a session cookie after signing in
+    const idToken = await user?.getIdToken();
+    await createSessionCookie(idToken);
   }
 
   const signOut = async () => {
-    const user = await firebaseSignOut();
+    await firebaseSignOut();
 
-    // delete the session cookie
-
-    return user;
-  };
+    // Delete the session cookie after signing out
+    await deleteSessionCookie()
+  }
 
   return (
     <AuthContext.Provider value={{ isSignedIn, firebaseUser, profile, isLoading, register, signIn, signOut }}>

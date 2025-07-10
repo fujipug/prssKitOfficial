@@ -1,18 +1,20 @@
 'use client';
+import { useState } from 'react';
+import { slide1Video, slide2Video } from '@/utils/static-data';
 import BackgroundPlayer from 'next-video/background-player';
 import Link from 'next/link';
-import { useState } from 'react';
+import Image from 'next/image';
 
 const slides = [
   {
     id: 1,
-    videoSrc: 'https://firebasestorage.googleapis.com/v0/b/prsskit.firebasestorage.app/o/prss_kit_videos%2Fsebas_wolf_slide.mp4?alt=media&token=440c79d4-7ef5-491e-9635-dc20fbaacd9f',
+    videoSrc: slide1Video,
     // title: 'Slide 1',
     // description: 'Description for Slide 1',
   },
   {
     id: 2,
-    videoSrc: 'https://firebasestorage.googleapis.com/v0/b/prsskit.firebasestorage.app/o/prss_kit_videos%2Fdie_hekss_slide.mp4?alt=media&token=78394e2f-9dbf-46d4-8f8b-bda5330201ae',
+    videoSrc: slide2Video,
   },
 ];
 
@@ -37,7 +39,7 @@ export default function ArtistCarousel({ textOverlay, actionButtonText }: { text
               className='-mt-10 rounded-box'>
             </BackgroundPlayer>
             <div className="cardtext-primary-content w-full">
-              <div className="card-body glass rounded-box -bottom-5 -left-5 absolute w-1/2">
+              <div className="card-body glass rounded-box -bottom-5 -left-5 absolute">
                 <p className='sm:text-md md:text-lg lg:text-2xl font-bold text-white'>{textOverlay}</p>
                 <div className="card-actions justify-end mt-2">
                   <Link href="/onboard" role="button" className="btn sm:btn-sm md:btn-md lg:btn-md btn-primary">{actionButtonText}</Link>
@@ -47,7 +49,7 @@ export default function ArtistCarousel({ textOverlay, actionButtonText }: { text
               <div className="mockup-phone border-error absolute -bottom-5 right-20 scale-30 sm:scale-45 md:scale-50 lg:scale-55 origin-bottom-right shadow-2xl">
                 <div className="mockup-phone-camera"></div>
                 <div className="mockup-phone-display">
-                  <img alt="wallpaper" src="/register_image.jpg" />
+                  <Image alt="prsskit artist page" src="/login_image.jpg" width={375} height={667} />
                 </div>
               </div>
             </div>

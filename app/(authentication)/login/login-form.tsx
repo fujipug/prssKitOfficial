@@ -1,7 +1,6 @@
 'use client';
 import SocialAuthButtonGrid from "@/components/social-auth-button-grid";
-import { createSessionCookie } from "@/services/cookies";
-import { useAuth } from "@/utils/AuthContext";
+import { useAuth } from "@/lib/AuthContext";
 import { useState } from "react";
 
 type LoginFormProps = {
@@ -29,18 +28,9 @@ export default function LoginForm({ messages, ...formProps }: { messages: LoginF
 
     if (!email || !password) return;
 
-    await auth.signIn({ email, password }).then(async () => {
-      const token = await auth.firebaseUser?.getIdToken();
-      if (typeof token === "string") {
-        await createSessionCookie(token, 12 * 60 * 60 * 24).then((response) => {
-          console.log("Session cookie created successfully:", response);
-          setAlert(false);
-        })
-      } else {
-        setAlert(true);
-      }
-    });
-  }
+    await auth.signIn({ email, password });
+    setAlert(false);
+  };
 
   return (
     <>

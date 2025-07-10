@@ -1,5 +1,5 @@
 'use client';
-import { useTheme } from "@/utils/ThemeContext";
+import { useTheme } from "@/lib/ThemeContext";
 
 const themes = [
   { name: 'fantasy', label: 'Light' },

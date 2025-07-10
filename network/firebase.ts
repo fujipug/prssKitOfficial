@@ -1,5 +1,5 @@
 import { Artist, FileData, PostRegister, PreRegister } from "@/app/types";
-import { uploadFile } from "@/lib/file-uploader";
+import { uploadFile } from "@/utils/file-uploader";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, User } from "firebase/auth";
 import { doc, onSnapshot, setDoc, Timestamp } from "firebase/firestore";
 import { clientDb, clientAuth } from "@/services/firebase-config";
@@ -112,11 +112,5 @@ export const subscribeToCurrentUser = (
 };
 
 export const firebaseSignOut = async () => {
-  return await clientAuth.signOut()
-    .then(async () => {
-      console.log('User signed out');
-    })
-    .catch((error) => {
-      console.log('Error signing out: ', error);
-    });
+  return await clientAuth.signOut();
 }

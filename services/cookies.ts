@@ -1,26 +1,29 @@
-'use server';
-export async function createSessionCookie(token: string, expiresIn: number) {
-  const { cookies } = await import('next/headers');
-  const cookieStore = await cookies();
+import { deleteSecureCookie, setSecureCookie } from '@/app/actions/cookie-actions';
+import { clientFunctions, httpsCallable } from './firebase-config';
+import { redirect } from 'next/navigation';
 
-  // Create session cookie
-  const sessionCookie = await import('@/services/firebase-admin-config')
-    .then(({ adminAuth }) => {
-      return adminAuth.createSessionCookie(token, { expiresIn });
+export function createSessionCookie(idToken: string) {
+  httpsCallable(clientFunctions, 'createSessionCookie')({ idToken })
+    .then((response) => {
+      setSecureCookie(response.data as string).then(() => {
+        redirect('/artist-dashboard');
+      })
     })
     .catch((error) => {
       console.error("Error creating session cookie:", error);
-      return null;
+      throw new Error('Failed to create session cookie: ' + (error instanceof Error ? error.message : 'Unknown error'));
     });
+}
 
-  if (sessionCookie) {
-    cookieStore.set("PRSSKIT_SESSION", sessionCookie, {
-      httpOnly: true,
-      sameSite: "lax",
-      path: "/",
-      maxAge: expiresIn
-    });
-  }
-
-  return sessionCookie;
+export function deleteSessionCookie() {
+  deleteSecureCookie().then(() => {
+    //TODO: Find a better way to handle redirects in Next.js
+    // This is a workaround to ensure the redirect happens after the cookie is deleted
+    // Using setTimeout to allow the cookie deletion to complete before redirecting
+    setTimeout(() => {
+      redirect('/login');
+    }, 1000);
+  }).catch((error) => {
+    console.error("Error deleting session cookie:", error);
+  });
 }

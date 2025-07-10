@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import ArtistCarousel from "./artist-carousel";
+import ArtistCarousel from "../_components/artist-carousel";
 
 export default function Landing() {
   const translations = useTranslations("Home");

@@ -5,8 +5,8 @@ import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider, useTranslations } from "next-intl";
 import NavigationBar from "@/components/navigation-bar";
 import Footer from "@/components/footer";
-import { AuthProvider } from "@/utils/AuthContext";
-import { ThemeProvider } from "@/utils/ThemeContext";
+import { AuthProvider } from "@/lib/AuthContext";
+import { ThemeProvider } from "@/lib/ThemeContext";
 
 const specialEliteSans = Special_Elite({ weight: "400", subsets: ["latin"] });
 
