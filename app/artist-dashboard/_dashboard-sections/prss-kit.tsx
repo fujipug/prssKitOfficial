@@ -10,6 +10,12 @@ export default function PrssKit({ translations }: { translations: any }) {
   const initialItems = ["🍅 Tomato", "🥒 Cucumber", "🧀 Cheese", "🥬 Lettuce"];
   const [items, setItems] = useState(initialItems);
 
+  const handleReorder = (newItems: string[]) => {
+    setItems(newItems);
+    // Here you can also handle the API call to save the new order
+    console.log("Reordered items:", newItems);
+  };
+
   return (
     <div className="min-h-dvh bg-base-100">
       <div className="grid grid-cols-8 gap-4">
@@ -54,7 +60,7 @@ export default function PrssKit({ translations }: { translations: any }) {
             <h1 className="text-2xl font-bold mb-1">{translations['title']}</h1>
             <p className="text-sm mb-4">{translations['subtitle']}</p>
 
-            <Reorder.Group axis="y" values={items} onReorder={setItems} >
+            <Reorder.Group axis="y" values={items} onReorder={handleReorder} >
               <span className="space-y-4">
                 {items.map((item) => (
                   <Reorder.Item key={item} value={item}>

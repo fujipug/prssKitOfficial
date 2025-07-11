@@ -45,15 +45,18 @@ export default function LocaleSwitcher() {
           />
         </li>
         <li>
-          <input
-            type="radio"
-            name="language-dropdown"
-            className="btn btn-sm btn-block btn-ghost justify-start"
-            aria-label="Español"
-            value="es"
-            checked={locale === 'es'}
-            onChange={onChange}
-          />
+          <span className='flex items-center'>
+            <span className="pe-4 font-mono text-[.5625rem] font-bold tracking-[0.09375rem] opacity-40">ES</span>
+            <input
+              type="radio"
+              name="language-dropdown"
+              className="btn btn-sm btn-block btn-ghost justify-start"
+              aria-label="Español"
+              value="es"
+              checked={locale === 'es'}
+              onChange={onChange}
+            />
+          </span>
         </li>
       </ul>
     </div>
