@@ -33,7 +33,7 @@ const PROTECTED_ROUTES = ['/artist-dashboard'];
 const PUBLIC_ROUTES = ['/_next', '/login', '/register', '/'];
 
 export async function middleware(request: NextRequest) {
-  const sessionCookie = request.cookies.get('PRSSKIT_SESSION') !== undefined;
+  const sessionCookie = request.cookies.get('sessionCookie') !== undefined;
   const path = request.nextUrl.pathname;
 
   // If not authenticated and trying to access a protected route, redirect to login

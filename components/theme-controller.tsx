@@ -3,15 +3,15 @@ import { useTheme } from "@/lib/ThemeContext";
 import { PiSwatchesFill } from "react-icons/pi";
 
 const themes = [
-  { name: 'fantasy', label: 'Light' },
-  { name: 'dark', label: 'Dark' },
-  { name: 'cupcake', label: 'Cupcake' },
-  { name: 'coffee', label: 'Coffee' },
-  { name: 'retro', label: 'Retro' }
+  { value: 'fantasy', label: 'Light' },
+  { value: 'dark', label: 'Dark' },
+  { value: 'cupcake', label: 'Cupcake' },
+  { value: 'coffee', label: 'Coffee' },
+  { value: 'retro', label: 'Retro' }
 ];
 
 export default function ThemeController() {
-  const { setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
 
   return (
     <div className="dropdown">
@@ -28,15 +28,15 @@ export default function ThemeController() {
         </svg>
       </div>
       <ul tabIndex={0} className="dropdown-content bg-base-300 rounded-box z-1 mt-2 p-2 shadow">
-        {themes.map((theme, index) => (
+        {themes.map((themeItem, index) => (
           <li key={index}>
             <input
               type="radio"
               name="theme-dropdown"
-              className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-              aria-label={theme.label}
-              onChange={() => setTheme(theme.name)}
-              value={theme.name} />
+              className={`${theme === themeItem.value ? 'btn-active' : ''} theme-controller btn btn-sm btn-ghost btn-block justify-start`}
+              aria-label={themeItem.label}
+              onChange={() => setTheme(themeItem.value)}
+              value={themeItem.value} />
           </li>
         ))}
       </ul>

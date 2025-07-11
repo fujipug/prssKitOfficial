@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { Reorder } from "framer-motion";
 import { useState } from 'react';
-import { PiAtBold, PiDesktop, PiDeviceMobileSpeaker, PiLayout, PiMapPin, PiNotebook, PiNotePencil, PiPlusSquare, PiTrash } from "react-icons/pi";
+import { PiAtBold, PiDesktop, PiDeviceMobileSpeaker, PiLayout, PiListPlusBold, PiMapPin, PiNotebook, PiNotePencil, PiPlusSquare, PiTrash, PiUserList } from "react-icons/pi";
 import { useAuth } from '@/lib/AuthContext';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -14,16 +14,16 @@ export default function PrssKit({ translations }: { translations: any }) {
     <div className="min-h-dvh bg-base-100">
       <div className="grid grid-cols-8 gap-4">
         <div className="col-span-8 md:col-span-4 lg:col-span-5">
-          <div className="card lg:card-side bg-base-200 border-base-300 rounded-box border p-4 mb-4">
+          <div className="card card-side bg-base-200 border-base-300 rounded-box border mb-4">
             <figure>
               <Image
                 src="/login_image.jpg"
-                width={120}
-                height={120}
+                width={140}
+                height={140}
                 alt="Profile Pic" />
             </figure>
             <div className="card-body">
-              <p className='font-bold text-2xl'>{profile?.artistName}</p>
+              <p className='font-bold text-3xl'>{profile?.artistName}</p>
               <div className="font-semibold flex items-center space-x-1">
                 <PiAtBold />
                 <p>/{profile?.urlIdentifier}</p>
@@ -37,10 +37,18 @@ export default function PrssKit({ translations }: { translations: any }) {
                 <p>{profile?.location || translations['location_placeholder']}</p>
               </div>
               <div className="card-actions justify-start">
-                <button className="btn btn-primary btn-wide">Listen</button>
+                <button className="btn btn-primary btn-wide">
+                  <PiUserList size={22} />
+                  <span className="ml-1">{translations['edit_profile']}</span>
+                </button>
               </div>
             </div>
           </div>
+
+          <button className="btn btn-primary btn-lg btn-block mb-4">
+            <PiListPlusBold size={22} />
+            <span className="ml-1">{translations['add_new_item']}</span>
+          </button>
 
           <div className="bg-base-200 border-base-300 rounded-box border p-4 mb-4">
             <h1 className="text-2xl font-bold mb-1">{translations['title']}</h1>
@@ -107,11 +115,11 @@ export default function PrssKit({ translations }: { translations: any }) {
         <div className="col-span-8 md:col-span-4 lg:col-span-3">
           <div className="bg-base-200 border-base-300 rounded-box border p-4">
             <div className="flex justify-center items-center space-x-2">
-              <button className="btn btn-square btn-soft">
+              <button className="btn btn-soft btn-primary btn-active">
                 <PiDeviceMobileSpeaker size={22} />
               </button>
 
-              <button className="btn btn-square btn-soft">
+              <button className="btn btn-soft btn-primary">
                 <PiDesktop size={22} />
               </button>
             </div>

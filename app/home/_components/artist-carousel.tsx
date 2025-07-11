@@ -49,7 +49,7 @@ export default function ArtistCarousel({ textOverlay, actionButtonText }: { text
               <div className="mockup-phone border-error absolute -bottom-5 right-20 scale-30 sm:scale-45 md:scale-50 lg:scale-55 origin-bottom-right shadow-2xl">
                 <div className="mockup-phone-camera"></div>
                 <div className="mockup-phone-display">
-                  <Image alt="prsskit artist page" src="/login_image.jpg" width={375} height={667} />
+                  <Image alt="prsskit artist page" src="/register_image.jpg" width={375} height={667} />
                 </div>
               </div>
             </div>

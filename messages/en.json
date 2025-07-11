@@ -11,7 +11,9 @@
     "video_text": "Videos"
   },
   "ArtistDashboardPrssKit": {
+    "add_new_item": "Add new item",
     "biography_placeholder": "Add biography",
+    "edit_profile": "Edit profile",
     "location_placeholder": "Add location",
     "subtitle": "Content that will be displayed on your profile page",
     "title": "Your PRSS Kit"

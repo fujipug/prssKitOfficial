@@ -3,7 +3,7 @@ import { cookies } from 'next/headers';
 
 export async function setSecureCookie(cookie: string) {
   const cookieStore = await cookies();
-  await cookieStore.set("PRSSKIT_SESSION", cookie, {
+  await cookieStore.set("sessionCookie", cookie, {
     httpOnly: true,
     sameSite: "lax",
     secure: process.env.NODE_ENV === 'production',
@@ -14,5 +14,5 @@ export async function setSecureCookie(cookie: string) {
 
 export async function deleteSecureCookie() {
   const cookieStore = await cookies();
-  await cookieStore.delete('PRSSKIT_SESSION');
+  await cookieStore.delete("sessionCookie");
 }

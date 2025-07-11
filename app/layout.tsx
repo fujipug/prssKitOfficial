@@ -28,7 +28,19 @@ export default function RootLayout({
   const navMessages = navigationBarTranslations(translations);
 
   return (
-    <html lang={params.locale} className="h-full">
+    <html lang={params.locale} suppressHydrationWarning className="h-full">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var savedTheme = localStorage.getItem('theme') || 'light';
+                document.documentElement.setAttribute('data-theme', savedTheme);
+              })();
+            `,
+          }}
+        />
+      </head>
       <body
         className={`${specialEliteSans.className} antialiased`}
       >

@@ -1,13 +1,12 @@
 'use client';
-
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { ReactNode } from "react";
 
 const ThemeContext = createContext<{
-  // isDark: boolean;
+  theme: string;
   setTheme: (theme: string) => void;
 }>({
-  // isDark: false,
+  theme: '',
   setTheme: () => { },
 });
 
@@ -16,22 +15,21 @@ interface ThemeProviderProps {
 }
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
-  // const [isDark] = useState(localStorage.getItem("isDark") === "true");
-  const [theme, changeTheme] = useState<string>();
+  const [theme, changeTheme] = useState<string>('');
 
   useEffect(() => {
-    // localStorage.setItem("isDark", String(isDark));
-    changeTheme(localStorage.getItem("theme") || "fantasy");
-    document.documentElement.setAttribute("data-theme", theme || "fantasy");
-  }, [theme]);
+    const storedTheme = localStorage.getItem("theme");
+    changeTheme(storedTheme || '');
+  }, []);
 
   const setTheme = (theme: string) => {
     localStorage.setItem("theme", theme);
+    document.documentElement.setAttribute("data-theme", theme);
     changeTheme(theme);
   };
 
   return (
-    <ThemeContext.Provider value={{ setTheme }}>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
       {children}
     </ThemeContext.Provider>
   );
