@@ -50,5 +50,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: [...PROTECTED_ROUTES, ...PUBLIC_ROUTES],
+  matcher: ['/_next', '/login', '/register', '/', '/artist-dashboard/:path*'],
 }
