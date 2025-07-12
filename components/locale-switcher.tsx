@@ -20,7 +20,6 @@ export default function LocaleSwitcher() {
   return (
     <div className="dropdown dropdown-end">
       <div tabIndex={0} role="button" className="btn ml-1">
-        {/* <span className="text-xs">{locale === 'en' ? 'English' : 'Español'}</span> */}
         <PiGlobeFill size={22} />
 
         <svg
@@ -33,30 +32,29 @@ export default function LocaleSwitcher() {
         </svg>
       </div>
       <ul tabIndex={0} className="dropdown-content bg-base-300 rounded-box z-1 mt-2 p-2 shadow">
-        <li>
+        <li className='flex items-center'>
+          <p className="pe-1 font-mono text-[.65rem] font-bold tracking-[0.05rem] opacity-60">EN</p>
           <input
             type="radio"
             name="language-dropdown"
-            className="btn btn-sm btn-block btn-ghost justify-start"
+            className="btn btn-sm btn-ghost justify-start"
             aria-label="English"
             value="en"
             checked={locale === 'en'}
             onChange={onChange}
           />
         </li>
-        <li>
-          <span className='flex items-center'>
-            <span className="pe-4 font-mono text-[.5625rem] font-bold tracking-[0.09375rem] opacity-40">ES</span>
-            <input
-              type="radio"
-              name="language-dropdown"
-              className="btn btn-sm btn-block btn-ghost justify-start"
-              aria-label="Español"
-              value="es"
-              checked={locale === 'es'}
-              onChange={onChange}
-            />
-          </span>
+        <li className='flex items-center'>
+          <p className="pe-1 font-mono text-[.65rem] font-bold tracking-[0.05rem] opacity-60">ES</p>
+          <input
+            type="radio"
+            name="language-dropdown"
+            className="btn btn-sm btn-ghost justify-start"
+            aria-label="Español"
+            value="es"
+            checked={locale === 'es'}
+            onChange={onChange}
+          />
         </li>
       </ul>
     </div>

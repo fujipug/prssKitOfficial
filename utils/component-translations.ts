@@ -32,9 +32,7 @@ const prssKitTranslations = (translations: ReturnType<typeof useTranslations>) =
     add_new_item: translations("add_new_item"),
     biography_placeholder: translations("biography_placeholder"),
     edit_profile: translations("edit_profile"),
-    location_placeholder: translations("location_placeholder"),
-    subtitle: translations("subtitle"),
-    title: translations("title"),
+    location_placeholder: translations("location_placeholder")
   };
 }
 

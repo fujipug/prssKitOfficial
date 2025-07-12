@@ -1,25 +1,29 @@
 import Image from 'next/image';
 import { Reorder } from "framer-motion";
-import { useState } from 'react';
-import { PiAtBold, PiDesktop, PiDeviceMobileSpeaker, PiLayout, PiListPlusBold, PiMapPin, PiNotebook, PiNotePencil, PiPlusSquare, PiTrash, PiUserList } from "react-icons/pi";
+import { useRef, useState } from 'react';
+import { PiAtBold, PiDesktop, PiDeviceMobileSpeaker, PiLayout, PiMapPin, PiNotebook, PiNotePencil, PiPlusSquare } from "react-icons/pi";
 import { useAuth } from '@/lib/AuthContext';
+import EditProfileModal from '../_components/edit-profile-modal';
+import AddElementModal from '../_components/add-element-modal';
+import DeleteItemModal from '../_components/delete-item-modal';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function PrssKit({ translations }: { translations: any }) {
   const { profile } = useAuth();
+  const constraintsRef = useRef(null)
   const initialItems = ["🍅 Tomato", "🥒 Cucumber", "🧀 Cheese", "🥬 Lettuce"];
   const [items, setItems] = useState(initialItems);
 
   const handleReorder = (newItems: string[]) => {
     setItems(newItems);
-    // Here you can also handle the API call to save the new order
     console.log("Reordered items:", newItems);
   };
 
   return (
     <div className="min-h-dvh bg-base-100">
       <div className="grid grid-cols-8 gap-4">
-        <div className="col-span-8 md:col-span-4 lg:col-span-5">
+        {/* TODO: add the mb-4 probably in the layout */}
+        <div className="col-span-8 md:col-span-4 lg:col-span-5 mb-4">
           <div className="card card-side bg-base-200 border-base-300 rounded-box border mb-4">
             <figure>
               <Image
@@ -43,80 +47,79 @@ export default function PrssKit({ translations }: { translations: any }) {
                 <p>{profile?.location || translations['location_placeholder']}</p>
               </div>
               <div className="card-actions justify-start">
-                <button className="btn btn-primary btn-wide">
-                  <PiUserList size={22} />
-                  <span className="ml-1">{translations['edit_profile']}</span>
-                </button>
+                <EditProfileModal modalButtonText={translations['edit_profile']} />
               </div>
             </div>
           </div>
 
-          <button className="btn btn-primary btn-lg btn-block mb-4">
-            <PiListPlusBold size={22} />
-            <span className="ml-1">{translations['add_new_item']}</span>
-          </button>
+          <AddElementModal elementType='row' modalButtonText={translations['add_new_item']} />
 
-          <div className="bg-base-200 border-base-300 rounded-box border p-4 mb-4">
-            <h1 className="text-2xl font-bold mb-1">{translations['title']}</h1>
-            <p className="text-sm mb-4">{translations['subtitle']}</p>
+          {/* <div className="bg-base-200 border-base-300 rounded-box border p-4 mb-4"> */}
+          <Reorder.Group axis="y" values={items} onReorder={handleReorder} ref={constraintsRef}>
+            <span className="space-y-4">
+              {items.map((item) => (
+                <Reorder.Item key={item} value={item} drag dragConstraints={constraintsRef} >
 
-            <Reorder.Group axis="y" values={items} onReorder={handleReorder} >
-              <span className="space-y-4">
-                {items.map((item) => (
-                  <Reorder.Item key={item} value={item}>
-
-                    {/* TODO: On Toggle to not show switch, change the background color to indicate that
+                  {/* TODO: On Toggle to not show switch, change the background color to indicate that
                     you can see it on the artist page */}
-                    <div className="card bg-base-100 card-lg shadow">
-                      <div className="card-body">
-                        <div className="flex justify-between items-center">
-                          <div className="flex items-baseline space-x-2">
-                            <h2 className="card-title">{item}</h2>
-                            <p className="text-xs">Spotify</p>
-                          </div>
+                  <div className="card bg-base-200 border-base-300 border card-lg shadow">
+                    <div className="card-body">
+                      <div className="flex justify-between items-center">
+                        <div className="flex items-baseline space-x-2">
+                          <h2 className="card-title">{item}</h2>
+                          {/* <p className="text-xs">Spotify</p> */}
+                        </div>
 
-                          <div className="flex justify-end items-center">
-                            <input type="checkbox" defaultChecked className="toggle toggle-primary" />
+                        <div className="flex justify-end items-center">
+                          <input type="checkbox" defaultChecked className="toggle toggle-primary" />
+                        </div>
+                      </div>
+
+                      <div className="space-x-2">
+                        <div className="avatar">
+                          <div className="w-24 rounded-box">
+                            <Image width={96} height={96} alt="Item" src="/register_image.jpg" />
                           </div>
                         </div>
 
-                        <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                        <div className="card-actions justify-between">
-                          <div className='space-x-2'>
+                        {/* <button className="btn btn-dash size-24">
+                          <PiPlus size={22} />
+                        </button> */}
+                        <AddElementModal elementType='item' />
+                      </div>
 
-                            <div className="tooltip" data-tip="Layout">
-                              <button className="btn btn-square btn-soft">
-                                <PiLayout size={22} />
-                              </button>
-                            </div>
+                      <div className="card-actions justify-between">
+                        <div className='space-x-2'>
 
-                            <div className="tooltip" data-tip="Edit">
-                              <button className="btn btn-square btn-soft">
-                                <PiNotePencil size={22} />
-                              </button>
-                            </div>
-
-                            <div className="tooltip" data-tip="Add">
-                              <button className="btn btn-square btn-soft">
-                                <PiPlusSquare size={22} />
-                              </button>
-                            </div>
+                          <div className="tooltip" data-tip="Layout">
+                            <button className="btn btn-square btn-soft">
+                              <PiLayout size={22} />
+                            </button>
                           </div>
 
-                          <div className="tooltip tooltip-error" data-tip="Delete">
-                            <button className="btn btn-square btn-error btn-soft">
-                              <PiTrash size={22} />
+                          <div className="tooltip" data-tip="Edit">
+                            <button className="btn btn-square btn-soft">
+                              <PiNotePencil size={22} />
+                            </button>
+                          </div>
+
+                          <div className="tooltip" data-tip="Add">
+                            <button className="btn btn-square btn-soft">
+                              <PiPlusSquare size={22} />
                             </button>
                           </div>
                         </div>
+
+                        <DeleteItemModal />
                       </div>
                     </div>
-                  </Reorder.Item>
-                ))}
-              </span>
-            </Reorder.Group>
-          </div>
+                  </div>
+                </Reorder.Item>
+              ))}
+            </span>
+          </Reorder.Group>
         </div>
+        {/* </div> */}
 
         <div className="col-span-8 md:col-span-4 lg:col-span-3">
           <div className="bg-base-200 border-base-300 rounded-box border p-4">
