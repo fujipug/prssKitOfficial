@@ -13,8 +13,11 @@
   "ArtistDashboardPrssKit": {
     "add_new_item": "Add row",
     "biography_placeholder": "Add biography",
+    "divider_text": "Or",
     "edit_profile": "Edit profile",
-    "location_placeholder": "Add location"
+    "location_placeholder": "Add location",
+    "select_from_assets": "My assets",
+    "upload_files": "Upload files"
   },
   "ArtistDashboardShare": {
     "title": "Recent added files",

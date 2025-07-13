@@ -1,12 +1,65 @@
-import { useRef } from "react";
-import { PiPlus, PiRowsPlusBottom } from "react-icons/pi";
+import { useAuth } from "@/lib/AuthContext";
+import { updateArtist } from "@/network/firebase";
+import AssetsFolderSvg from "@/utils/assets-folder-svg";
+import fileSortTypeUpload from "@/utils/file-sort-type-upload";
+import UploadFilesSvg from "@/utils/upload-files-svg";
+import { useRef, useState } from "react";
+import { PiArrowLeft, PiPlus, PiRowsPlusBottom } from "react-icons/pi";
 
-export default function AddElementModal({ elementType, modalButtonText }: { elementType: string; modalButtonText?: string }) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function AddElementModal({ translations, rowId, modalButtonText }: { translations: any; rowId?: string; modalButtonText?: string; }) {
   const modalRef = useRef<HTMLDialogElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const [showAssets, setShowAssets] = useState(false);
+  const { firebaseUser, artist } = useAuth();
+
+  const handleFileUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const files = event.target.files;
+    if (!files || files.length === 0) return;
+
+    return await fileSortTypeUpload(Array.from(files), firebaseUser.uid).then(async (results) => {
+      const rows = artist.rows;
+      const selectedRow = rows?.find((row) => row.id === rowId);
+      selectedRow?.items?.push(...results);
+
+      const elementObject = !rowId
+        ? [
+          // create a new row with the uploaded files in the items array
+          ...(rows || []),
+          {
+            id: crypto.randomUUID(),
+            items: [...results],
+            index: (rows?.length || 0) + 1,
+            isShown: true,
+            name: translations['new_row'] || 'New Row',
+          },
+        ]
+        : [
+          // get the selected row and add the uploaded files to items array
+          ...(rows?.map((row) => row.id === rowId ?
+            {
+              ...row,
+              items: [...(row.items || []), ...results],
+            }
+            : row) || []),
+        ];
+
+      const updatedArtist = {
+        ...artist,
+        assets: [...(artist.assets || []), ...results],
+        rows: elementObject,
+      };
+
+      return await updateArtist(updatedArtist);
+    }).catch((error) => {
+      console.error("Error uploading files:", error);
+    });
+  };
 
   return (
     <>
-      {elementType === 'row' ? (
+      <input type="file" multiple max={4} accept="image/*,video/*,audio/*,.pdf,.docx" className="hidden" ref={fileInputRef} onChange={handleFileUpload} />
+      {typeof rowId !== "string" ? (
         <button onClick={() => modalRef.current?.showModal()} className="btn btn-primary btn-lg btn-block mb-4">
           <PiRowsPlusBottom size={22} />
           <span className="ml-1">{modalButtonText || 'Add new item'}</span>
@@ -18,8 +71,23 @@ export default function AddElementModal({ elementType, modalButtonText }: { elem
       )}
       <dialog ref={modalRef} className="modal modal-bottom sm:modal-middle">
         <div className="modal-box">
-          <h3 className="font-bold text-lg">Hello!</h3>
-          <p className="py-4">Press ESC key or click the button below to close</p>
+          <div className={`${showAssets ? 'hidden' : 'flex w-full'}`}>
+            <div onClick={() => fileInputRef.current?.click()} className="card bg-base-300 hover:bg-base-200 rounded-box grid grow place-items-center p-4 cursor-pointer">
+              <UploadFilesSvg className="size-32 text-primary" />
+              <p className="text-center font-semibold mt-4">{translations['upload_files']}</p>
+            </div>
+            <div className="divider divider-horizontal">{translations['divider_text']}</div>
+            <div onClick={() => setShowAssets(true)} className="card bg-base-300 hover:bg-base-200 rounded-box grid grow place-items-center p-4 cursor-pointer">
+              <AssetsFolderSvg className="size-32 text-primary" />
+              <p className="text-center font-semibold mt-4">{translations['select_from_assets']}</p>
+            </div>
+          </div>
+
+          <button onClick={() => setShowAssets(false)} className={`${showAssets ? 'btn btn-ghost' : 'hidden'}`}>
+            <PiArrowLeft size={22} />
+            <span className="ml-1">Back</span>
+          </button>
+
           <div className="modal-action">
             <form method="dialog">
               {/* if there is a button in form, it will close the modal */}

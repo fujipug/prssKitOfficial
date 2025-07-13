@@ -9,16 +9,16 @@ import { createSessionCookie, deleteSessionCookie } from "@/services/cookies";
 
 const AuthContext = createContext<{
   isSignedIn: boolean;
-  firebaseUser: User | null;
-  profile: Artist | null;
+  firebaseUser: User;
+  artist: Artist;
   isLoading: boolean;
   register: (params: { email: string; password: string; preRegister: PreRegister }) => Promise<void>;
   signIn: (credentials: { email: string; password: string }) => Promise<void>;
   signOut: () => void;
 }>({
   isSignedIn: false,
-  firebaseUser: null,
-  profile: null,
+  firebaseUser: {} as User,
+  artist: {} as Artist,
   isLoading: true,
   register: async () => { },
   signIn: async () => { },
@@ -31,9 +31,9 @@ interface AuthProviderProps {
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [isSignedIn, setIsSignedIn] = useState(false);
-  const [firebaseUser, setFirebaseUser] = useState<User | null>(null);
+  const [firebaseUser, setFirebaseUser] = useState<User>({} as User);
   const [isLoading, setIsLoading] = useState(true);
-  const [profile, setProfile] = useState<Artist | null>(null);
+  const [artist, setArtist] = useState<Artist>({} as Artist);
 
   useEffect(() => {
     onAuthStateChanged(clientAuth, (user) => {
@@ -44,7 +44,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         setFirebaseUser(user);
       } else {
         setIsSignedIn(false);
-        setFirebaseUser(null);
+        setFirebaseUser({} as User);
       }
 
       setIsLoading(false);
@@ -52,7 +52,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   }, []);
 
   useEffect(() => {
-    const unsubscribe = subscribeToCurrentUser(setProfile);
+    const unsubscribe = subscribeToCurrentUser(setArtist);
     return () => unsubscribe(); // Cleanup on unmount
   }, [firebaseUser]);
 
@@ -88,7 +88,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   }
 
   return (
-    <AuthContext.Provider value={{ isSignedIn, firebaseUser, profile, isLoading, register, signIn, signOut }}>
+    <AuthContext.Provider value={{ isSignedIn, firebaseUser, artist, isLoading, register, signIn, signOut }}>
       {children}
     </AuthContext.Provider>
   );

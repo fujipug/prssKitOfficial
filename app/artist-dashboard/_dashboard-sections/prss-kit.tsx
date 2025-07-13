@@ -6,17 +6,17 @@ import { useAuth } from '@/lib/AuthContext';
 import EditProfileModal from '../_components/edit-profile-modal';
 import AddElementModal from '../_components/add-element-modal';
 import DeleteItemModal from '../_components/delete-item-modal';
+import { Row } from '@/app/types';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function PrssKit({ translations }: { translations: any }) {
-  const { profile } = useAuth();
+  const { artist } = useAuth();
   const constraintsRef = useRef(null)
-  const initialItems = ["🍅 Tomato", "🥒 Cucumber", "🧀 Cheese", "🥬 Lettuce"];
-  const [items, setItems] = useState(initialItems);
+  const [items, setItems] = useState(artist.rows ? artist.rows : []);
 
-  const handleReorder = (newItems: string[]) => {
-    setItems(newItems);
-    console.log("Reordered items:", newItems);
+  const handleReorder = (rows: Row[]) => {
+    setItems(rows);
+    console.log("Reordered items:", rows);
   };
 
   return (
@@ -33,18 +33,18 @@ export default function PrssKit({ translations }: { translations: any }) {
                 alt="Profile Pic" />
             </figure>
             <div className="card-body">
-              <p className='font-bold text-3xl'>{profile?.artistName}</p>
+              <p className='font-bold text-3xl'>{artist?.artistName}</p>
               <div className="font-semibold flex items-center space-x-1">
                 <PiAtBold />
-                <p>/{profile?.urlIdentifier}</p>
+                <p>/{artist?.urlIdentifier}</p>
               </div>
-              <div className={`flex items-center space-x-1 ${profile?.biography ? '' : 'text-info/60 italic'}`}>
+              <div className={`flex items-center space-x-1 ${artist?.biography ? '' : 'text-info/60 italic'}`}>
                 <PiNotebook />
-                <p>{profile?.biography || translations['biography_placeholder']}</p>
+                <p>{artist?.biography || translations['biography_placeholder']}</p>
               </div>
-              <div className={`flex items-center space-x-1 ${profile?.location ? '' : 'text-info/60 italic'}`}>
+              <div className={`flex items-center space-x-1 ${artist?.location ? '' : 'text-info/60 italic'}`}>
                 <PiMapPin />
-                <p>{profile?.location || translations['location_placeholder']}</p>
+                <p>{artist?.location || translations['location_placeholder']}</p>
               </div>
               <div className="card-actions justify-start">
                 <EditProfileModal modalButtonText={translations['edit_profile']} />
@@ -52,13 +52,16 @@ export default function PrssKit({ translations }: { translations: any }) {
             </div>
           </div>
 
-          <AddElementModal elementType='row' modalButtonText={translations['add_new_item']} />
+          <AddElementModal
+            modalButtonText={translations['add_new_item']}
+            translations={translations}
+          />
 
           {/* <div className="bg-base-200 border-base-300 rounded-box border p-4 mb-4"> */}
           <Reorder.Group axis="y" values={items} onReorder={handleReorder} ref={constraintsRef}>
             <span className="space-y-4">
-              {items.map((item) => (
-                <Reorder.Item key={item} value={item} drag dragConstraints={constraintsRef} >
+              {items?.map((item) => (
+                <Reorder.Item key={item.id} value={item} drag dragConstraints={constraintsRef} >
 
                   {/* TODO: On Toggle to not show switch, change the background color to indicate that
                     you can see it on the artist page */}
@@ -66,7 +69,7 @@ export default function PrssKit({ translations }: { translations: any }) {
                     <div className="card-body">
                       <div className="flex justify-between items-center">
                         <div className="flex items-baseline space-x-2">
-                          <h2 className="card-title">{item}</h2>
+                          <h2 className="card-title">{item.name}</h2>
                           {/* <p className="text-xs">Spotify</p> */}
                         </div>
 
@@ -75,17 +78,17 @@ export default function PrssKit({ translations }: { translations: any }) {
                         </div>
                       </div>
 
+                      {/* Main row body */}
                       <div className="space-x-2">
-                        <div className="avatar">
-                          <div className="w-24 rounded-box">
-                            <Image width={96} height={96} alt="Item" src="/register_image.jpg" />
+                        {item.items?.map((file, index) => (
+                          <div key={index} className="avatar">
+                            <div className="w-24 rounded-box">
+                              <Image width={96} height={96} alt="Item" src={file?.url} />
+                            </div>
                           </div>
-                        </div>
+                        ))}
 
-                        {/* <button className="btn btn-dash size-24">
-                          <PiPlus size={22} />
-                        </button> */}
-                        <AddElementModal elementType='item' />
+                        <AddElementModal rowId={item.id} translations={translations} />
                       </div>
 
                       <div className="card-actions justify-between">

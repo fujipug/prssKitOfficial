@@ -13,8 +13,11 @@
   "ArtistDashboardPrssKit": {
     "add_new_item": "Agregar fila",
     "biography_placeholder": "Agregar biografía",
+    "divider_text": "O",
     "edit_profile": "Editar perfil",
-    "location_placeholder": "Agregar ubicación"
+    "location_placeholder": "Agregar ubicación",
+    "select_from_assets": "Mis recursos",
+    "upload_files": "Subir archivos"
   },
   "ArtistDashboardShare": {
     "title": "Archivos añadidos recientemente",

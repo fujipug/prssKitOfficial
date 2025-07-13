@@ -3,7 +3,7 @@ import { QRCodeSVG } from "qrcode.react";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function Share({ translations }: { translations: any }) {
-  const { profile } = useAuth();
+  const { artist } = useAuth();
 
   return (
     <div className="min-h-dvh bg-base-100">
@@ -20,10 +20,10 @@ export default function Share({ translations }: { translations: any }) {
               />
             </span>
 
-            <h1 className="text-3xl font-bold mt-4">{profile?.artistName}</h1>
+            <h1 className="text-3xl font-bold mt-4">{artist?.artistName}</h1>
 
             <span className="rounded-box py-2 px-3 bg-base-300 mt-2">
-              <p className="text-sm font-mono">prsskit.com/{profile?.urlIdentifier}</p>
+              <p className="text-sm font-mono">prsskit.com/{artist?.urlIdentifier}</p>
             </span>
           </div>
         </div>

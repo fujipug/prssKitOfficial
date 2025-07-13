@@ -1,4 +1,4 @@
-import { DocumentData, Timestamp } from "firebase/firestore";
+import { DocumentData } from "firebase/firestore";
 
 export interface Artist extends DocumentData {
   location: string;
@@ -6,13 +6,13 @@ export interface Artist extends DocumentData {
   biography: string;
   urlIdentifier: string;
   profileImage?: FileData;
-  pressKitElementIndex: number;
-  pressKitElementShown: boolean;
-  pressKits?: PressKit[];
+  // pressKitElementIndex: number;
+  // pressKitElementShown: boolean;
+  // pressKits?: PressKit[];
   assets?: FileData[];
-  collections?: Collection[];
+  // collections?: Collection[];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  elements?: any[];
+  rows?: Row[];
 }
 
 export interface PreRegister {
@@ -28,7 +28,7 @@ export interface PostRegister {
 }
 
 export interface FileData {
-  imgUrl: string;
+  url: string;
   path: string;
   name: string;
   type: string;
@@ -36,55 +36,63 @@ export interface FileData {
   lastModified: number;
 }
 
-export interface PressKit {
-  imgUrl: string;
-  name: string;
-  lastModified: number;
-  size: number;
-  type: string;
-  path: string;
-  pdf?: PdfData;
-  index?: number;
-  isShown?: boolean;
-}
+// export interface PressKit {
+//   imgUrl: string;
+//   name: string;
+//   lastModified: number;
+//   size: number;
+//   type: string;
+//   path: string;
+//   pdf?: PdfData;
+//   index?: number;
+//   isShown?: boolean;
+// }
 
 export interface PdfData {
   pageCount: number;
   thumbnails: string[];
 }
 
-export interface ProfileElement {
+export interface Row {
   id: string;
-  name: string;
-  type: ElementType;
-  items: FileData[];
   index: number;
   isShown: boolean;
-  createdAt: Timestamp;
-}
-
-export interface Item {
-  id: string;
+  items?: FileData[];
   name: string;
-  type: ElementType;
-  index: number;
-  isShown: boolean;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  data?: any;
 }
 
-export interface Collection {
-  id: string;
-  name: string;
-  type: ElementType;
-  createdAt: Timestamp;
-  items: FileData[];
-}
+// export interface ProfileElement {
+//   id: string;
+//   name: string;
+//   type: ElementType;
+//   items: FileData[];
+//   index: number;
+//   isShown: boolean;
+//   createdAt: Timestamp;
+// }
 
-export interface LinkData {
-  title?: string;
-  url: string;
-}
+// export interface Item {
+//   id: string;
+//   name: string;
+//   type: ElementType;
+//   index: number;
+//   isShown: boolean;
+//   // eslint-disable-next-line @typescript-eslint/no-explicit-any
+//   data?: any;
+// }
+
+// export interface Collection {
+//   id: string;
+//   name: string;
+//   type: ElementType;
+//   createdAt: Timestamp;
+//   items: FileData[];
+// }
+
+// export interface LinkData {
+//   title?: string;
+//   url: string;
+// }
 
 export enum ElementType {
   SPOTIFY = 'Spotify',

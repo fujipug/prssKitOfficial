@@ -1,56 +1,25 @@
-import { Artist, FileData, PostRegister, PreRegister } from "@/app/types";
-import { uploadFile } from "@/utils/file-uploader";
+import { Artist, PostRegister, PreRegister } from "@/app/types";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, User } from "firebase/auth";
 import { doc, onSnapshot, setDoc, Timestamp } from "firebase/firestore";
 import { clientDb, clientAuth } from "@/services/firebase-config";
+import fileSortTypeUpload from "@/utils/file-sort-type-upload";
 
 export const firebaseRegister = async (email: string, password: string, preRegister: PreRegister) => {
   return await createUserWithEmailAndPassword(clientAuth, email, password)
     .then(async (userCredential) => {
       const user = userCredential.user;
 
-      const uploadedPressKits = preRegister.pressKits
-        ? await Promise.all(preRegister.pressKits.map(async (file: File) => {
-          try {
-            const res = await uploadFile(file, user.uid, 'press-kits');
-            return {
-              imgUrl: res.url,
-              path: res.path,
-              name: file.name,
-              type: file.type,
-              size: file.size,
-              lastModified: file.lastModified,
-            };
-          } catch (error) {
-            console.error('Error uploading file:', error);
-            return null;
-          }
-        })).then(results => results.filter((item): item is FileData => item !== null))
-        : undefined;
+      const uploadedPressKits = (preRegister.pressKits?.length ?? 0) > 0
+        ? await fileSortTypeUpload(preRegister.pressKits ?? [], user.uid)
+        : [];
 
-      const uploadedAssets = preRegister.assets
-        ? await Promise.all(preRegister.assets.map(async (file: File) => {
-          try {
-            const res = await uploadFile(file, user.uid, 'assets');
-            return {
-              imgUrl: res.url,
-              path: res.path,
-              name: file.name,
-              type: file.type,
-              size: file.size,
-              lastModified: file.lastModified,
-            };
-          } catch (error) {
-            console.error('Error uploading file:', error);
-            return null;
-          }
-        })).then(results => results.filter((item): item is FileData => item !== null))
-        : undefined;
+      const uploadedAssets = (preRegister.assets?.length ?? 0) > 0
+        ? await fileSortTypeUpload(preRegister.assets ?? [], user.uid)
+        : [];
 
       const registerData: PostRegister = {
         artistName: preRegister.artistName,
-        pressKits: uploadedPressKits,
-        assets: uploadedAssets
+        assets: uploadedPressKits.concat(uploadedAssets),
       };
 
       await createUserInFirestore(user, registerData);
@@ -80,21 +49,28 @@ const createUserInFirestore = async (user: User, postRegister: PostRegister) => 
   return await setDoc(docRef, {
     email: user.email,
     artistName: postRegister.artistName,
-    pressKits: postRegister.pressKits,
+    // pressKits: postRegister.pressKits,
     assets: postRegister.assets,
     urlIdentifier: user.uid,
-    pressKitElementIndex: 0,
+    // pressKitElementIndex: 0,
+    rows: [{
+      id: "press-kit",
+      name: "Press Kit",
+      index: 0,
+      isShown: true,
+      items: (postRegister.pressKits ?? []).length > 0 ? postRegister.pressKits : [],
+    }],
     createdAt: Timestamp.now(),
   });
 };
 
 export const subscribeToCurrentUser = (
-  onUserUpdate: (userData: { userId: string } & Artist | null) => void
+  onUserUpdate: (userData: { userId: string } & Artist) => void
 ) => {
   const user = clientAuth.currentUser;
 
   if (!user) {
-    onUserUpdate(null);
+    onUserUpdate({ userId: "", ...({} as Artist) });
     return () => { }; // No-op cleanup
   }
 
@@ -113,4 +89,15 @@ export const subscribeToCurrentUser = (
 
 export const firebaseSignOut = async () => {
   return await clientAuth.signOut();
+}
+
+
+export async function updateArtist(artist: Artist) {
+  const user = clientAuth.currentUser;
+  if (!user) {
+    throw new Error("User not authenticated");
+  }
+
+  const docRef = doc(clientDb, 'users', user.uid);
+  return await setDoc(docRef, { ...artist }, { merge: true });
 }

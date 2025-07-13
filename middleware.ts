@@ -30,7 +30,7 @@
 import { NextResponse, NextRequest } from 'next/server';
 
 const PROTECTED_ROUTES = ['/artist-dashboard'];
-const PUBLIC_ROUTES = ['/_next', '/login', '/register', '/'];
+const PUBLIC_ROUTES = ['/login', '/register', '/'];
 
 export async function middleware(request: NextRequest) {
   const sessionCookie = request.cookies.get('sessionCookie') !== undefined;
@@ -50,5 +50,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/_next', '/login', '/register', '/', '/artist-dashboard/:path*'],
+  matcher: ['/login', '/register', '/', '/artist-dashboard/:path*'],
 }
