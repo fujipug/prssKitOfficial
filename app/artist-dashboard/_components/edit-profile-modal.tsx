@@ -1,8 +1,72 @@
-import { useRef } from "react";
+import { Artist, GoogleCity } from "@/app/types";
+import { isUrlIdentifierAvailable } from "@/network/firebase";
+import { useEffect, useRef, useState } from "react";
 import { PiUserList } from "react-icons/pi";
 
-export default function EditProfileModal({ modalButtonText }: { modalButtonText?: string }) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function EditProfileModal({ artist, translations, modalButtonText }: { artist: Artist; translations: any; modalButtonText?: string }) {
   const modalRef = useRef<HTMLDialogElement>(null);
+  const [places, setPlaces] = useState<GoogleCity[]>([]);
+  const [urlIdentifier, setUrlIdentifier] = useState(artist?.urlIdentifier || '');
+  const [isChecking, setIsChecking] = useState(false);
+  const [isAvailable, setIsAvailable] = useState<boolean | null>(null);
+
+  const onPlaceInputChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    // debounce the input to avoid too many requests
+    if (event.target.value.length < 3) {
+      setPlaces([]);
+      return;
+    }
+
+    if (event.target.value.length > 20) {
+      return; // Prevent too long input
+    }
+
+    // Fetch cities from the API
+    fetch('/api/places/cities?input=' + encodeURIComponent(event.target.value))
+      .then(response => response.json())
+      .then(data => setPlaces(data.cities));
+  }
+
+  const checkIdentifier = (async (identifier: string) => {
+    if (!identifier) {
+      setIsAvailable(null);
+      return;
+    }
+
+    if (identifier === artist?.urlIdentifier) {
+      setIsAvailable(true);
+      return;
+    }
+
+    setIsChecking(true);
+    const available = await isUrlIdentifierAvailable(identifier);
+    setIsAvailable(available);
+    setIsChecking(false);
+  });
+
+  useEffect(() => {
+    checkIdentifier(urlIdentifier);
+    // Cleanup debounce on unmount
+    // return () => checkIdentifier.cancel();
+  }, [urlIdentifier]);
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const artistName = formData.get('artistName') as string;
+    const biography = formData.get('biography') as string;
+    const location = formData.get('location') as string;
+    const updatedArtist: Artist = {
+      ...artist,
+      artistName: artistName.trim(),
+      urlIdentifier: urlIdentifier.trim(),
+      biography: biography.trim(),
+      location: location.trim(),
+    };
+
+    console.log("Updated artist data:", updatedArtist);
+  }
 
   return (
     <>
@@ -12,19 +76,47 @@ export default function EditProfileModal({ modalButtonText }: { modalButtonText?
       </button>
       <dialog ref={modalRef} className="modal modal-bottom sm:modal-middle">
         <div className="modal-box">
-          <h3 className="font-bold text-lg">Edit profile</h3>
-          <p className="py-4">Press ESC key or click the button below to close</p>
+          <form onSubmit={handleSubmit}>
+            <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border p-4">
 
-          <form onSubmit={() => { }}>
+              <label htmlFor="artistName" className="label">{translations['artist_name_label']}</label>
+              <input id="artistName" type="text" name="artistName" className="input w-full" placeholder="Bad Bunny" defaultValue={artist?.artistName} />
 
-          </form>
+              <label htmlFor="urlIdentifier" className="label mt-2">{translations['url_identifier_label']}</label>
+              <label className="input w-full">
+                <span className="label">prsskit.com/</span>
+                <input onChange={(e) => setUrlIdentifier(e.target.value.trim())} id="urlIdentifier" type="text" name="urlIdentifier" className="input" placeholder="badbunny" defaultValue={artist?.urlIdentifier} />
+              </label>
+              <label className={`${isChecking || isAvailable ? 'block' : 'hidden'}`}>
+                {
+                  isChecking ? 'Checking availability...' :
+                    isAvailable ? urlIdentifier === artist?.urlIdentifier ? '' : <span className="text-success">This handle is available</span> : ''
+                }
+              </label>
+              <label className={`${!isChecking && !isAvailable ? 'block' : 'hidden'} text-error`}>
+                {isAvailable === false && 'Handle is already taken'}
+              </label>
 
-          <div className="modal-action">
-            <form method="dialog">
+              <label htmlFor="biography" className="label mt-2">{translations['biography_label']}</label>
+              <textarea id="biography" name="biography" className="textarea w-full resize-none" maxLength={120} placeholder="Biography" rows={4} defaultValue={artist?.biography}></textarea>
+
+              <label htmlFor="location" className="label mt-2">{translations['location_label']}</label>
+              <input id="location" name="location" onChange={onPlaceInputChange} type="text" className="input w-full" placeholder="Where you located?" list="cities" defaultValue={artist?.location} />
+              <datalist id="cities">
+                {places?.map(place => (
+                  <option key={place.placeId} value={place.description}>{place.description}</option>
+                ))}
+              </datalist>
+            </fieldset>
+
+            <div className="modal-action justify-between">
+              {/* <form method="dialog"> */}
               {/* if there is a button in form, it will close the modal */}
-              <button className="btn">Close</button>
-            </form>
-          </div>
+              <button onClick={() => modalRef.current?.close()} className="btn">{translations['action_close']}</button>
+              {/* </form> */}
+              <button type="submit" className="btn btn-primary">{translations['action_save']}</button>
+            </div>
+          </form>
         </div>
       </dialog>
     </>

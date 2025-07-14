@@ -1,6 +1,6 @@
 import { Artist, PostRegister, PreRegister } from "@/app/types";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, User } from "firebase/auth";
-import { doc, onSnapshot, setDoc, Timestamp } from "firebase/firestore";
+import { collection, doc, getDocs, onSnapshot, query, setDoc, Timestamp, where } from "firebase/firestore";
 import { clientDb, clientAuth } from "@/services/firebase-config";
 import fileSortTypeUpload from "@/utils/file-sort-type-upload";
 
@@ -69,6 +69,8 @@ export const subscribeToCurrentUser = (
 ) => {
   const user = clientAuth.currentUser;
 
+  console.log("Subscribing to user:", user);
+
   if (!user) {
     onUserUpdate({ userId: "", ...({} as Artist) });
     return () => { }; // No-op cleanup
@@ -89,6 +91,19 @@ export const subscribeToCurrentUser = (
 
 export const firebaseSignOut = async () => {
   return await clientAuth.signOut();
+}
+
+export async function isUrlIdentifierAvailable(urlIdentifier: string): Promise<boolean> {
+  try {
+    const usersRef = collection(clientDb, 'users');
+    const q = query(usersRef, where('urlIdentifier', '==', urlIdentifier));
+    const querySnapshot = await getDocs(q);
+
+    return querySnapshot.empty; // Returns true if available, false if taken
+  } catch (error) {
+    console.error("Error checking URL identifier:", error);
+    return false;
+  }
 }
 
 

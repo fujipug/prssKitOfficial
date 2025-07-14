@@ -61,6 +61,13 @@ export interface Row {
   name: string;
 }
 
+export interface GoogleCity {
+  description: string;
+  placeId: string;
+  mainText: string;
+  secondaryText: string;
+}
+
 // export interface ProfileElement {
 //   id: string;
 //   name: string;

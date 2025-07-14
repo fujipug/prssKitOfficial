@@ -38,6 +38,15 @@
     "register_description": "¡Regístrate gratis!",
     "register_redirect_login": "¿Ya tienes una cuenta? <login>Inicia sesión aquí</login>"
   },
+  "EditProfileModal": {
+    "action_close": "Cerrar",
+    "action_save": "Guardar",
+    "artist_name_label": "Nombre artístico",
+    "biography_label": "Biografía",
+    "location_label": "Ubicación",
+    "profile_image_label": "Imagen de perfil",
+    "url_identifier_label": "Identificador de URL"
+  },
   "Home": {
     "action_register": "¡Crea tu Prss Kit!",
     "description": "Comparte quién eres y lo que te mueve",

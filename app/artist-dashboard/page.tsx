@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import { assetTranslations, prssKitTranslations, shareTranslations, tabTranslations } from "@/utils/component-translations";
+import { assetTranslations, editProfileModalTranslations, prssKitTranslations, shareTranslations, tabTranslations } from "@/utils/component-translations";
 import TabManager from "./tab-manager";
 
 // TODO: Verify token handling and session management probably in a layout in this folder
@@ -16,11 +16,16 @@ export default function ArtistDashboard() {
   const shareTranslationsInstance = useTranslations('ArtistDashboardShare');
   const shareMessages = shareTranslations(shareTranslationsInstance);
 
+  const editProfileModalTranslationsInstance = useTranslations('EditProfileModal');
+  const editProfileModalMessages = editProfileModalTranslations(editProfileModalTranslationsInstance);
+
   return (
     <TabManager
       tabTranslations={tabMessages}
       assetTranslations={assetMessages}
       prssKitTranslations={prssKitMessages}
-      shareTranslations={shareMessages} />
+      shareTranslations={shareMessages}
+      editProfileModalTranslations={editProfileModalMessages}
+    />
   );
 }

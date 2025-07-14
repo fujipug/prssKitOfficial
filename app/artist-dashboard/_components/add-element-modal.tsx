@@ -19,30 +19,27 @@ export default function AddElementModal({ translations, rowId, modalButtonText }
 
     return await fileSortTypeUpload(Array.from(files), firebaseUser.uid).then(async (results) => {
       const rows = artist.rows;
-      const selectedRow = rows?.find((row) => row.id === rowId);
-      selectedRow?.items?.push(...results);
 
       const elementObject = !rowId
-        ? [
-          // create a new row with the uploaded files in the items array
-          ...(rows || []),
-          {
-            id: crypto.randomUUID(),
-            items: [...results],
-            index: (rows?.length || 0) + 1,
-            isShown: true,
-            name: translations['new_row'] || 'New Row',
-          },
-        ]
-        : [
-          // get the selected row and add the uploaded files to items array
-          ...(rows?.map((row) => row.id === rowId ?
-            {
+        ? // create a new row with the uploaded files in the items array
+        [...(artist.rows || []),
+        {
+          id: crypto.randomUUID(),
+          name: "Untitled",
+          index: rows ? rows.length : 0,
+          isShown: true,
+          items: results,
+        }]
+        : // get the selected row and add the uploaded files to items array along with existing items
+        rows?.map((row) => {
+          if (row.id === rowId) {
+            return {
               ...row,
               items: [...(row.items || []), ...results],
-            }
-            : row) || []),
-        ];
+            };
+          }
+          return row;
+        });
 
       const updatedArtist = {
         ...artist,

@@ -5,7 +5,7 @@ import { useState } from "react";
 import Assets from "./_dashboard-sections/assets";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function TabManager({ tabTranslations, prssKitTranslations, shareTranslations, assetTranslations }: { tabTranslations: any, prssKitTranslations: any, shareTranslations: any, assetTranslations: any }) {
+export default function TabManager({ tabTranslations, prssKitTranslations, shareTranslations, assetTranslations, editProfileModalTranslations }: { tabTranslations: any, prssKitTranslations: any, shareTranslations: any, assetTranslations: any, editProfileModalTranslations: any }) {
   const [selectedTab, setSelectedTab] = useState('share-tab');
 
   const handleTabSelect = (tab: string) => {
@@ -35,7 +35,7 @@ export default function TabManager({ tabTranslations, prssKitTranslations, share
       </div>
 
       {selectedTab === 'share-tab' && <Share translations={shareTranslations} />}
-      {selectedTab === 'prsskit-tab' && <PrssKit translations={prssKitTranslations} />}
+      {selectedTab === 'prsskit-tab' && <PrssKit translations={prssKitTranslations} editProfileModalTranslations={editProfileModalTranslations} />}
       {selectedTab === 'assets-tab' && <Assets translations={assetTranslations} />}
     </div>
   );

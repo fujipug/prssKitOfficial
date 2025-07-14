@@ -46,4 +46,16 @@ const shareTranslations = (translations: ReturnType<typeof useTranslations>) => 
   };
 }
 
-export { navigationBarTranslations, tabTranslations, assetTranslations, prssKitTranslations, shareTranslations };
+const editProfileModalTranslations = (translations: ReturnType<typeof useTranslations>) => {
+  return {
+    action_close: translations("action_close"),
+    action_save: translations("action_save"),
+    artist_name_label: translations("artist_name_label"),
+    biography_label: translations("biography_label"),
+    location_label: translations("location_label"),
+    profile_image_label: translations("profile_image_label"),
+    url_identifier_label: translations("url_identifier_label"),
+  };
+}
+
+export { navigationBarTranslations, tabTranslations, assetTranslations, prssKitTranslations, shareTranslations, editProfileModalTranslations };

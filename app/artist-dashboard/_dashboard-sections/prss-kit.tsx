@@ -9,7 +9,7 @@ import DeleteItemModal from '../_components/delete-item-modal';
 import { Row } from '@/app/types';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function PrssKit({ translations }: { translations: any }) {
+export default function PrssKit({ translations, editProfileModalTranslations }: { translations: any, editProfileModalTranslations: any }) {
   const { artist } = useAuth();
   const constraintsRef = useRef(null)
   const [items, setItems] = useState(artist.rows ? artist.rows : []);
@@ -47,7 +47,7 @@ export default function PrssKit({ translations }: { translations: any }) {
                 <p>{artist?.location || translations['location_placeholder']}</p>
               </div>
               <div className="card-actions justify-start">
-                <EditProfileModal modalButtonText={translations['edit_profile']} />
+                <EditProfileModal artist={artist} modalButtonText={translations['edit_profile']} translations={editProfileModalTranslations} />
               </div>
             </div>
           </div>
