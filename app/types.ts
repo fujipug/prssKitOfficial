@@ -53,6 +53,7 @@ export interface PdfData {
   thumbnails: string[];
 }
 
+// TODO: Might now need indexedDB. Seems to keep track just fine
 export interface Row {
   id: string;
   index: number;

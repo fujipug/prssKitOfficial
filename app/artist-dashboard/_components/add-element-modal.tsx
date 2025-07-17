@@ -86,12 +86,13 @@ export default function AddElementModal({ translations, rowId, modalButtonText }
           </button>
 
           <div className="modal-action">
-            <form method="dialog">
-              {/* if there is a button in form, it will close the modal */}
-              <button className="btn">Close</button>
-            </form>
+            <button className="btn">Action</button>
           </div>
         </div>
+
+        <form method="dialog" className="modal-backdrop">
+          <button>Close</button>
+        </form>
       </dialog>
     </>
   )

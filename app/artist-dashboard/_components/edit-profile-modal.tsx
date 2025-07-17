@@ -52,6 +52,7 @@ export default function EditProfileModal({ artist, translations, modalButtonText
   }, [urlIdentifier]);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    console.log("Submitting form...", event);
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const artistName = formData.get('artistName') as string;
@@ -75,7 +76,19 @@ export default function EditProfileModal({ artist, translations, modalButtonText
         <span className="ml-1">{modalButtonText || 'Edit Profile'}</span>
       </button>
       <dialog ref={modalRef} className="modal modal-bottom sm:modal-middle">
-        <div className="modal-box">
+        <div className="modal-box space-y-2">
+          <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border p-4 flex space-x-2">
+            <div className="avatar">
+              <div className="w-24 rounded">
+                <img src="https://img.daisyui.com/images/profile/demo/batperson@192.webp" />
+              </div>
+            </div>
+            <div className="relative w-full">
+              <p className="text-lg font-semibold">Profile image</p>
+              <input type="file" accept="image/*" className="file-input file-input-primary absolute bottom-0" />
+            </div>
+          </fieldset>
+
           <form onSubmit={handleSubmit}>
             <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border p-4">
 
@@ -109,15 +122,14 @@ export default function EditProfileModal({ artist, translations, modalButtonText
               </datalist>
             </fieldset>
 
-            <div className="modal-action justify-between">
-              {/* <form method="dialog"> */}
-              {/* if there is a button in form, it will close the modal */}
-              <button onClick={() => modalRef.current?.close()} className="btn">{translations['action_close']}</button>
-              {/* </form> */}
+            <div className="modal-action">
               <button type="submit" className="btn btn-primary">{translations['action_save']}</button>
             </div>
           </form>
         </div>
+        <form method="dialog" className="modal-backdrop">
+          <button>{translations['action_close']}</button>
+        </form>
       </dialog>
     </>
   )
