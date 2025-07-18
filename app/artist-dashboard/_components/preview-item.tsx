@@ -39,7 +39,7 @@ export default function PreviewItem({ fileData }: { fileData: FileData }) {
           ></iframe>
         }
       </div>
-      <h2 className="text-lg font-bold">{fileData.name}</h2>
+      <h2 className="text-lg font-bold truncate">{fileData.name}</h2>
       <p className="text-sm text-gray-500">{formatBytes(fileData.size)}</p>
     </div>
   )

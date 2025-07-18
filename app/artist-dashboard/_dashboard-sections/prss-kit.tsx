@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { Reorder } from "framer-motion";
 import { useEffect, useRef, useState } from 'react';
-import { PiAtBold, PiDesktop, PiDeviceMobileSpeaker, PiMapPin, PiNotebook, PiNotePencil, PiPencilSimpleLineDuotone, PiVinylRecordDuotone } from "react-icons/pi";
+import { PiAtBold, PiDesktop, PiDeviceMobileSpeaker, PiMapPin, PiNotebook, PiNotePencil, PiPencilSimpleLineDuotone } from "react-icons/pi";
 import { useAuth } from '@/lib/AuthContext';
 import EditProfileModal from '../_components/edit-profile-modal';
 import AddElementModal from '../_components/add-element-modal';
@@ -14,20 +14,27 @@ import TestModal from '../_components/test-modal';
 import { updateArtist } from '@/network/firebase';
 import useClickOutside from '@/lib/useClickOutside';
 import Dock from '../_components/dock';
+import RowInstance from '../_components/row-instance';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function PrssKit({ translations, editProfileModalTranslations }: { translations: any, editProfileModalTranslations: any }) {
   const { artist } = useAuth();
   const constraintsRef = useRef(null);
   const inputRef = useRef(null);
+  // const editRowRef = useRef(null);
   const [items, setItems] = useState(artist.rows ? artist.rows : []);
   const [mobilePreviewItem, setMobilePreviewItem] = useState<FileData | null>(null);
   const [editRowNameMode, setEditRowNameMode] = useState<string | null>(null);
+  const [editRowItemsMode, setEditRowItemsMode] = useState<string | null>(null);
   const [inputValue, setInputValue] = useState('');
 
   useClickOutside(inputRef, async () => {
     await handleArtistUpdate();
   });
+
+  // useClickOutside(editRowRef, () => {
+  //   setEditRowItemsMode(null);
+  // });
 
   useEffect(() => {
     if (artist.rows) {
@@ -99,10 +106,12 @@ export default function PrssKit({ translations, editProfileModalTranslations }: 
             </div>
           </div>
 
-          <AddElementModal
-            modalButtonText={translations['add_new_item']}
-            translations={translations}
-          />
+          <div className="hidden lg:block">
+            <AddElementModal
+              modalButtonText={translations['add_new_item']}
+              translations={translations}
+            />
+          </div>
 
           {/* <div className="bg-base-200 border-base-300 rounded-box border p-4 mb-4"> */}
           <Reorder.Group axis="y" values={items} onReorder={handleReorder} ref={constraintsRef}>
@@ -149,52 +158,19 @@ export default function PrssKit({ translations, editProfileModalTranslations }: 
                       </div>
 
                       {/* Main row body */}
-                      <div className="space-x-2 snap-x space-y-2 flex overflow-x-scroll">
-                        {item.items?.map((file, index) => (
-                          <div key={index} className="avatar snap-center">
-                            <div className="w-24 rounded-box">
-
-                              {/* TODO: Move this to a util folder  */}
-                              {file?.type?.startsWith('video/') && (
-                                <video className="w-full h-full object-cover rounded-box" controls>
-                                  <source src={file?.url} type={file?.type} />
-                                  Your browser does not support the video tag.
-                                </video>
-                              )}
-
-                              {file?.type?.startsWith('audio/') && (
-                                <div className="w-full h-full relative bg-base-300/80">
-                                  <div className="bg-base-300 shadow w-full h-2/5 bottom-0 absolute z-10 flex items-center justify-center"></div>
-                                  <PiVinylRecordDuotone size={100} className='absolute inset-0 m-auto' />
-                                </div>
-                              )}
-
-                              {file?.type?.startsWith('image/') && (
-                                <Image width={96} height={96} alt="Item" src={file?.url} />
-                              )}
-
-                              {file?.type?.startsWith('application/') && (
-                                <iframe
-                                  src={file?.url}
-                                  height="100%"
-                                  width="100%"
-                                  allowFullScreen={false}
-                                  className="overflow-hidden pointer-events-none border-none"
-                                ></iframe>
-                              )}
-                            </div>
-                          </div>
-                        ))}
-
-                        <AddElementModal rowId={item.id} translations={translations} />
-                      </div>
+                      <RowInstance
+                        item={item}
+                        editRowItemsMode={editRowItemsMode}
+                        translations={translations}
+                        setEditRowItemsMode={setEditRowItemsMode}
+                      />
 
                       <div className="card-actions justify-between">
                         <div className='space-x-2'>
                           <RowInfoModal row={item} />
 
                           <div className="tooltip" data-tip="Edit">
-                            <button className="btn btn-square btn-soft">
+                            <button onClick={() => setEditRowItemsMode(item.id)} className="btn btn-square btn-soft">
                               <PiNotePencil size={22} />
                             </button>
                           </div>
