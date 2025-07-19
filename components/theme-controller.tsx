@@ -3,7 +3,7 @@ import { useTheme } from "@/lib/ThemeContext";
 import { PiSwatchesFill } from "react-icons/pi";
 
 const themes = [
-  { value: 'fantasy', label: 'Light' },
+  { value: 'light', label: 'Light' },
   { value: 'dark', label: 'Dark' },
   { value: 'cupcake', label: 'Cupcake' },
   { value: 'coffee', label: 'Coffee' },

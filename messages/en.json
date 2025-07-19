@@ -48,11 +48,13 @@
     "url_identifier_label": "URL identifier"
   },
   "Home": {
-    "action_register": "Create your Prss Kit!",
-    "description": "Share who you are and what you do",
+    "action_register": "Get started!",
+    "description": "Join thousands of artists using Press Kit to get booked. One link to showcase your music, photos, videos, EPK and more.",
     "features_header_1": "Everything you need",
     "features_header_2": "All in one place",
-    "features_description": "Prsskit is made by artists, for artists. We make it easy to share what's most important with a single link. All your assets in one place."
+    "features_description": "Prsskit is made by artists, for artists. We make it easy to share what's most important with a single link. All your assets in one place.",
+    "subtitle": "Your {itemType} {pluralized} what you do.",
+    "title": "Your <highlight>Prss Kit</highlight> says who you are."
   },
   "NavigationBar": {
     "login": "Login",

@@ -8,13 +8,13 @@ import AddElementModal from '../_components/add-element-modal';
 import DeleteElementModal from '../_components/delete-element-modal';
 import { FileData, Row } from '@/app/types';
 import WelcomeAboardSvg from '@/utils/welcome-aboard-svg';
-import RowInfoModal from '../_components/row-info-modal';
 import MobilePreview from '../_components/mobile-preview';
 import TestModal from '../_components/test-modal';
 import { updateArtist } from '@/network/firebase';
 import useClickOutside from '@/lib/useClickOutside';
 import Dock from '../_components/dock';
 import RowInstance from '../_components/row-instance';
+import RowInfoModal from '../_components/row-info-modal';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function PrssKit({ translations, editProfileModalTranslations }: { translations: any, editProfileModalTranslations: any }) {
@@ -29,7 +29,10 @@ export default function PrssKit({ translations, editProfileModalTranslations }: 
   const [inputValue, setInputValue] = useState('');
 
   useClickOutside(inputRef, async () => {
-    await handleArtistUpdate();
+    if (editRowNameMode) {
+      setEditRowNameMode(null);
+      return;
+    }
   });
 
   // useClickOutside(editRowRef, () => {
@@ -116,8 +119,8 @@ export default function PrssKit({ translations, editProfileModalTranslations }: 
           {/* <div className="bg-base-200 border-base-300 rounded-box border p-4 mb-4"> */}
           <Reorder.Group axis="y" values={items} onReorder={handleReorder} ref={constraintsRef}>
             <span className="space-y-4">
-              {items?.map((item) => (
-                <Reorder.Item key={item.id} value={item} drag dragConstraints={constraintsRef} >
+              {items?.map((item: Row) => (
+                <Reorder.Item key={item.id} value={item} dragListener={false} drag dragConstraints={constraintsRef} >
 
                   {/* TODO: On Toggle to not show switch, change the background color to indicate that
                     you can see it on the artist page */}

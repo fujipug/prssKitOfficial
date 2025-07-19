@@ -8,8 +8,6 @@ export default function DeleteElementModal({ row }: { row: Row }) {
   const { artist } = useAuth();
   const modalRef = useRef<HTMLDialogElement>(null);
 
-  console.log("DeleteElementModal row:", row);
-
   const handleDeleteRow = async () => {
     const updatedRows = artist.rows?.filter((item) => item.id !== row.id);
     await updateArtist({

@@ -48,11 +48,13 @@
     "url_identifier_label": "Identificador de URL"
   },
   "Home": {
-    "action_register": "¡Crea tu Prss Kit!",
-    "description": "Comparte quién eres y lo que te mueve",
+    "action_register": "¡Comienza ahora!",
+    "description": "Únete a miles de artistas que usan Prss Kit para conseguir gigs. Un enlace para mostrar tu música, fotos, videos, EPK y más.",
     "features_header_1": "Todo lo que necesitas",
     "features_header_2": "En un solo lugar",
-    "features_description": "Prsskit está hecho por artistas, para artistas. Facilitamos compartir lo más importante con un solo enlace. Todo disponible en un solo lugar."
+    "features_description": "Prsskit está hecho por artistas, para artistas. Facilitamos compartir lo más importante con un solo enlace. Todo disponible en un solo lugar.",
+    "subtitle": "{pluralized} {itemType} dice lo que haces.",
+    "title": "Tu <highlight>Prss Kit</highlight> dice quién eres."
   },
   "NavigationBar": {
     "login": "Iniciar sesión",

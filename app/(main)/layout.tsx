@@ -1,4 +1,4 @@
-import "./globals.css";
+import "../globals.css";
 import type { Metadata } from "next";
 import { Special_Elite } from "next/font/google";
 import { getMessages } from "next-intl/server";
@@ -41,9 +41,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body
-        className={`${specialEliteSans.className} antialiased`}
-      >
+      <body className={`${specialEliteSans.className} antialiased`}>
         <AuthProvider>
           <ThemeProvider>
             <NextIntlClientProvider messages={messages}>

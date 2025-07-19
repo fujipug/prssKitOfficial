@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @plugin "daisyui" {
-  themes: fantasy --default, dark --prefersdark, cupcake, coffee, retro;
+  themes: light --default, dark --prefersdark, cupcake, coffee, retro;
 }
 
 [data-theme="dark"],
@@ -27,7 +27,7 @@
   }
 }
 
-[data-theme="fantasy"],
+[data-theme="light"],
 [data-theme="cupcake"],
 [data-theme="retro"] {
   .skull-pattern {

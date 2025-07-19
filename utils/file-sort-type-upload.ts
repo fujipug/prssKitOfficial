@@ -1,4 +1,5 @@
 import { uploadFile } from "@/services/file-manager";
+import { Timestamp } from "firebase/firestore";
 
 async function fileSortTypeUpload(files: File[], userId: string) {
   if (!files || files.length === 0) {
@@ -35,6 +36,8 @@ async function fileSortTypeUpload(files: File[], userId: string) {
       const { name, type, size, lastModified } = file;
       return uploadFile(file, userId, type.split('/')[0]).then(result => ({
         ...result,
+        id: crypto.randomUUID(),
+        createdAt: Timestamp.now(),
         name,
         type,
         size,

@@ -1,6 +1,6 @@
 import { Artist, PostRegister, PreRegister } from "@/app/types";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, User } from "firebase/auth";
-import { collection, doc, getDocs, onSnapshot, query, setDoc, Timestamp, where } from "firebase/firestore";
+import { collection, doc, getDocs, limit, onSnapshot, query, setDoc, Timestamp, where } from "firebase/firestore";
 import { clientDb, clientAuth } from "@/services/firebase-config";
 import fileSortTypeUpload from "@/utils/file-sort-type-upload";
 
@@ -115,4 +115,20 @@ export async function updateArtist(artist: Artist) {
 
   const docRef = doc(clientDb, 'users', user.uid);
   return await setDoc(docRef, { ...artist }, { merge: true });
+}
+
+export async function getUserByUrlIdentifier(urlIdentifier: string) {
+  const getUserQuery = query(
+    collection(clientDb, 'users'),
+    where('urlIdentifier', '==', urlIdentifier),
+    limit(1)
+  );
+
+  const querySnapshot = await getDocs(getUserQuery);
+  if (querySnapshot.empty) {
+    console.log('No such user!');
+    return null;
+  }
+  const userDoc = querySnapshot.docs[0];
+  return { userId: userDoc.id, ...userDoc.data() as Artist };
 }
