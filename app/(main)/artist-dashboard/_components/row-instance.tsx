@@ -1,9 +1,11 @@
 import { Row } from "@/app/types";
-import { PiMinusBold, PiVinylRecordDuotone } from "react-icons/pi";
+import { PiMinusBold, PiPlus, PiVinylRecordDuotone } from "react-icons/pi";
 import Image from "next/image";
 import AddElementModal from "./add-element-modal";
 import { useRef } from "react";
 import useClickOutside from "@/lib/useClickOutside";
+import { deleteRowItem } from "@/network/firebase";
+import { useAuth } from "@/lib/AuthContext";
 
 export default function RowInstance({ item, editRowItemsMode, translations, setEditRowItemsMode }: {
   item: Row;
@@ -12,7 +14,9 @@ export default function RowInstance({ item, editRowItemsMode, translations, setE
   translations: any;
   setEditRowItemsMode: (mode: string | null) => void;
 }) {
+  let addElementModalRef = useRef<HTMLDialogElement | null>(null);
   const editRowRef = useRef<HTMLDivElement>(null);
+  const { firebaseUser } = useAuth();
 
   useClickOutside(editRowRef, () => {
     if (editRowItemsMode === item.id) {
@@ -20,12 +24,22 @@ export default function RowInstance({ item, editRowItemsMode, translations, setE
     }
   });
 
+  const handleDeleteRowItem = async (fileId: string) => {
+    await deleteRowItem(firebaseUser.uid, item.id, fileId).then(() => {
+      if (item.items?.length === 1) {
+        setEditRowItemsMode(null);
+      }
+    });
+  };
+
   return (
     <div ref={editRowRef} className={`${editRowItemsMode === item.id ? 'overflow-x-visible' : 'overflow-x-scroll'} space-x-2 snap-x space-y-2 flex pt-2`} id={item.id}>
       {item.items?.map((file, index) => (
         <div key={index} className={`${editRowItemsMode === item.id ? 'animate-wiggle' : ''} avatar snap-center indicator`}>
-          <span className={`${editRowItemsMode === item.id ? 'indicator-item indicator-start badge badge-error size-8 p-0 rounded-full' : 'hidden'}`}>
-            <PiMinusBold onClick={() => setEditRowItemsMode(item.id)} className="text-white" size={18} />
+          <span onClick={() => handleDeleteRowItem(file.id)}
+            className={`${editRowItemsMode === item.id ? 'indicator-item indicator-start badge badge-error size-8 p-0 rounded-full cursor-pointer' : 'hidden'}`}
+          >
+            <PiMinusBold className="text-white" size={18} />
           </span>
 
           <div className="w-24 rounded-box">
@@ -62,9 +76,12 @@ export default function RowInstance({ item, editRowItemsMode, translations, setE
       ))}
 
       {item.items && item.items.length < 6 && (
-        <AddElementModal rowId={item.id} translations={translations} />
+        <AddElementModal dialogRef={(ref) => addElementModalRef = ref} rowId={item.id} translations={translations}>
+          <button onClick={() => addElementModalRef.current?.showModal()} className="btn btn-dash size-24">
+            <PiPlus size={22} />
+          </button>
+        </AddElementModal>
       )}
     </div>
-
   );
 }

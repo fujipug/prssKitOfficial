@@ -132,3 +132,22 @@ export async function getUserByUrlIdentifier(urlIdentifier: string) {
   const userDoc = querySnapshot.docs[0];
   return { userId: userDoc.id, ...userDoc.data() as Artist };
 }
+
+export async function deleteRowItem(artistId: string, rowId: string, itemId: string) {
+  const docRef = doc(clientDb, 'users', artistId);
+  const userDoc = await (await import("firebase/firestore")).getDoc(docRef);
+
+  if (!userDoc.exists()) {
+    throw new Error("User not found");
+  }
+
+  const userData = userDoc.data() as Artist;
+  const updatedRows = userData.rows?.map(row => {
+    if (row.id === rowId) {
+      return { ...row, items: row.items?.filter(item => item.id !== itemId) };
+    }
+    return row;
+  });
+
+  return await setDoc(docRef, { rows: updatedRows }, { merge: true });
+}

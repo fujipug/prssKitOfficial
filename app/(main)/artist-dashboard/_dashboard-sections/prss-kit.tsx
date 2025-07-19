@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { Reorder } from "framer-motion";
 import { useEffect, useRef, useState } from 'react';
-import { PiAtBold, PiDesktop, PiDeviceMobileSpeaker, PiMapPin, PiNotebook, PiNotePencil, PiPencilSimpleLineDuotone } from "react-icons/pi";
+import { PiAtBold, PiDesktop, PiDeviceMobileSpeaker, PiMapPin, PiNotebook, PiNotePencil, PiPencilSimpleLineDuotone, PiRowsPlusBottom } from "react-icons/pi";
 import { useAuth } from '@/lib/AuthContext';
 import EditProfileModal from '../_components/edit-profile-modal';
 import AddElementModal from '../_components/add-element-modal';
@@ -21,7 +21,7 @@ export default function PrssKit({ translations, editProfileModalTranslations }: 
   const { artist } = useAuth();
   const constraintsRef = useRef(null);
   const inputRef = useRef(null);
-  // const editRowRef = useRef(null);
+  let addElementModalRef = useRef<HTMLDialogElement | null>(null);
   const [items, setItems] = useState(artist.rows ? artist.rows : []);
   const [mobilePreviewItem, setMobilePreviewItem] = useState<FileData | null>(null);
   const [editRowNameMode, setEditRowNameMode] = useState<string | null>(null);
@@ -110,31 +110,35 @@ export default function PrssKit({ translations, editProfileModalTranslations }: 
           </div>
 
           <div className="hidden lg:block">
-            <AddElementModal
-              modalButtonText={translations['add_new_item']}
-              translations={translations}
-            />
+            <AddElementModal dialogRef={(ref) => addElementModalRef = ref} translations={translations}>
+              <button onClick={() => addElementModalRef.current?.showModal()} className="btn btn-primary btn-lg btn-block mb-4">
+                <PiRowsPlusBottom size={22} />
+                <span className="ml-1">{translations['add_new_item']}</span>
+              </button>
+            </AddElementModal>
           </div>
 
           {/* <div className="bg-base-200 border-base-300 rounded-box border p-4 mb-4"> */}
           <Reorder.Group axis="y" values={items} onReorder={handleReorder} ref={constraintsRef}>
             <span className="space-y-4">
               {items?.map((item: Row) => (
-                <Reorder.Item key={item.id} value={item} dragListener={false} drag dragConstraints={constraintsRef} >
+                <Reorder.Item key={item.id} value={item} drag dragConstraints={constraintsRef} >
 
                   {/* TODO: On Toggle to not show switch, change the background color to indicate that
                     you can see it on the artist page */}
                   <div className="card bg-base-200 border-base-300 border card-lg shadow">
                     <div className="card-body">
-                      <div className="flex justify-between items-center">
+                      <div className="grid grid-cols-10 items-center">
                         {editRowNameMode !== item.id ? (
-                          <h2 className="card-title">
-                            {item.name}
+                          <div className='col-span-8 flex items-center space-x-1'>
+                            <h2 className="card-title line-clamp-1">
+                              {item.name}
+                            </h2>
                             <PiPencilSimpleLineDuotone
-                              className='cursor-pointer'
+                              className='cursor-pointer flex-shrink-0'
                               onClick={() => setEditRowNameMode(item.id)}
-                              size={20} />
-                          </h2>
+                              size={22} />
+                          </div>
                         ) : (
                           <input ref={inputRef}
                             type="text"
@@ -144,10 +148,10 @@ export default function PrssKit({ translations, editProfileModalTranslations }: 
                             onChange={(e) => setInputValue(e.target.value)}
                             onKeyDown={(e) => e.key === 'Enter' && handleArtistUpdate()}
                             placeholder="Type here"
-                            className="input input-ghost card-title p-0" />
+                            className="input input-ghost card-title p-0 col-span-8" />
                         )}
 
-                        <div className="flex justify-end items-center">
+                        <div className="col-span-2 flex justify-end items-center">
                           <input type="checkbox"
                             defaultChecked={item.isShown}
                             onChange={async (e) => {
@@ -229,7 +233,7 @@ export default function PrssKit({ translations, editProfileModalTranslations }: 
           </div>
         </div>
       </div>
-      <Dock />
+      <Dock translations={translations} />
     </div >
   );
 }

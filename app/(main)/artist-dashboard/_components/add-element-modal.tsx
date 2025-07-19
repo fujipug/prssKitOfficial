@@ -3,15 +3,22 @@ import { updateArtist } from "@/network/firebase";
 import AssetsFolderSvg from "@/utils/assets-folder-svg";
 import fileSortTypeUpload from "@/utils/file-sort-type-upload";
 import UploadFilesSvg from "@/utils/upload-files-svg";
-import { useRef, useState } from "react";
-import { PiArrowLeft, PiPlus, PiRowsPlusBottom } from "react-icons/pi";
+import { RefObject, useEffect, useRef, useState } from "react";
+import { PiArrowLeft } from "react-icons/pi";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function AddElementModal({ translations, rowId, modalButtonText }: { translations: any; rowId?: string; modalButtonText?: string; }) {
-  const modalRef = useRef<HTMLDialogElement>(null);
+export default function AddElementModal({ translations, dialogRef, rowId, children }: { translations: any; dialogRef?: (ref: RefObject<HTMLDialogElement | null>) => void; rowId?: string; children?: React.ReactNode }) {
+  const modalRef = useRef<HTMLDialogElement | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [showAssets, setShowAssets] = useState(false);
   const { firebaseUser, artist } = useAuth();
+
+  useEffect(() => {
+    console.log("AddElementModal mounted");
+    if (modalRef.current && typeof dialogRef === 'function') {
+      dialogRef(modalRef);
+    }
+  }, [dialogRef, modalRef]);
 
   const handleFileUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
@@ -56,16 +63,7 @@ export default function AddElementModal({ translations, rowId, modalButtonText }
   return (
     <>
       <input type="file" multiple max={4} accept="image/*,video/*,audio/*,.pdf,.docx" className="hidden" ref={fileInputRef} onChange={handleFileUpload} />
-      {typeof rowId !== "string" ? (
-        <button onClick={() => modalRef.current?.showModal()} className="btn btn-primary btn-lg btn-block mb-4">
-          <PiRowsPlusBottom size={22} />
-          <span className="ml-1">{modalButtonText || 'Add new item'}</span>
-        </button>
-      ) : (
-        <button onClick={() => modalRef.current?.showModal()} className="btn btn-dash size-24">
-          <PiPlus size={22} />
-        </button>
-      )}
+      {children}
       <dialog ref={modalRef} className="modal modal-bottom sm:modal-middle">
         <div className="modal-box">
           <div className={`${showAssets ? 'hidden' : 'flex w-full'}`}>
