@@ -98,7 +98,7 @@ export default function EditProfileModal({ artist, translations, modalButtonText
               <label htmlFor="urlIdentifier" className="label mt-2">{translations['url_identifier_label']}</label>
               <label className="input w-full">
                 <span className="label">prsskit.com/</span>
-                <input onChange={(e) => setUrlIdentifier(e.target.value.trim())} id="urlIdentifier" type="text" name="urlIdentifier" className="input" placeholder="badbunny" defaultValue={artist?.urlIdentifier} />
+                <input onChange={(e) => setUrlIdentifier(e.target.value.trim())} id="urlIdentifier" type="text" name="urlIdentifier" className="input lowercase" placeholder="badbunny" defaultValue={artist?.urlIdentifier} />
               </label>
               <label className={`${isChecking || isAvailable ? 'block' : 'hidden'}`}>
                 {
@@ -122,7 +122,8 @@ export default function EditProfileModal({ artist, translations, modalButtonText
               </datalist>
             </fieldset>
 
-            <div className="modal-action">
+            <div className="modal-action justify-between">
+              <button onClick={() => modalRef.current?.close()} className="btn btn-ghost">{translations['action_close']}</button>
               <button type="submit" className="btn btn-primary">{translations['action_save']}</button>
             </div>
           </form>

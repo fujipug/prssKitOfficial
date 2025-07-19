@@ -14,7 +14,6 @@ export default function AddElementModal({ translations, dialogRef, rowId, childr
   const { firebaseUser, artist } = useAuth();
 
   useEffect(() => {
-    console.log("AddElementModal mounted");
     if (modalRef.current && typeof dialogRef === 'function') {
       dialogRef(modalRef);
     }

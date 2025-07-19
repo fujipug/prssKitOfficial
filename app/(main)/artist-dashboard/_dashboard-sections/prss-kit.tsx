@@ -9,12 +9,12 @@ import DeleteElementModal from '../_components/delete-element-modal';
 import { FileData, Row } from '@/app/types';
 import WelcomeAboardSvg from '@/utils/welcome-aboard-svg';
 import MobilePreview from '../_components/mobile-preview';
-import TestModal from '../_components/test-modal';
 import { updateArtist } from '@/network/firebase';
 import useClickOutside from '@/lib/useClickOutside';
 import Dock from '../_components/dock';
 import RowInstance from '../_components/row-instance';
 import RowInfoModal from '../_components/row-info-modal';
+import MobilePreviewEmulatedModal from '../_components/mobile-preview-emulated-modal';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function PrssKit({ translations, editProfileModalTranslations }: { translations: any, editProfileModalTranslations: any }) {
@@ -220,7 +220,7 @@ export default function PrssKit({ translations, editProfileModalTranslations }: 
                   <div className={`mockup-phone-display relative ${mobilePreviewItem ? 'overflow-y-hidden' : 'overflow-y-auto'}`}>
                     <MobilePreview selectedPreviewItem={setMobilePreviewItem} />
                     {mobilePreviewItem && (
-                      <TestModal
+                      <MobilePreviewEmulatedModal
                         item={mobilePreviewItem}
                         onClose={() => setMobilePreviewItem(null)}
                       />

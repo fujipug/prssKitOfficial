@@ -2,7 +2,7 @@ import { FileData } from "@/app/types";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-export default function TestModal({
+export default function MobilePreviewEmulatedModal({
   item,
   onClose
 }: {

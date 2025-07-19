@@ -17,10 +17,10 @@
     "edit_profile": "Editar perfil",
     "location_placeholder": "Agregar ubicación",
     "select_from_assets": "Mis recursos",
-    "upload_files": "Subir archivos"
+    "upload_files": "Subir ficheros"
   },
   "ArtistDashboardShare": {
-    "title": "Archivos añadidos recientemente",
+    "title": "Ficheros añadidos recientemente",
     "description": "Comparte o descarga tus recursos"
   },
   "Auth": {
