@@ -1,4 +1,4 @@
-import { DocumentData } from "firebase/firestore";
+import { DocumentData, Timestamp } from "firebase/firestore";
 
 export interface Artist extends DocumentData {
   location: string;
@@ -29,7 +29,7 @@ export interface FileData {
   name: string;
   type: string;
   size: number;
-  createdAt: number;
+  createdAt: Timestamp;
   lastModified: number;
 }
 

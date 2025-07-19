@@ -1,7 +1,6 @@
 import { deleteObject, getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { clientStorage } from "./firebase-config";
 
-
 export const uploadFile = async (file: File, userId: string, path?: string) => {
   try {
     const storagePath = `${userId}/${path ? path + '/' : ''}${file.name}`;

@@ -12,11 +12,12 @@ export default async function Layout({
   params
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
 
   return (
-    <html lang={params.locale}>
+    <html lang={locale}>
       <body>
         <ThemeProvider>
           {children}
