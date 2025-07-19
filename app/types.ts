@@ -6,12 +6,7 @@ export interface Artist extends DocumentData {
   biography: string;
   urlIdentifier: string;
   profileImage?: FileData;
-  // pressKitElementIndex: number;
-  // pressKitElementShown: boolean;
-  // pressKits?: PressKit[];
   assets?: FileData[];
-  // collections?: Collection[];
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   rows?: Row[];
 }
 
@@ -28,25 +23,15 @@ export interface PostRegister {
 }
 
 export interface FileData {
+  id: string;
   url: string;
   path: string;
   name: string;
   type: string;
   size: number;
+  createdAt: number;
   lastModified: number;
 }
-
-// export interface PressKit {
-//   imgUrl: string;
-//   name: string;
-//   lastModified: number;
-//   size: number;
-//   type: string;
-//   path: string;
-//   pdf?: PdfData;
-//   index?: number;
-//   isShown?: boolean;
-// }
 
 export interface PdfData {
   pageCount: number;
@@ -68,34 +53,6 @@ export interface GoogleCity {
   mainText: string;
   secondaryText: string;
 }
-
-// export interface ProfileElement {
-//   id: string;
-//   name: string;
-//   type: ElementType;
-//   items: FileData[];
-//   index: number;
-//   isShown: boolean;
-//   createdAt: Timestamp;
-// }
-
-// export interface Item {
-//   id: string;
-//   name: string;
-//   type: ElementType;
-//   index: number;
-//   isShown: boolean;
-//   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-//   data?: any;
-// }
-
-// export interface Collection {
-//   id: string;
-//   name: string;
-//   type: ElementType;
-//   createdAt: Timestamp;
-//   items: FileData[];
-// }
 
 // export interface LinkData {
 //   title?: string;

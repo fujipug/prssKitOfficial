@@ -1,5 +1,5 @@
-import { ThemeProvider } from "@/lib/ThemeContext";
 import "../globals.css";
+import { ThemeProvider } from "@/lib/ThemeContext";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 export default async function Layout({
   children,
   params
-}: {
-  children: React.ReactNode,
+}: Readonly<{
+  children: React.ReactNode;
   params: { locale: string };
-}) {
+}>) {
 
   return (
     <html lang={params.locale}>

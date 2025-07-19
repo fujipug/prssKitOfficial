@@ -1561,3 +1561,88 @@ INFO: Detected non-HTTP/2 connection.
 [debug] [2025-07-19T04:06:58.753Z] Jul 18, 2025 11:06:58 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
 INFO: Detected non-HTTP/2 connection.
  {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 18, 2025 11:06:58 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-19T04:07:58.781Z] Jul 18, 2025 11:07:58 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 18, 2025 11:07:58 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-19T04:09:14.754Z] Jul 18, 2025 11:09:14 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 18, 2025 11:09:14 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-19T04:09:18.200Z] Jul 18, 2025 11:09:18 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Jul 18, 2025 11:09:18 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 18, 2025 11:09:18 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\nJul 18, 2025 11:09:18 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-19T04:09:18.202Z] Jul 18, 2025 11:09:18 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 18, 2025 11:09:18 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-19T04:09:18.221Z] Jul 18, 2025 11:09:18 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 18, 2025 11:09:18 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected HTTP/2 connection.\n"}}
+[debug] [2025-07-19T04:09:25.376Z] [work-queue] {"queuedWork":["/prsskit/us-central1/createSessionCookie-2025-07-19T04:09:25.376Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-19T04:09:25.376Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/prsskit/us-central1/createSessionCookie-2025-07-19T04:09:25.376Z"],"workRunningCount":1}
+[debug] [2025-07-19T04:09:25.376Z] Accepted request OPTIONS /prsskit/us-central1/createSessionCookie --> us-central1-createSessionCookie
+[debug] [2025-07-19T04:09:25.378Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-19T04:09:25.379Z] [functions] Got req.url=/prsskit/us-central1/createSessionCookie, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/prsskit/us-central1/createSessionCookie, mapping to path=/"}}
+[debug] [2025-07-19T04:09:25.380Z] [worker-pool] submitRequest(triggerId=us-central1-createSessionCookie) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-createSessionCookie)"}}
+[info] i  functions: Beginning execution of "us-central1-createSessionCookie" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"Beginning execution of \"us-central1-createSessionCookie\""}}
+[debug] [2025-07-19T04:09:25.381Z] [worker-us-central1-createSessionCookie-19957f89-d01c-4fed-87b1-39c039f2dd4c]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"[worker-us-central1-createSessionCookie-19957f89-d01c-4fed-87b1-39c039f2dd4c]: BUSY"}}
+[debug] [2025-07-19T04:09:25.385Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-createSessionCookie" in 5.07775ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"Finished \"us-central1-createSessionCookie\" in 5.07775ms"}}
+[debug] [2025-07-19T04:09:25.386Z] [worker-us-central1-createSessionCookie-19957f89-d01c-4fed-87b1-39c039f2dd4c]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"[worker-us-central1-createSessionCookie-19957f89-d01c-4fed-87b1-39c039f2dd4c]: IDLE"}}
+[debug] [2025-07-19T04:09:25.386Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-19T04:09:25.386Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-19T04:09:25.386Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-19T04:09:25.386Z] [work-queue] {"queuedWork":["/prsskit/us-central1/createSessionCookie-2025-07-19T04:09:25.386Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-19T04:09:25.386Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/prsskit/us-central1/createSessionCookie-2025-07-19T04:09:25.386Z"],"workRunningCount":1}
+[debug] [2025-07-19T04:09:25.386Z] Accepted request POST /prsskit/us-central1/createSessionCookie --> us-central1-createSessionCookie
+[debug] [2025-07-19T04:09:25.387Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-07-19T04:09:25.387Z] [functions] Got req.url=/prsskit/us-central1/createSessionCookie, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/prsskit/us-central1/createSessionCookie, mapping to path=/"}}
+[debug] [2025-07-19T04:09:25.387Z] [worker-pool] submitRequest(triggerId=us-central1-createSessionCookie) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-createSessionCookie)"}}
+[info] i  functions: Beginning execution of "us-central1-createSessionCookie" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"Beginning execution of \"us-central1-createSessionCookie\""}}
+[debug] [2025-07-19T04:09:25.387Z] [worker-us-central1-createSessionCookie-19957f89-d01c-4fed-87b1-39c039f2dd4c]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"[worker-us-central1-createSessionCookie-19957f89-d01c-4fed-87b1-39c039f2dd4c]: BUSY"}}
+[debug] [2025-07-19T04:09:25.389Z] Jul 18, 2025 11:09:25 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 18, 2025 11:09:25 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[info] >  {"verifications":{"app":"MISSING","auth":"VALID"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"} {"user":{"verifications":{"app":"MISSING","auth":"VALID"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"verifications\":{\"app\":\"MISSING\",\"auth\":\"VALID\"},\"logging.googleapis.com/labels\":{\"firebase-log-type\":\"callable-request-verification\"},\"severity\":\"DEBUG\",\"message\":\"Callable request verification passed\"}"}}
+[debug] [2025-07-19T04:09:25.396Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-createSessionCookie" in 9.01ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"Finished \"us-central1-createSessionCookie\" in 9.01ms"}}
+[debug] [2025-07-19T04:09:25.396Z] [worker-us-central1-createSessionCookie-19957f89-d01c-4fed-87b1-39c039f2dd4c]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"[worker-us-central1-createSessionCookie-19957f89-d01c-4fed-87b1-39c039f2dd4c]: IDLE"}}
+[debug] [2025-07-19T04:09:25.396Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-07-19T04:09:25.396Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-createSessionCookie"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-07-19T04:09:25.396Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2025-07-19T04:09:25.400Z] Jul 18, 2025 11:09:25 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 18, 2025 11:09:25 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-19T04:10:14.788Z] Jul 18, 2025 11:10:14 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 18, 2025 11:10:14 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-19T04:10:25.415Z] Jul 18, 2025 11:10:25 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 18, 2025 11:10:25 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-19T04:11:00.763Z] Jul 18, 2025 11:11:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 18, 2025 11:11:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-19T04:11:40.759Z] Jul 18, 2025 11:11:40 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 18, 2025 11:11:40 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-19T04:12:00.823Z] Jul 18, 2025 11:12:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 18, 2025 11:12:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-19T04:12:40.782Z] Jul 18, 2025 11:12:40 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 18, 2025 11:12:40 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-19T04:13:00.847Z] Jul 18, 2025 11:13:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 18, 2025 11:13:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-19T04:13:40.806Z] Jul 18, 2025 11:13:40 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 18, 2025 11:13:40 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-19T04:14:00.881Z] Jul 18, 2025 11:14:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 18, 2025 11:14:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-19T04:14:40.842Z] Jul 18, 2025 11:14:40 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 18, 2025 11:14:40 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2025-07-19T04:15:00.913Z] Jul 18, 2025 11:15:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 18, 2025 11:15:00 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
