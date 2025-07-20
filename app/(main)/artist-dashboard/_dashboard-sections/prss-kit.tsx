@@ -122,10 +122,13 @@ export default function PrssKit({ translations, editProfileModalTranslations }: 
           <Reorder.Group axis="y" values={items} onReorder={handleReorder} ref={constraintsRef}>
             <span className="space-y-4">
               {items?.map((item: Row) => (
-                <Reorder.Item key={item.id} value={item} drag dragConstraints={constraintsRef} >
+                <Reorder.Item
+                  key={item.id}
+                  value={item}
+                  drag
+                  dragConstraints={constraintsRef}
+                  className={`${item.isShown ? '' : 'opacity-50'}`}>
 
-                  {/* TODO: On Toggle to not show switch, change the background color to indicate that
-                    you can see it on the artist page */}
                   <div className="card bg-base-200 border-base-300 border card-lg shadow">
                     <div className="card-body">
                       <div className="grid grid-cols-10 items-center">
@@ -175,18 +178,11 @@ export default function PrssKit({ translations, editProfileModalTranslations }: 
                       <div className="card-actions justify-between">
                         <div className='space-x-2'>
                           <RowInfoModal row={item} />
-
                           <div className="tooltip" data-tip="Edit">
                             <button onClick={() => setEditRowItemsMode(item.id)} className="btn btn-square btn-soft">
                               <PiNotePencil size={22} />
                             </button>
                           </div>
-
-                          {/* <div className="tooltip" data-tip="Add">
-                            <button className="btn btn-square btn-soft">
-                              <PiPlusSquare size={22} />
-                            </button>
-                          </div> */}
                         </div>
 
                         <DeleteElementModal row={item} />

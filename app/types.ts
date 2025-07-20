@@ -38,7 +38,7 @@ export interface PdfData {
   thumbnails: string[];
 }
 
-// TODO: Might now need indexedDB. Seems to keep track just fine
+// TODO: Might not need indexedDB. Seems to keep track just fine
 export interface Row {
   id: string;
   index: number;
@@ -67,12 +67,11 @@ export enum ElementType {
   TWITTER = 'Twitter',
   TIKTOK = 'TikTok',
   YOUTUBE = 'YouTube',
-  PRESS_KIT = 'PressKits',
-  COLLECTION = 'Collection',
   IMAGE = 'Image',
   VIDEO = 'Video',
   AUDIO = 'Audio',
   LINK = 'Link',
   EMBED = 'Embed',
   TEXT = 'Text',
+  VOICE = 'Voice',
 }

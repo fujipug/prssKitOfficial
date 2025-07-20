@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Artist } from "../../types";
 import { usePathname } from "next/navigation";
 import { getUserByUrlIdentifier } from "@/network/firebase";
+import Image from "next/image";
 
 export default function ArtistPrssKit() {
   const pathname = usePathname();
@@ -17,21 +18,17 @@ export default function ArtistPrssKit() {
   }, [pathname]);
 
   return (
-    <div className="hero bg-red-200 min-h-screen">
-      <div className="hero-content flex-col lg:flex-row">
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-          className="max-w-sm rounded-lg shadow-2xl"
-        />
-        <div>
-          <h1 className="text-5xl font-bold">{artist?.artistName || "Artist"}</h1>
-          <p className="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-            quasi. In deleniti eaque aut repudiandae et a id nisi.
-          </p>
-          <button className="btn btn-primary">Get Started</button>
+    <>
+      <div className="h-60 w-full bg-indigo-500"></div>
+      <div className="grid grid-cols-8 h-screen">
+        <div className="col-span-2 bg-indigo-600">
+          <Image src={artist?.imageUrl} alt={artist?.name} width={200} height={200} />
+        </div>
+
+        <div className="col-span-6 bg-gray-300">
+
         </div>
       </div>
-    </div>
+    </>
   )
 }
