@@ -71,7 +71,7 @@ export default function PrssKit({ translations, editProfileModalTranslations }: 
   };
 
   return (
-    <div className="min-h-dvh bg-base-100">
+    <div className="min-h-screen bg-base-100">
       <div className="grid grid-cols-8 gap-4">
         {/* TODO: add the mb-4 probably in the layout */}
         <div className="col-span-8 lg:col-span-5 mb-4">

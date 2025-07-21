@@ -7,7 +7,7 @@ export default function MobilePreview({ selectedPreviewItem }: { selectedPreview
   const { artist } = useAuth();
 
   return (
-    <div className="bg-gray-200 min-h-dvh">
+    <div className="bg-gray-200 min-h-screen">
       <PiDotsThreeVerticalBold size={36} className='fixed top-10 right-10 cursor-pointer z-50' />
       <div className="relative">
         <Image src={artist?.profileImage?.url || '/default-profile.png'}

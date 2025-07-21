@@ -56,7 +56,7 @@ export default function Share({ translations, showMore }: { translations: any, s
         </div>
       )}
 
-      <div className="min-h-dvh bg-base-100">
+      <div className="min-h-screen bg-base-100">
         <div className="grid grid-cols-8 gap-4">
           <div className="col-span-8 md:col-span-4 lg:col-span-3">
             <div className="bg-base-200 border-base-300 rounded-box border p-4 flex flex-col items-center justify-center">

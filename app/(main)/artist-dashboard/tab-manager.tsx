@@ -35,7 +35,7 @@ export default function TabManager({ tabTranslations, prssKitTranslations, share
   }
 
   return (
-    <div className="mx-4 my-4 sm:mx-12 sm:my-0 min-h-dvh">
+    <div className="mx-4 my-4 sm:mx-12 sm:my-0 min-h-screen">
       <div role="tablist" className="tabs tabs-xl tabs-border mb-8 font-bold">
         <a role="tab" id="share-tab" onClick={() => handleTabSelect('share-tab')} className="tab tab-active">{tabTranslations['share']}</a>
         <a role="tab" id="prsskit-tab" onClick={() => handleTabSelect('prsskit-tab')} className="tab">Prss Kit</a>

@@ -12,7 +12,7 @@ export default function Assets({ translations }: { translations: any }) {
   const audios = artist?.assets?.filter((file) => file.type.split("/")[0] === "audio");
 
   return (
-    <div className="min-h-dvh bg-base-10 space-y-4">
+    <div className="min-h-screen bg-base-10 space-y-4">
       {/* <div className="p-4">
         <p className="text-lg font-bold mb-4">{translations['collection_text']}</p>
         <MaskedDiv maskType="type-1" className="size-40">

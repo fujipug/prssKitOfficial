@@ -16,7 +16,7 @@ export default function Login() {
   }
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 skull-pattern min-h-dvh">
+    <div className="grid grid-cols-1 lg:grid-cols-2 skull-pattern min-h-screen">
       <div className="col-span-1 mx-4 my-4 sm:mx-12 sm:my-0">
         <div className="w-fit text-center sm:hover:rotate-25">
           <Link href="/">

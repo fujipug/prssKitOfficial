@@ -9,7 +9,7 @@ export default function Step1({ translations, step1Complete, ...children }: { tr
   };
 
   return (
-    <div {...children} className="flex flex-col items-center justify-center min-h-dvh bg-base-200 diamond-pattern">
+    <div {...children} className="flex flex-col items-center justify-center min-h-screen bg-base-200 diamond-pattern">
       <div className="w-fit text-center">
         <div className="torn-paper text-black">
           <h1 className="font-bold text-2xl sm:text-5xl">{translations['step_1_title']}</h1>

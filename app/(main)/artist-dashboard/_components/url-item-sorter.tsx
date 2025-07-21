@@ -40,4 +40,8 @@ export function UrlItemSorter({ url }: { url?: string }) {
     );
   }
 
+  return <div className="bg-base-200 border-base-300 rounded-box border p-4">
+    <h2 className="text-lg font-semibold">Title</h2>
+    <p className="text-xs">{url}</p>
+  </div>;
 }

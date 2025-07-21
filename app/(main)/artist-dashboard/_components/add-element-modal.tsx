@@ -74,6 +74,12 @@ export default function AddElementModal({ translations, dialogRef, rowId, childr
     const formData = new FormData(event.target as HTMLFormElement);
     const url = formData.get("url") as string | null;
 
+    // Check if the URL is valid
+    if (!url || !/^https?:\/\/.+/.test(url)) {
+      console.error("Invalid URL");
+      return;
+    }
+
     if (url) {
       setUrlInput(url);
       setShowSecondary(true);
