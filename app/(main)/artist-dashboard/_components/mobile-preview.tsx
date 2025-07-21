@@ -1,12 +1,14 @@
 import { useAuth } from '@/lib/AuthContext';
 import Image from 'next/image';
 import { FileData } from '@/app/types';
+import { PiDotsThreeVerticalBold } from 'react-icons/pi';
 
 export default function MobilePreview({ selectedPreviewItem }: { selectedPreviewItem: (item: FileData) => void }) {
   const { artist } = useAuth();
 
   return (
     <div className="bg-gray-200 min-h-dvh">
+      <PiDotsThreeVerticalBold size={36} className='fixed top-10 right-10 cursor-pointer z-50' />
       <div className="relative">
         <Image src="/register_image.jpg"
           alt="Mobile Preview"
@@ -40,7 +42,7 @@ export default function MobilePreview({ selectedPreviewItem }: { selectedPreview
                       <li key={itemIndex} onClick={() => selectedPreviewItem(item)} className="flex-shrink-0 snap-start cursor-pointer">
                         {item.type.includes('image') && (
                           <Image
-                            src={item.url}
+                            src={item.thumbnail?.url || item.url}
                             alt={item.name}
                             width={400}
                             height={400}

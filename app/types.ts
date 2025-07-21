@@ -31,6 +31,7 @@ export interface FileData {
   size: number;
   createdAt: Timestamp;
   lastModified: number;
+  thumbnail?: Thumbnail;
 }
 
 export interface PdfData {
@@ -54,10 +55,10 @@ export interface GoogleCity {
   secondaryText: string;
 }
 
-// export interface LinkData {
-//   title?: string;
-//   url: string;
-// }
+export interface Thumbnail {
+  url: string;
+  path: string;
+}
 
 export enum ElementType {
   SPOTIFY = 'Spotify',

@@ -7,6 +7,7 @@ import { useFormatter } from "next-intl";
 import { QRCodeSVG } from "qrcode.react";
 import { useState } from "react";
 import { PiCopySimpleDuotone, PiDownloadSimple } from "react-icons/pi";
+import Image from "next/image";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function Share({ translations, showMore }: { translations: any, showMore: () => void }) {
@@ -20,20 +21,18 @@ export default function Share({ translations, showMore }: { translations: any, s
     setTimeout(() => setShowCopyToast(false), 2000);
   };
 
-  const handleDownload = async (fileData: FileData) => {
-    console.log("Downloading file:", fileData);
-    try {
-      const response = await fetch(fileData.url);
-      const blob = await response.blob();
-      const blobUrl = window.URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = blobUrl;
-      a.download = fileData.name;
-      a.click();
-      window.URL.revokeObjectURL(blobUrl);
-    } catch (error) {
-      console.error("Download failed:", error);
-    }
+  const handleDownload = async (asset: FileData) => {
+    const response = await fetch(asset.url);
+    const blob = await response.blob();
+    const url = window.URL.createObjectURL(blob);
+
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = asset.name || 'downloaded-file'; // use a better name if you have it
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    window.URL.revokeObjectURL(url);
   };
 
   return (
@@ -85,13 +84,16 @@ export default function Share({ translations, showMore }: { translations: any, s
                   ?.sort((a, b) => b.createdAt?.seconds - a.createdAt?.seconds)?.slice(0, 5)
                   ?.map((asset, index) => (
                     <li className="list-row" key={asset.name + index}>
-                      <div><img className="size-10 rounded-box" src={asset.url} /></div>
-                      <div>
-                        <p>{asset.name}</p>
-                        <p className="text-xs uppercase font-semibold opacity-60">
-                          {format.dateTime(new Date(asset.createdAt?.seconds * 1000))}
-                        </p>
+                      <Image height={56} width={56} className="size-14 rounded-box object-cover" alt={asset.name} src={asset.thumbnail?.url || asset.url} />
+                      <div className="items-center flex">
+                        <div>
+                          <p className="line-clamp-1">{asset.name}</p>
+                          <p className="text-xs uppercase font-semibold opacity-60">
+                            {format.dateTime(new Date(asset.createdAt?.seconds * 1000))}
+                          </p>
+                        </div>
                       </div>
+
                       <div className="tooltip" data-tip="Share">
                         <ShareButton
                           url={asset.url}
@@ -99,10 +101,12 @@ export default function Share({ translations, showMore }: { translations: any, s
                           text={`Check out this asset: ${asset.name}`}
                         />
                       </div>
+
                       <div className="tooltip" data-tip="Download">
-                        <button className="btn btn-square btn-ghost" onClick={() => handleDownload(asset)}>
+                        <button onClick={() => handleDownload(asset)} className="btn btn-square btn-ghost" role="button">
                           <PiDownloadSimple size={22} />
                         </button>
+
                       </div>
                     </li>
                   ))}

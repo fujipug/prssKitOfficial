@@ -59,7 +59,7 @@ export default function RowInstance({ item, editRowItemsMode, translations, setE
             )}
 
             {file?.type?.startsWith('image/') && (
-              <Image width={96} height={96} alt="Item" src={file?.url} />
+              <Image width={96} height={96} alt="Item" src={file?.thumbnail?.url ? file?.thumbnail?.url : file?.url} />
             )}
 
             {file?.type?.startsWith('application/') && (

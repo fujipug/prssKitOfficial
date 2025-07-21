@@ -25,6 +25,8 @@ export default function AddElementModal({ translations, dialogRef, rowId, childr
 
     return await fileSortTypeUpload(Array.from(files), firebaseUser.uid).then(async (results) => {
       const rows = artist.rows;
+      let assets = results;
+      assets = assets.filter((asset) => !artist.assets?.some((existingAsset) => existingAsset.path === asset.path));
 
       const elementObject = !rowId
         ? // create a new row with the uploaded files in the items array
@@ -49,9 +51,14 @@ export default function AddElementModal({ translations, dialogRef, rowId, childr
 
       const updatedArtist = {
         ...artist,
-        assets: [...(artist.assets || []), ...results],
+        assets: [...(artist.assets || []), ...assets],
         rows: elementObject,
       };
+
+      // clear the file input
+      if (fileInputRef.current) {
+        fileInputRef.current.value = "";
+      }
 
       return await updateArtist(updatedArtist);
     }).catch((error) => {

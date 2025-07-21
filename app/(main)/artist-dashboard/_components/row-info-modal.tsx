@@ -3,6 +3,7 @@ import { PiArrowLeft, PiFileText, PiFilmStripDuotone, PiImage, PiInfo, PiPlayPau
 import { FileData, Row } from "@/app/types";
 import formatBytes from "@/utils/format-bytes";
 import PreviewItem from "./preview-item";
+import Image from "next/image";
 
 export default function RowInfoModal({ row }: { row: Row }) {
   const modalRef = useRef<HTMLDialogElement>(null);
@@ -38,7 +39,7 @@ export default function RowInfoModal({ row }: { row: Row }) {
                     )}
 
                     {item.type?.startsWith('image/') && (
-                      <img className="size-14 rounded-box object-cover" src={item.url} />
+                      <Image height={56} width={56} className="size-14 rounded-box object-cover" alt={item.name} src={item.thumbnail?.url || item.url} />
                     )}
 
                     {item.type?.startsWith('application/') && (
@@ -51,9 +52,9 @@ export default function RowInfoModal({ row }: { row: Row }) {
                   </div>
 
                   <div className="list-col-grow">
-                    <div className="line-clamp-1">{item.name}</div>
-                    {/* <div className="text-xs font-semibold opacity-60">{item.type}</div> */}
-                    <div className="text-xs uppercase font-semibold opacity-60">{formatBytes(item.size)}</div>
+                    <p className="line-clamp-1">{item.name}</p>
+                    {/* <p className="text-xs font-semibold opacity-60">{item.type}</p> */}
+                    <p className="text-xs uppercase font-semibold opacity-60">{formatBytes(item.size)}</p>
                   </div>
 
                   <button className="btn btn-square btn-soft" onClick={() => setPreviewItem(item)}>
