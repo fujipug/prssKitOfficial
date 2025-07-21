@@ -24,7 +24,7 @@ export default function NavigationBar({ translations }: { translations: any }) {
           <ul
             tabIndex={0}
             className="menu dropdown-content bg-base-300 rounded-box z-1 mt-2 p-2 shadow">
-            <li><Link href="/profile">{translations['profile']}</Link></li>
+            <li><Link href="/account">{translations['account']}</Link></li>
             <li><Link href="/settings">{translations['settings']}</Link></li>
             <li role="button" onClick={signOut} className="btn btn-error mt-1 w-max">
               {translations['logout']}

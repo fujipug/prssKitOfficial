@@ -40,8 +40,8 @@ export default function RegisterForm({ messages, ...formProps }: { messages: Reg
       email,
       password,
       preRegister: {
-        // TODO: Add the values
-        artistName: "New Artist",
+        // TODO: Add the values from the OnboardingForm
+        artistName: "(New Artist)",
         pressKits: [],
         assets: []
       }

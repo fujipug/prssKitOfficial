@@ -7,7 +7,7 @@ import EditProfileModal from '../_components/edit-profile-modal';
 import AddElementModal from '../_components/add-element-modal';
 import DeleteElementModal from '../_components/delete-element-modal';
 import { FileData, Row } from '@/app/types';
-import WelcomeAboardSvg from '@/utils/welcome-aboard-svg';
+// import WelcomeAboardSvg from '@/utils/welcome-aboard-svg';
 import MobilePreview from '../_components/mobile-preview';
 import { updateArtist } from '@/network/firebase';
 import useClickOutside from '@/lib/useClickOutside';
@@ -77,18 +77,13 @@ export default function PrssKit({ translations, editProfileModalTranslations }: 
         <div className="col-span-8 lg:col-span-5 mb-4">
           <div className="card md:card-side bg-base-200 border-base-300 rounded-box border mb-4">
             <figure>
-              {artist?.profileImage && artist?.profileImage.url ? (
-                <Image
-                  src={artist.profileImage.url}
-                  width={400}
-                  height={140}
-                  alt="Profile Pic"
-                  className='object-cover'
-                />
-              ) : (
-                <WelcomeAboardSvg className="w-48 h-72 rounded-2xl" />
-              )}
-
+              <Image
+                src={artist.profileImage?.url || '/default_user.jpg'}
+                width={400}
+                height={140}
+                alt="Profile Pic"
+                className={`object-cover ${!artist.profileImage?.url && 'blur-xs'}`}
+              />
             </figure>
             <div className="card-body justify-center items-center md:w-3/4 md:justify-start md:items-start">
               <p className='font-bold text-3xl break-all card-title'>{artist?.artistName}</p>

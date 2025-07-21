@@ -65,12 +65,15 @@ export default function EditProfileModal({ artist, translations, modalButtonText
 
     const updatedArtist: Artist = {
       ...artist,
-      profileImage: uploadedImage && uploadedImage.length > 0 ? uploadedImage[0] : artist.profileImage,
       artistName: artistName.trim(),
       urlIdentifier: urlIdentifier.trim(),
       biography: biography.trim(),
       location: location.trim(),
     };
+
+    if (uploadedImage && uploadedImage.length > 0) {
+      updatedArtist.profileImage = uploadedImage[0];
+    }
 
     await updateArtist(updatedArtist).then(() => {
       modalRef.current?.close();
@@ -94,11 +97,11 @@ export default function EditProfileModal({ artist, translations, modalButtonText
             <div className="avatar">
               <div className="w-24 rounded">
                 <Image
-                  src={tempProfileImage ? URL.createObjectURL(tempProfileImage) : artist?.profileImage?.url || '/default-profile.png'}
+                  src={tempProfileImage ? URL.createObjectURL(tempProfileImage) : artist?.profileImage?.url || '/default_user.jpg'}
                   alt={artist?.artistName || 'Artist Profile'}
                   width={96}
                   height={96}
-                  className="object-cover"
+                  className={`object-cover` + (tempProfileImage || artist?.profileImage?.url ? '' : ' blur-xs')}
                 />
               </div>
             </div>
@@ -142,7 +145,7 @@ export default function EditProfileModal({ artist, translations, modalButtonText
             </fieldset>
 
             <div className="modal-action justify-between">
-              <button onClick={() => modalRef.current?.close()} className="btn btn-ghost">{translations['action_close']}</button>
+              <button type="button" onClick={() => modalRef.current?.close()} className="btn btn-ghost">{translations['action_close']}</button>
               <button type="submit" className="btn btn-primary">{translations['action_save']}</button>
             </div>
           </form>

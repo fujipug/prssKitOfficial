@@ -10,11 +10,11 @@ export default function MobilePreview({ selectedPreviewItem }: { selectedPreview
     <div className="bg-gray-200 min-h-screen">
       <PiDotsThreeVerticalBold size={36} className='fixed top-10 right-10 cursor-pointer z-50' />
       <div className="relative">
-        <Image src={artist?.profileImage?.url || '/default-profile.png'}
+        <Image src={artist?.profileImage?.url || '/default_user.jpg'}
           alt={artist?.profileImage?.url || 'Artist Image'}
           width={300}
           height={300}
-          className="w-full h-96 object-cover" />
+          className={`w-full h-96 object-cover ${!artist?.profileImage?.url && 'blur-xs'}`} />
 
         <div className="absolute inset-0 flex items-end justify-center mb-4">
           <div className='mx-auto text-center space-y-4'>

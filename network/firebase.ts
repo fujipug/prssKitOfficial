@@ -20,6 +20,16 @@ export const firebaseRegister = async (email: string, password: string, preRegis
       const registerData: PostRegister = {
         artistName: preRegister.artistName,
         assets: uploadedPressKits.concat(uploadedAssets),
+        // profileImage: {
+        //   id: user.uid,
+        //   url: '/default_user.jpg', // Default profile image
+        //   path: "",
+        //   name: user.displayName || "Default Profile",
+        //   type: "image/jpeg",
+        //   size: 0,
+        //   createdAt: Timestamp.now(),
+        //   lastModified: Date.now(),
+        // }
       };
 
       await createUserInFirestore(user, registerData);

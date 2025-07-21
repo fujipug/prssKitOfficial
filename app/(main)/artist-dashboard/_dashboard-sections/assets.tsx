@@ -37,8 +37,8 @@ export default function Assets({ translations }: { translations: any }) {
         <ul className="space-x-2 snap-x space-y-2 flex overflow-x-scroll">
           {images?.map((file, index) => (
             <li key={file.name + index} className="avatar snap-center">
-              <div className="w-24 rounded-box">
-                <Image width={96} height={96} alt="Item" src={file?.url} />
+              <div className="size-32 rounded-box">
+                <Image width={96} height={96} alt="Item" src={file?.thumbnail?.url || file?.url} />
               </div>
             </li>
           ))}

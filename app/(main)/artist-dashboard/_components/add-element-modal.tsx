@@ -103,7 +103,7 @@ export default function AddElementModal({ translations, dialogRef, rowId, childr
                 <legend className="fieldset-legend space-x-2">
                   <div className="size-8 bg-[#1DB954] flex justify-center items-center rounded-full text-white tooltip" data-tip="Spotify"><PiSpotifyLogo size={20} /></div>
                   <div className="size-8 bg-[#FA2D48] flex justify-center items-center rounded-full text-white tooltip" data-tip="Apple Music"><PiAppleLogo size={20} /></div>
-                  <div className="size-8 bg-[#FF7700] flex justify-center items-center rounded-full text-white tooltip" data-tip="SoundCloud"><PiSoundcloudLogo size={20} /></div>
+                  <div className="size-8 bg-[#FF7700] flex justify-center items-center rounded-full text-white tooltip" data-tip="Sound Cloud"><PiSoundcloudLogo size={20} /></div>
                   <div className="size-8 bg-[#CD201F] flex justify-center items-center rounded-full text-white tooltip" data-tip="YouTube"><PiYoutubeLogo size={20} /></div>
                   <div className="size-8 bg-gray-600 flex justify-center items-center rounded-full text-white tooltip" data-tip="Link"><PiLink size={20} /></div>
                   {/* <span className="font-semibold"></span> */}
@@ -114,6 +114,8 @@ export default function AddElementModal({ translations, dialogRef, rowId, childr
                 </div>
               </fieldset>
             </form>
+
+            <div className="divider"></div>
 
             <div className="flex w-full">
               <div onClick={() => fileInputRef.current?.click()} className="card bg-base-300 hover:bg-base-200 rounded-box grid grow place-items-center p-4 cursor-pointer">

@@ -57,9 +57,9 @@
     "title": "Tu <highlight>Prss Kit</highlight> dice quién eres."
   },
   "NavigationBar": {
+    "account": "Cuenta",
     "login": "Iniciar sesión",
     "register": "Registrarse",
-    "profile": "Perfil",
     "logout": "Cerrar sesión",
     "settings": "Configuración"
   },
