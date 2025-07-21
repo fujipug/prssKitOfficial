@@ -43,6 +43,10 @@ export default function MobileMockModal() {
               </div>
             </div>
           </div>
+          <div className="justify-between">
+            <button onClick={() => modalRef.current?.close()} className="btn btn-ghost">Close</button>
+            {/* <button type="submit" className="btn btn-primary">Update</button> */}
+          </div>
         </div>
 
         <form method="dialog" className="modal-backdrop">

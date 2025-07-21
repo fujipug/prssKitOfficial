@@ -8,6 +8,7 @@ import { QRCodeSVG } from "qrcode.react";
 import { useState } from "react";
 import { PiCopySimpleDuotone, PiDownloadSimple } from "react-icons/pi";
 import Image from "next/image";
+// import { getStorage, ref, getDownloadURL } from "firebase/storage";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function Share({ translations, showMore }: { translations: any, showMore: () => void }) {
@@ -22,17 +23,29 @@ export default function Share({ translations, showMore }: { translations: any, s
   };
 
   const handleDownload = async (asset: FileData) => {
-    const response = await fetch(asset.url);
-    const blob = await response.blob();
-    const url = window.URL.createObjectURL(blob);
+    try {
+      const response = await fetch(asset.url);
+      const blob = await response.blob();
 
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = asset.name || 'downloaded-file'; // use a better name if you have it
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-    window.URL.revokeObjectURL(url);
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = asset.name || 'download';
+      a.style.display = 'none';
+
+      // Clean up after the download starts
+      a.addEventListener('click', () => {
+        setTimeout(() => {
+          document.body.removeChild(a);
+          window.URL.revokeObjectURL(url);
+        }, 0);
+      }, { once: true });
+
+      document.body.appendChild(a);
+      a.click();
+    } catch (error) {
+      console.error('Download failed:', error);
+    }
   };
 
   return (
@@ -57,7 +70,7 @@ export default function Share({ translations, showMore }: { translations: any, s
                 />
               </span>
 
-              <h1 className="text-3xl font-bold mt-4">{artist?.artistName}</h1>
+              <h1 className="text-3xl font-bold mt-4 break-all line-clamp-2">{artist?.artistName}</h1>
 
               <motion.span
                 onClick={handleCopyUrl}
@@ -106,7 +119,6 @@ export default function Share({ translations, showMore }: { translations: any, s
                         <button onClick={() => handleDownload(asset)} className="btn btn-square btn-ghost" role="button">
                           <PiDownloadSimple size={22} />
                         </button>
-
                       </div>
                     </li>
                   ))}

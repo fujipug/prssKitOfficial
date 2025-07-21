@@ -8,8 +8,8 @@ export default function Dock({ translations }: { translations: any }) {
   let addElementModalRef = useRef<HTMLDialogElement | null>(null);
 
   return (
-    <div className="lg:hidden fixed z-10 bottom-2 left-1/2 
-    transform -translate-x-1/2 bg-secondary shadow-2xl py-2 px-3
+    <div className="lg:hidden fixed z-10 bottom-2 left-1/2 glass
+    transform -translate-x-1/2 bg-secondary shadow-2xl py-3 px-4
     rounded-box flex justify-center items-center space-x-12 text-secondary-content">
       <AddElementModal dialogRef={(ref) => addElementModalRef = ref} translations={translations}>
         <button className="flex flex-col items-center justify-center" onClick={() => addElementModalRef.current?.showModal()}>

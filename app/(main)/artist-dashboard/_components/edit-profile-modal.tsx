@@ -1,7 +1,9 @@
 import { Artist, GoogleCity } from "@/app/types";
-import { isUrlIdentifierAvailable } from "@/network/firebase";
+import { isUrlIdentifierAvailable, updateArtist } from "@/network/firebase";
 import { useEffect, useRef, useState } from "react";
 import { PiUserList } from "react-icons/pi";
+import Image from "next/image";
+import fileSortTypeUpload from "@/utils/file-sort-type-upload";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function EditProfileModal({ artist, translations, modalButtonText }: { artist: Artist; translations: any; modalButtonText?: string }) {
@@ -10,6 +12,7 @@ export default function EditProfileModal({ artist, translations, modalButtonText
   const [urlIdentifier, setUrlIdentifier] = useState(artist?.urlIdentifier || '');
   const [isChecking, setIsChecking] = useState(false);
   const [isAvailable, setIsAvailable] = useState<boolean | null>(null);
+  const [tempProfileImage, setTempProfileImage] = useState<File | null>(null);
 
   const onPlaceInputChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
     // debounce the input to avoid too many requests
@@ -22,56 +25,66 @@ export default function EditProfileModal({ artist, translations, modalButtonText
       return; // Prevent too long input
     }
 
-    // Fetch cities from the API
     fetch('/api/places/cities?input=' + encodeURIComponent(event.target.value))
       .then(response => response.json())
       .then(data => setPlaces(data.cities));
   }
 
-  const checkIdentifier = (async (identifier: string) => {
-    if (!identifier) {
-      setIsAvailable(null);
-      return;
-    }
-
-    if (identifier === artist?.urlIdentifier) {
-      setIsAvailable(true);
-      return;
-    }
-
-    setIsChecking(true);
-    const available = await isUrlIdentifierAvailable(identifier);
-    setIsAvailable(available);
-    setIsChecking(false);
-  });
-
   useEffect(() => {
-    checkIdentifier(urlIdentifier);
-    // Cleanup debounce on unmount
-    // return () => checkIdentifier.cancel();
-  }, [urlIdentifier]);
+    const checkIdentifier = (async (identifier: string) => {
+      if (!identifier) {
+        setIsAvailable(null);
+        return;
+      }
+
+      if (identifier === artist?.urlIdentifier) {
+        setIsAvailable(true);
+        return;
+      }
+
+      setIsChecking(true);
+      const available = await isUrlIdentifierAvailable(identifier);
+      setIsAvailable(available);
+      setIsChecking(false);
+    });
+
+    const debounceCheck = setTimeout(() => {
+      checkIdentifier(urlIdentifier);
+    }, 1000);
+
+    return () => clearTimeout(debounceCheck);
+  }, [urlIdentifier, artist?.urlIdentifier]);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    console.log("Submitting form...", event);
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const artistName = formData.get('artistName') as string;
     const biography = formData.get('biography') as string;
     const location = formData.get('location') as string;
+    const uploadedImage = tempProfileImage ? await fileSortTypeUpload([tempProfileImage], artist.uid) : null;
+
     const updatedArtist: Artist = {
       ...artist,
+      profileImage: uploadedImage && uploadedImage.length > 0 ? uploadedImage[0] : artist.profileImage,
       artistName: artistName.trim(),
       urlIdentifier: urlIdentifier.trim(),
       biography: biography.trim(),
       location: location.trim(),
     };
 
-    console.log("Updated artist data:", updatedArtist);
+    await updateArtist(updatedArtist).then(() => {
+      modalRef.current?.close();
+    })
   }
+
+  const handleProfileImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) setTempProfileImage(file);
+  };
 
   return (
     <>
-      <button onClick={() => modalRef.current?.showModal()} className="btn btn-primary btn-wide">
+      <button onClick={() => modalRef.current?.showModal()} className="btn btn-primary btn-block">
         <PiUserList size={22} />
         <span className="ml-1">{modalButtonText || 'Edit Profile'}</span>
       </button>
@@ -80,12 +93,18 @@ export default function EditProfileModal({ artist, translations, modalButtonText
           <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border p-4 flex space-x-2">
             <div className="avatar">
               <div className="w-24 rounded">
-                <img src="https://img.daisyui.com/images/profile/demo/batperson@192.webp" />
+                <Image
+                  src={tempProfileImage ? URL.createObjectURL(tempProfileImage) : artist?.profileImage?.url || '/default-profile.png'}
+                  alt={artist?.artistName || 'Artist Profile'}
+                  width={96}
+                  height={96}
+                  className="object-cover"
+                />
               </div>
             </div>
             <div className="relative w-full">
               <p className="text-lg font-semibold">Profile image</p>
-              <input type="file" accept="image/*" className="file-input file-input-primary absolute bottom-0" />
+              <input onChange={(e) => handleProfileImageChange(e)} type="file" accept="image/*" className="file-input file-input-primary absolute bottom-0" />
             </div>
           </fieldset>
 

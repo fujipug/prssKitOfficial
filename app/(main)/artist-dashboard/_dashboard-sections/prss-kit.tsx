@@ -75,35 +75,40 @@ export default function PrssKit({ translations, editProfileModalTranslations }: 
       <div className="grid grid-cols-8 gap-4">
         {/* TODO: add the mb-4 probably in the layout */}
         <div className="col-span-8 lg:col-span-5 mb-4">
-          <div className="card card-side bg-base-200 border-base-300 rounded-box border mb-4">
+          <div className="card md:card-side bg-base-200 border-base-300 rounded-box border mb-4">
             <figure>
               {artist?.profileImage && artist?.profileImage.url ? (
                 <Image
                   src={artist.profileImage.url}
-                  width={140}
+                  width={400}
                   height={140}
                   alt="Profile Pic"
+                  className='object-cover'
                 />
               ) : (
                 <WelcomeAboardSvg className="w-48 h-72 rounded-2xl" />
               )}
 
             </figure>
-            <div className="card-body">
-              <p className='font-bold text-3xl'>{artist?.artistName}</p>
-              <div className="font-semibold flex items-center space-x-1">
-                <PiAtBold />
-                <p>/{artist?.urlIdentifier}</p>
+            <div className="card-body justify-center items-center md:w-3/4 md:justify-start md:items-start">
+              <p className='font-bold text-3xl break-all card-title'>{artist?.artistName}</p>
+
+              <div className="sm:w-4/5 md:w-full space-y-4">
+                <div className="font-semibold flex items-center space-x-3">
+                  <PiAtBold className='shrink-0' />
+                  <p className='break-all line-clamp-1'>/{artist?.urlIdentifier}</p>
+                </div>
+                <div className={`flex items-center space-x-3 ${artist?.biography ? '' : 'text-info/60 italic'}`}>
+                  <PiNotebook className='shrink-0' />
+                  <p className='text-pretty'>{artist?.biography || translations['biography_placeholder']}</p>
+                </div>
+                <div className={`flex items-center space-x-3 ${artist?.location ? '' : 'text-info/60 italic'}`}>
+                  <PiMapPin className='shrink-0' />
+                  <p>{artist?.location || translations['location_placeholder']}</p>
+                </div>
               </div>
-              <div className={`flex items-center space-x-1 ${artist?.biography ? '' : 'text-info/60 italic'}`}>
-                <PiNotebook />
-                <p>{artist?.biography || translations['biography_placeholder']}</p>
-              </div>
-              <div className={`flex items-center space-x-1 ${artist?.location ? '' : 'text-info/60 italic'}`}>
-                <PiMapPin />
-                <p>{artist?.location || translations['location_placeholder']}</p>
-              </div>
-              <div className="card-actions justify-start">
+
+              <div className="card-actions justify-start mt-4 w-full">
                 <EditProfileModal artist={artist} modalButtonText={translations['edit_profile']} translations={editProfileModalTranslations} />
               </div>
             </div>

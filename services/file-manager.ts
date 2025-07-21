@@ -6,10 +6,6 @@ export const uploadFile = async (file: File, userId: string, path?: string) => {
     const storagePath = `${userId}/${path ? path + '/' : ''}${file.name}`;
     const storageRef = ref(clientStorage, storagePath);
 
-    // const metadata = {
-    //   contentDisposition: 'inline',
-    // };
-
     // Upload file
     await uploadBytes(storageRef, file);
 

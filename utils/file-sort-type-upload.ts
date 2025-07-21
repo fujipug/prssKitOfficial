@@ -1,7 +1,8 @@
+import { FileData } from "@/app/types";
 import { uploadFile } from "@/services/file-manager";
 import { Timestamp } from "firebase/firestore";
 
-async function fileSortTypeUpload(files: File[], userId: string) {
+async function fileSortTypeUpload(files: File[], userId: string): Promise<FileData[]> {
   if (!files || files.length === 0) {
     throw new Error("No files provided for sorting.");
   }

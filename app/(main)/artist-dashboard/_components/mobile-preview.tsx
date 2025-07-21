@@ -10,8 +10,8 @@ export default function MobilePreview({ selectedPreviewItem }: { selectedPreview
     <div className="bg-gray-200 min-h-dvh">
       <PiDotsThreeVerticalBold size={36} className='fixed top-10 right-10 cursor-pointer z-50' />
       <div className="relative">
-        <Image src="/register_image.jpg"
-          alt="Mobile Preview"
+        <Image src={artist?.profileImage?.url || '/default-profile.png'}
+          alt={artist?.profileImage?.url || 'Artist Image'}
           width={300}
           height={300}
           className="w-full h-96 object-cover" />
