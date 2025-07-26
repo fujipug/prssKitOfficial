@@ -1,5 +1,5 @@
 import { deleteSecureCookie, setSecureCookie } from '@/app/actions/cookie-actions';
-import { clientFunctions, httpsCallable } from './firebase-config';
+import { clientFunctions, httpsCallable } from '../utils/firebase-config';
 import { redirect } from 'next/navigation';
 
 export function createSessionCookie(idToken: string) {

@@ -1,5 +1,4 @@
 'use client';
-
 import { useLocale } from 'next-intl';
 import { useTransition } from 'react';
 import { setUserLocale } from '@/services/locale';
@@ -11,9 +10,9 @@ export default function LocaleSwitcher() {
   const [, startTransition] = useTransition();
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const locale = event.target.value as Locale;
+    const localLocale = event.target.value as Locale;
     startTransition(() => {
-      setUserLocale(locale);
+      setUserLocale(localLocale);
     });
   }
 

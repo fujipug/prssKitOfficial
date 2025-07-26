@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 import { firebaseRegister, firebaseSignIn, firebaseSignOut, subscribeToCurrentUser } from "@/network/firebase";
 import { onAuthStateChanged, User } from "firebase/auth";
 import { PreRegister, Artist } from "@/app/types";
-import { clientAuth } from "@/services/firebase-config";
+import { clientAuth } from "@/utils/firebase-config";
 import { createSessionCookie, deleteSessionCookie } from "@/services/cookies";
 
 const AuthContext = createContext<{
@@ -19,7 +19,7 @@ const AuthContext = createContext<{
   isSignedIn: false,
   firebaseUser: {} as User,
   artist: {} as Artist,
-  isLoading: true,
+  isLoading: false,
   register: async () => { },
   signIn: async () => { },
   signOut: async () => { },
@@ -32,7 +32,7 @@ interface AuthProviderProps {
 export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [isSignedIn, setIsSignedIn] = useState(false);
   const [firebaseUser, setFirebaseUser] = useState<User>({} as User);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [artist, setArtist] = useState<Artist>({} as Artist);
 
   useEffect(() => {

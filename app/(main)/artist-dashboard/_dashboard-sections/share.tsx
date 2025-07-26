@@ -8,7 +8,6 @@ import { QRCodeSVG } from "qrcode.react";
 import { useState } from "react";
 import { PiCopySimpleDuotone, PiDownloadSimple } from "react-icons/pi";
 import Image from "next/image";
-// import { getStorage, ref, getDownloadURL } from "firebase/storage";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function Share({ translations, showMore }: { translations: any, showMore: () => void }) {

@@ -18,7 +18,7 @@ export default function MobilePreview({ selectedPreviewItem }: { selectedPreview
 
         <div className="absolute inset-0 flex items-end justify-center mb-4">
           <div className='mx-auto text-center space-y-4'>
-            <p className='font-sans font-light text-white text-5xl'>{artist?.artistName}</p>
+            <p className='font-sans font-light text-white text-4xl'>{artist?.artistName}</p>
             <p className='font-sans font-light text-white text-md'>{artist?.location}</p>
           </div>
         </div>

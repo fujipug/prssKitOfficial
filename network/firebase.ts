@@ -1,7 +1,7 @@
 import { Artist, PostRegister, PreRegister } from "@/app/types";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, User } from "firebase/auth";
 import { collection, doc, getDocs, limit, onSnapshot, query, setDoc, Timestamp, where } from "firebase/firestore";
-import { clientDb, clientAuth } from "@/services/firebase-config";
+import { clientDb, clientAuth } from "@/utils/firebase-config";
 import fileSortTypeUpload from "@/utils/file-sort-type-upload";
 
 export const firebaseRegister = async (email: string, password: string, preRegister: PreRegister) => {

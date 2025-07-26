@@ -7,7 +7,6 @@ import EditProfileModal from '../_components/edit-profile-modal';
 import AddElementModal from '../_components/add-element-modal';
 import DeleteElementModal from '../_components/delete-element-modal';
 import { FileData, Row } from '@/app/types';
-// import WelcomeAboardSvg from '@/utils/welcome-aboard-svg';
 import MobilePreview from '../_components/mobile-preview';
 import { updateArtist } from '@/network/firebase';
 import useClickOutside from '@/lib/useClickOutside';
